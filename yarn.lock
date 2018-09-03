@@ -3675,6 +3675,14 @@ gatsby-remark-images@^1.5.67:
     slash "^1.0.0"
     unist-util-select "^1.5.0"
 
+gatsby-remark-static-images@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-static-images/-/gatsby-remark-static-images-1.0.0.tgz#bd74ff31f05afd863bd2b0df7377e1572806c491"
+  dependencies:
+    is-relative-url "^2.0.0"
+    slash "^2.0.0"
+    unist-util-select "^1.5.0"
+
 gatsby-source-filesystem@^1.5.39:
   version "1.5.39"
   resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-1.5.39.tgz#c7e49b7809632b53c827e66ff3ee0ba74ef62dd8"
@@ -8664,6 +8672,10 @@ simple-swizzle@^0.2.2:
 slash@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/slash/-/slash-1.0.0.tgz#c41f2f6c39fc16d1cd17ad4b5d896114ae470d55"
+
+slash@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/slash/-/slash-2.0.0.tgz#de552851a1759df3a8f206535442f5ec4ddeab44"
 
 snapdragon-node@^2.0.1:
   version "2.1.1"

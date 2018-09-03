@@ -13,6 +13,30 @@ p {
   font-size: 1.125em;
 }
 
+.blog-post p > img {
+  max-width: 580px;
+}
+
+.gatsby-resp-image-background-image {
+  background: none !important;
+}
+
+.blog-post div p a.gatsby-resp-image-link:first-child > span.gatsby-resp-image-wrapper {
+  margin-right: 0;
+  float: right;
+  width: 300px;
+  height: 300px;
+  margin-top: -100px;
+  -webkit-filter: drop-shadow(0px 0px 30px rgba(163,174,182, 0.8));
+}
+
+.blog-post div p a.gatsby-resp-image-link:not(:first-child) > span.gatsby-resp-image-wrapper {
+  margin-left: 0 !important;
+  display: block;
+  width: 100%;
+  max-width: 580px !important;
+}
+
 .app {
   position: relative;
   display: flex;
