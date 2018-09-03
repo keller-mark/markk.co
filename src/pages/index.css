@@ -1,0 +1,8 @@
+.content .main .wrap .about a {
+    text-decoration: none;
+    color: steelblue;
+}
+
+.content .main .wrap .about a:hover, .content .main .wrap .about a:focus {
+    color: #333;
+}
