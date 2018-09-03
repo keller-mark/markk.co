@@ -25,7 +25,7 @@ class Layout extends Component {
         body = d.getElementsByTagName('body')[0],
         width = w.innerWidth || documentElement.clientWidth || body.clientWidth;
 
-        this.setState({ height: (width * 1.5) });
+        this.setState({ height: (width * 1.2) });
   }
   
   componentDidMount() {
@@ -65,7 +65,12 @@ class Layout extends Component {
               >
                 <div id="mark-trees" style={{ height: (this.state.height) + 'px' }}></div>
               </Parallax>
-              <a id="flickr-overlay" title="View more on Flickr" href="https://www.flickr.com/photos/83712651@N04/">
+              <a 
+                id="flickr-overlay" 
+                title="View more on Flickr" 
+                href="https://www.flickr.com/photos/83712651@N04/"
+                style={{ bottom: '250px' }}
+              >
                 <span id="flickr-logo"></span>
               </a>
               <div className="footer-inner">

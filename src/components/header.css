@@ -1,9 +1,12 @@
 .header {
     line-height: 3rem;
     border-bottom: 3px solid #EDF2F8;
+    z-index: 101;
 }
   
-.header .title {
+.header a.title {
+    text-decoration: none;
+    color: #333;
     font-weight: 600;
     font-size: 1.375rem;
 }

@@ -37,14 +37,7 @@ p {
   margin-top: 1.75rem;
 }
 
-.content .main .wrap .about a {
-  text-decoration: none;
-  color: steelblue;
-}
 
-.content .main .wrap .about a:hover, .content .main .wrap .about a:focus {
-  color: #333;
-}
 
 .footer {
   position: relative;
@@ -79,7 +72,6 @@ p {
 #flickr-overlay {
   z-index: 100;
   position: absolute;
-  bottom: 250px;
   right: 30px;
   display: block;
   width: 100%;
@@ -102,8 +94,6 @@ p {
  * Media Queries
  * -----------------------------------------------------------------------------
  */
-/* 400px */
-/* 568px (Pure.css Grid: SM) */
 /* 640px */
 @media screen and (min-width: 40em) {
   .wrap {
