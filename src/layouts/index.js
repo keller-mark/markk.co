@@ -50,18 +50,18 @@ class Layout extends Component {
                 </div>
               </div>
             </div>
-            <div className="footer">
+            <div className="footer" style={{ height: (this.state.height - 200) + 'px' }}>
               <Parallax
                   className="custom-class"
-                  offsetYMax={0}
-                  offsetYMin={-0}
+                  offsetYMax={'0px'}
+                  offsetYMin={'-0px'}
               >
-                <div id="mark-sky" style={{ height: (this.state.height) + 'px' }}></div>
+                <div id="mark-sky" style={{ height: this.state.height + 'px' }}></div>
               </Parallax>
               <Parallax
                   className="custom-class"
-                  offsetYMax={0}
-                  offsetYMin={-10}
+                  offsetYMax={'0px'}
+                  offsetYMin={'-200px'}
               >
                 <div id="mark-trees" style={{ height: (this.state.height) + 'px' }}></div>
               </Parallax>
@@ -69,15 +69,10 @@ class Layout extends Component {
                 id="flickr-overlay" 
                 title="View more on Flickr" 
                 href="https://www.flickr.com/photos/83712651@N04/"
-                style={{ bottom: '250px' }}
               >
                 <span id="flickr-logo"></span>
               </a>
-              <div className="footer-inner">
-                <p>
-                  Copyright &copy; 2018 Mark Keller
-                </p>
-              </div>
+              
             </div>
           </div>
         </ParallaxProvider>

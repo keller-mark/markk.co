@@ -43,11 +43,9 @@ p {
   position: relative;
   width: 100%;
   background-color: #405642;
+  overflow-y: hidden;
 }
-.footer-inner p {
-  text-align: center;
-  color: white;
-}
+
 
 #mark-sky {
   background-image: url('./../style/images/mountain.png');
@@ -73,6 +71,7 @@ p {
   z-index: 100;
   position: absolute;
   right: 30px;
+  bottom: 30px;
   display: block;
   width: 100%;
 }
