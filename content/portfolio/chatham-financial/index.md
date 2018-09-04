@@ -1,5 +1,5 @@
 ---
-title: "My Phillips Collection"
+title: "Chatham Financial"
 subtitle: "2017 Summer Internship"
 date: "2017-08-01"
 icon: "/static/portfolio/chatham-financial.png"
