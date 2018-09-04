@@ -2,8 +2,9 @@
 title: "Arduino Spinner Game"
 subtitle: "Class Project"
 date: "2017-05-10"
+icon: "/static/portfolio/cplay-spinner-game.png"
+color: "#080357"
 ---
-![Icon](./icon.png)
 ![Screenshot](./screenshot.gif)
 
 

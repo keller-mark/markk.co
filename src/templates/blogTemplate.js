@@ -14,13 +14,19 @@ class BlogPostTemplate extends React.Component {
       <div className="blog-post">
         <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
         <h1>{post.frontmatter.title}</h1>
+        <h3>{post.frontmatter.subtitle}</h3>
+        <img 
+          className="blog-post-icon" 
+          src={post.frontmatter.icon}
+          style={{ WebkitFilter: 'drop-shadow(0px 0px 30px ' + post.frontmatter.color + ')'}}
+        />
         <p>
           {post.frontmatter.date}
         </p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
     
 
-        <ul>
+        <ul className="blog-pagination">
           <li>
             {
               previous &&
@@ -57,6 +63,9 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        subtitle
+        icon
+        color
         date(formatString: "MMMM DD, YYYY")
       }
     }

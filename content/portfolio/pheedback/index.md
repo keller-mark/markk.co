@@ -2,8 +2,9 @@
 title: "Pheedback"
 subtitle: "Hackathon Project"
 date: "2017-04-08"
+icon: "/static/portfolio/pheedback.png"
+color: "#29BB9C"
 ---
-![Icon](./icon.png)
 ![Screenshot](./screenshot.png)
 Pheedback is a web application built in collaboration with two friends for Bitcamp 2017, the University of Maryland's annual hackathon. I worked on developing the back end, connecting the app with our database and an AWS S3 instance for photo uploads.
 

@@ -2,8 +2,9 @@
 title: "Stock Overflow"
 subtitle: "Hackathon Project"
 date: "2017-01-20"
+icon: "/static/portfolio/stock-overflow.png"
+color: "#64AEEF"
 ---
-![Icon](./icon.png)
 ![Screenshot](./screenshot.jpg)
 
 

@@ -2,8 +2,9 @@
 title: "Shark Alerts"
 subtitle: "Android and iOS Application"
 date: "2016-06-01"
+icon: "/static/portfolio/shark-alerts.png"
+color: "#D9F0F4"
 ---
-![Icon](./icon.png)
 ![Screenshot](./screenshot.png)
 Shark Alerts is an application for Android and iOS that notifies of the tagged sharks within a radius that is defined by each user. This warns users of potential danger and helps both the sharks and users to stay safe.
 

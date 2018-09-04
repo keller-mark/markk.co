@@ -21,3 +21,9 @@
     padding-top: 0.25rem;
     display: inline-block;
 }
+
+@media screen and (max-width: 40em) {
+    .header .header-right {
+        display: none;
+    }
+  }

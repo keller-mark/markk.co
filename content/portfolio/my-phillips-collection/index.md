@@ -2,8 +2,9 @@
 title: "My Phillips Collection"
 subtitle: "Research"
 date: "2017-06-04"
+icon: "/static/portfolio/my-phillips-collection.png"
+color: "#D85C37"
 ---
-![Icon](./icon.png)
 ![Screenshot](./screenshot.png)
 My Phillips Collection is a mobile app and corresponding web app that a partner and I developed in the spring of 2017 for a research project as part of the [UMD FIRE program](My Phillips Collection). As members of the FIRE [Phillips Virtual Culture](https://fire.umd.edu/streams-PVC.html) research stream, we worked with [The Phillips Collection](http://www.phillipscollection.org/), a museum of modern art in Washington D.C., researching how the museum experience can be improved through the use of immersive technologies such as VR, AR, and location services.
 
