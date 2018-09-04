@@ -2,3 +2,5 @@
 
 ## markk.co
 my personal website
+
+<img src="old-new.png" alt="Comparison to past version" width="700">
