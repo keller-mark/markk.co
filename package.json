@@ -1,6 +1,6 @@
 {
   "name": "markk",
-  "description": "Personal website",
+  "description": "my personal website",
   "version": "1.0.0",
   "author": "Mark Keller",
   "dependencies": {
@@ -30,6 +30,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/keller-mark/markk.co"
   }
 }
