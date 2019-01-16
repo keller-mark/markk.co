@@ -33,10 +33,6 @@ export default {
     components: {
         Header,
         Footer
-    },
-    mounted() {
-        console.log(this.$site);
-        console.log(this.$page);
     }
 }
 </script>

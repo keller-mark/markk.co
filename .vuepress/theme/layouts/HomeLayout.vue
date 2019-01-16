@@ -27,16 +27,10 @@ export default {
         Footer,
         Intro,
         Timeline
-    },
-    mounted() {
-        console.log(this.$site)
     }
 }
 </script>
 
 <style lang="scss" scoped>
-
-
-
 
 </style>
