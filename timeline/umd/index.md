@@ -7,7 +7,6 @@ icon: "/timeline/umd.png"
 layout: PortfolioLayout
 ---
 
-
 Computer science and math/statistics courses that I have taken:
 
 **CMSC**
