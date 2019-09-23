@@ -1,6 +1,6 @@
 ---
 title: "University of Maryland"
-subtitle: "B.S. in Computer Science, Expected 2020"
+subtitle: "B.S. in Computer Science, Expected Fall 2019"
 type: "Education"
 date: "2016-08-25"
 icon: "/timeline/umd.png"
@@ -10,6 +10,10 @@ layout: PortfolioLayout
 Computer science and math/statistics courses that I have taken:
 
 **CMSC**
+
+- CMSC422: Introduction to Machine Learning
+- CMSC424: Database Design
+- CMSC417: Computer Networks
 
 - CMSC423: Bioinformatic Algorithms, Databases, and Tools
 - CMSC451: Design and Analysis of Computer Algorithms

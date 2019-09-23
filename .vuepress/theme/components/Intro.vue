@@ -1,7 +1,7 @@
 <template>
     <div class="intro">
         <p>
-            I am a rising senior at the University of Maryland with a major in Computer Science (Data Science Track) and minor in Statistics.
+            I am a senior at the University of Maryland studying Computer Science (with a concentration in Data Science and minor in Statistics).
 
             My interests include <a href="http://explosig.lrgr.io">computational biology</a> and <a href="http://github.com/keller-mark/vueplotlib">data visualization</a>.
 
