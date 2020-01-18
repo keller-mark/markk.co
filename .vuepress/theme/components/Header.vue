@@ -3,7 +3,7 @@
         <div class="boxed">
             <a href="/">{{ site.title }}</a>
             <div class="header-right">
-                <span>Student at the University of Maryland</span>
+                <span></span>
             </div>
         </div>
     </div>
