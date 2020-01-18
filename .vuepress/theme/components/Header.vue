@@ -19,16 +19,16 @@ export default {
 .header {
     line-height: 3rem;
     border-bottom: 3px solid #EDF2F8;
+    padding-top: 0.35rem;
     a {
         text-decoration: none;
         color: #333;
-        font-weight: 600;
-        font-size: 1.375rem;
+        font-size: 1.15rem;
+        display: inline-block;
     }
     .header-right {
         float: right;
         span {
-            font-weight: 100;
             color: #555;
             line-height: 2.75rem;
             padding-top: 0.25rem;

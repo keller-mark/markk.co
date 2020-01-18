@@ -1,47 +1,11 @@
 ---
 title: "University of Maryland"
-subtitle: "B.S. in Computer Science, Expected Fall 2019"
+subtitle: "B.S. in Computer Science, Fall 2019"
 type: "Education"
-date: "2016-08-25"
+date: "2019-12-18"
 icon: "/timeline/umd.png"
 layout: PortfolioLayout
 ---
 
-Computer science and math/statistics courses that I have taken:
-
-**CMSC**
-
-- CMSC422: Introduction to Machine Learning
-- CMSC424: Database Design
-- CMSC417: Computer Networks
-
-- CMSC423: Bioinformatic Algorithms, Databases, and Tools
-- CMSC451: Design and Analysis of Computer Algorithms
-
-- CMSC828P: Advanced Topics in Information Processing; Algorithms and Machine Learning for Analyzing Mutations in Cancer
-- CMSC320: Introduction to Data Science
-
-- CMSC433: Programming Language Technologies and Paradigms
-
-- CMSC330: Organization of Programming Languages
-- CMSC351: Algorithms
-- CMSC396H: Computer Science Honors Seminar
-
-- CMSC216H: Introduction to Computer Systems
-- CMSC250: Discrete Structures
-
-- CMSC132H: Object-Oriented Programming II
-
-**MATH/STAT**
-
-- STAT410: Introduction to Probability Theory
-- MATH401: Applications of Linear Algebra
-
-- STAT430: Introduction to Statistical Computing with SAS
-- STAT401: Applied Probability and Statistics II
-
-- MATH461: Linear Algebra for Scientists and Engineers
-- MATH241H: Calculus III
-- MATH246: Differential Equations for Scientists and Engineers
-
-
+Major: [Computer Science, Data Science concentration](https://undergrad.cs.umd.edu/degree-requirements-cs-major#DataScience)<br>
+Minor: [Statistics](https://www-math.umd.edu/stat-undergrad/statistics-minor.html)

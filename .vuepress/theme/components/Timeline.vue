@@ -120,6 +120,9 @@ export default {
     table {
         margin: 0 auto;
     }
+    label {
+        font-size: 15px;
+    }
 }
 .timeline {
     display: table;
@@ -168,9 +171,11 @@ export default {
             z-index: 3;
             h3 {
                 margin-bottom: 0;
+                font-weight: normal;
             }
             h4 {
-                margin-top: 0rem;
+                margin-top: 0.25rem;
+                font-weight: normal;
             }
             .timeline-read-more a {
                 text-decoration: none;
