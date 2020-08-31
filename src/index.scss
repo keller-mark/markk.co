@@ -1,0 +1,36 @@
+@import "carbon-components/scss/globals/scss/styles";
+
+$orange: #E07A5F;
+$blue: #3D405B;
+$green: #81B29A;
+$yellow: #F2CC8F;
+$eggshell: #F4F1DE;
+
+.bx--header {
+    position: static !important;
+    background-color: $blue !important;
+}
+
+.bx--header__nav::before {
+    background-color: lighten($blue, 10) !important;
+}
+
+.mk--lg-header-nav a.bx--header__menu-item:hover {
+    background-color: lighten($blue, 5) !important;
+}
+
+.mk--lg-header-nav a.bx--header__menu-item:active {
+    background-color: lighten($blue, 3) !important;
+}
+
+.mk--lg-header-nav .bx--header__menu-title[aria-expanded=true] {
+    background-color: lighten($blue, 3) !important;
+}
+
+.mk--lg-header-nav .bx--header__menu-title[aria-expanded=true] + .bx--header__menu {
+    background-color: lighten($blue, 3) !important;
+}
+
+.mk--pt-1 {
+    padding-top: 1rem;
+}
