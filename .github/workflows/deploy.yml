@@ -16,8 +16,8 @@ jobs:
           node-version: 14
       - name: yarn install and build
         run: |
-          yarn
-          yarn build
+          npm ci
+          npm run build
           echo "markk.co" > build/CNAME
       - name: Deploy site to gh-pages branch
         uses: alex-page/blazing-fast-gh-pages-deploy@v1.1.0
