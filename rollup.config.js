@@ -116,7 +116,7 @@ const devConfig = {
             filename: join(BUILD_DIR, 'stats.html')
         }),
         serve({
-            port: 8000,
+            port: 3000,
             contentBase: BUILD_DIR
         }),
         livereload(BUILD_DIR)

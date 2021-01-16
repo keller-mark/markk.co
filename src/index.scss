@@ -48,6 +48,9 @@ a {
 .bx--accordion__item:nth-child(4) .bx--accordion__heading:hover::before {
     background-color: lighten($orange, 25) !important;
 }
+.bx--accordion__item:nth-child(5) .bx--accordion__heading:hover::before {
+    background-color: lighten($blue, 40) !important;
+}
 
 a.bx--side-nav__link:focus, .bx--side-nav a.bx--header__menu-item:focus {
     outline: 2px solid $blue !important;
