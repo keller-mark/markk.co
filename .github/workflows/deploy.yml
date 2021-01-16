@@ -1,0 +1,26 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node 14
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+      - name: yarn install and build
+        run: |
+          yarn
+          yarn build
+          echo "markk.co" > build/CNAME
+      - name: Deploy site to gh-pages branch
+        uses: alex-page/blazing-fast-gh-pages-deploy@v1.1.0
+        with:
+          repo-token: ${{ secrets.GH_PAT }}
+          site-directory: build
