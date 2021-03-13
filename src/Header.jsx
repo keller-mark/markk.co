@@ -19,6 +19,7 @@ export default function MyHeader() {
             <HeaderMenu aria-label="Elsewhere" menuLinkName="Elsewhere">
                 <HeaderMenuItem href="https://github.com/keller-mark">GitHub</HeaderMenuItem>
                 <HeaderMenuItem href="https://beta.observablehq.com/@keller-mark">Observable</HeaderMenuItem>
+                <HeaderMenuItem href="https://soundcloud.com/keller-mark-7">SoundCloud</HeaderMenuItem>
             </HeaderMenu>
         </>
     );
