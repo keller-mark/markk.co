@@ -1,4 +1,4 @@
-@import "carbon-components/scss/globals/scss/styles";
+@import "carbon-components/css/carbon-components.min.css";
 
 $blue: #354C79;
 $forest: #185851;
@@ -6,9 +6,14 @@ $turquoise: #49A997;
 $yellow: #EACA3F;
 $orange: #F59E32;
 $red: #EE2E2F;
+$purple: #AB75E1;
 
 a {
-    color: darken($turquoise, 5);
+    color: darken($turquoise, 3);
+}
+
+.bx--header__action:hover {
+    background-color: darken($turquoise, 3);
 }
 
 .bx--header {
@@ -49,7 +54,7 @@ a {
     background-color: lighten($orange, 25) !important;
 }
 .bx--accordion__item:nth-child(5) .bx--accordion__heading:hover::before {
-    background-color: lighten($blue, 40) !important;
+    background-color: lighten($purple, 20) !important;
 }
 
 a.bx--side-nav__link:focus, .bx--side-nav a.bx--header__menu-item:focus {
@@ -58,4 +63,12 @@ a.bx--side-nav__link:focus, .bx--side-nav a.bx--header__menu-item:focus {
 
 .mk--pt-1 {
     padding-top: 1rem;
+}
+
+.bx--side-nav .bx--header__menu-title[aria-expanded="true"] + .bx--header__menu a.bx--header__menu-item {
+    padding-left: 1.5rem;   
+}
+
+.bx--btn.bx--btn--icon-only.bx--tooltip__trigger .bx--assistive-text {
+    max-width: 16rem;
 }

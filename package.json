@@ -1,38 +1,24 @@
 {
   "name": "markk.co",
   "version": "1.0.0",
-  "main": "index.js",
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "carbon-components": "^10.18.0",
-    "carbon-components-react": "^7.18.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "carbon-components": "^10.30.0",
+    "carbon-components-react": "^7.30.0",
     "carbon-icons": "^7.0.7",
     "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.8.4",
-    "@babel/preset-react": "^7.8.4",
-    "@rollup/plugin-babel": "^5.0.0",
-    "@rollup/plugin-commonjs": "^11.1.0",
-    "@rollup/plugin-html": "^0.1.1",
-    "@rollup/plugin-json": "^4.0.1",
-    "@rollup/plugin-node-resolve": "^7.0.0",
-    "@rollup/plugin-replace": "^2.3.3",
-    "eslint": "^6.8.0",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "rollup": "^1.29.1",
-    "rollup-plugin-livereload": "^1.0.4",
-    "rollup-plugin-scss": "^2.1.0",
-    "rollup-plugin-serve": "^1.0.1",
-    "rollup-plugin-terser": "^5.2.0",
-    "rollup-plugin-visualizer": "^3.3.1",
-    "sass": "^1.25.0"
+    "@vitejs/plugin-react-refresh": "^1.3.1",
+    "sass": "^1.32.8",
+    "vite": "^2.0.5"
   },
   "scripts": {
-    "start": "rollup -c rollup.config.js --environment NODE_ENV:development --watch",
-    "build": "rollup -c rollup.config.js --environment NODE_ENV:production"
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
   }
 }

@@ -4,9 +4,10 @@ import {
     Header, HeaderName, HeaderGlobalBar,
     HeaderGlobalAction, HeaderNavigation, HeaderMenu,
     HeaderMenuItem, SideNav, SideNavItems,
-    HeaderSideNavItems, SkipToContent, HeaderMenuButton
+    HeaderSideNavItems, SkipToContent, HeaderMenuButton,
 } from 'carbon-components-react/es/components/UIShell';
-import { Search20 } from '@carbon/icons-react';
+import TooltipIcon from 'carbon-components-react/es/components/TooltipIcon';
+import { Email20 } from '@carbon/icons-react';
 
 export default function MyHeader() {
     const [isSideNavExpanded, toggleIsSideNavExpanded] = useReducer(v => !v, false);
@@ -37,11 +38,11 @@ export default function MyHeader() {
                 {nav}
             </HeaderNavigation>
             <HeaderGlobalBar>
-                {/*
-                <HeaderGlobalAction aria-label="Search" onClick={console.log('search click')}>
-                    <Search20 />
+                <HeaderGlobalAction aria-label="mark_keller[at]hms.harvard.edu" data-email="true" onClick={() => {
+                    const el = document.querySelector('.bx--header__action[data-email="true"]').focus();
+                }} tooltipAlignment="end">
+                    <Email20 />
                 </HeaderGlobalAction>
-                */}
             </HeaderGlobalBar>
             <SideNav
             aria-label="Side navigation"

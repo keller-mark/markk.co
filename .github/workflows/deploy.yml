@@ -14,7 +14,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 14
-      - name: yarn install and build
+      - name: npm install and build
         run: |
           npm ci
           npm run build
@@ -23,4 +23,4 @@ jobs:
         uses: alex-page/blazing-fast-gh-pages-deploy@v1.1.0
         with:
           repo-token: ${{ secrets.GH_PAT }}
-          site-directory: build
+          site-directory: dist
