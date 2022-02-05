@@ -17,7 +17,7 @@
     "vite": "^2.0.5"
   },
   "scripts": {
-    "dev": "vite",
+    "start": "vite",
     "build": "vite build",
     "serve": "vite preview"
   }

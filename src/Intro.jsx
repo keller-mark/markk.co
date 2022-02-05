@@ -9,6 +9,7 @@ import {
     default as Accordion,
     AccordionItem, 
 } from 'carbon-components-react/es/components/Accordion';
+import imgUrl from './img/mark.png'
 
 
 const featuredProjects = [
@@ -17,9 +18,9 @@ const featuredProjects = [
         slug: "vitessce",
         img: "vitessce.png",
         description: (<p>
-            During 2020, I worked with the <a href="http://gehlenborglab.org">Gehlenborg Lab</a>&nbsp;
+            Since 2019, I have worked with the Gehlenborg Lab
             on <a href="http://vitessce.io/">Vitessce</a>, an interactive visualization tool for spatial single-cell multi-omics experiments.
-            Vitessce can be used as a <a href="https://github.com/vitessce/vitessce">React component</a>, <a href="https://github.com/vitessce/vitessce-python">Jupyter widget</a>, or <a href="https://github.com/vitessce/vitessce-r">R htmlwidget</a>, and the React component has been integrated into the <a href="https://portal.hubmapconsortium.org/">HuBMAP data portal</a>.
+            Vitessce can be used as a <a href="https://github.com/vitessce/vitessce">React component</a>, <a href="https://github.com/vitessce/vitessce-python">Jupyter widget</a>, or <a href="https://github.com/vitessce/vitessceR">R htmlwidget</a>, and the React component has been integrated into the <a href="https://portal.hubmapconsortium.org/">HuBMAP data portal</a>.
 
             This work was presented as a poster at BioVis@ISMB 2019 and BioVis@ISMB 2020.
         </p>),
@@ -71,10 +72,13 @@ export default function Intro() {
     return (
         <Grid>
             <Row>
-                <Column sm={4} className="mk--pt-1">
+                <Column sm={4} md={1} className="intro-img-col">
+                    <div style={{ backgroundImage: `url(${imgUrl})` }} />
+                </Column>
+                <Column sm={4} md={7} className="mk--pt-1">
                 <p>
-                    I am currently a student in the Bioinformatics and Integrative Genomics PhD program at Harvard Medical School.
-                    I recently graduated from the University of Maryland, College Park where I studied Computer Science.
+                    I am a second-year PhD student in the Bioinformatics and Integrative Genomics (<a href="https://bigphd.hms.harvard.edu/" target="_blank">BIG</a>) program at Harvard Medical School, advised by Professor <a href="http://gehlenborglab.org/">Nils Gehlenborg</a>.
+                    I graduated from the University of Maryland, College Park in 2019, where I studied Computer Science.
                     My research interests include data visualization and computational biology.
                 </p>
                 </Column>

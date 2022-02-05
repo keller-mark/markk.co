@@ -14,9 +14,9 @@ export default function MyHeader() {
 
     const nav = (
         <>
-            <HeaderMenuItem href="#/blog">Blog</HeaderMenuItem>
-            <HeaderMenuItem href="#/photos">Photos</HeaderMenuItem>
             <HeaderMenu aria-label="Elsewhere" menuLinkName="Elsewhere">
+                <HeaderMenuItem href="https://www.linkedin.com/in/keller-mark/">LinkedIn</HeaderMenuItem>
+                <HeaderMenuItem href="https://scholar.google.com/citations?user=hnKZ5mwAAAAJ">Google Scholar</HeaderMenuItem>
                 <HeaderMenuItem href="https://github.com/keller-mark">GitHub</HeaderMenuItem>
                 <HeaderMenuItem href="https://beta.observablehq.com/@keller-mark">Observable</HeaderMenuItem>
                 <HeaderMenuItem href="https://soundcloud.com/keller-mark-7">SoundCloud</HeaderMenuItem>
