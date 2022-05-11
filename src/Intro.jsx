@@ -124,7 +124,6 @@ export default function Intro() {
               <Row key={item.slug}>
                 <Column sm={1}>{item.date}</Column>
                 <Column sm={3}>{item.description}</Column>
-                <hr/>
               </Row>
             ))}
           </div>
