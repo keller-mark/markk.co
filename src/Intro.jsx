@@ -19,6 +19,20 @@ const news = [
       Presented <a href="http://vitessce.io/">Vitessce</a> at Keystone Symposium on <a href="https://www.keystonesymposia.org/conferences/conference-listing/meeting?eventid=6802">Single Cell Biology</a> in Florence.
     </p>),
   },
+  {
+    date: "January 19, 2022",
+    slug: "big-pqe",
+    description: (<p>
+      Completed preliminary qualifying exam (<a href="https://bigphd.hms.harvard.edu/program/pqe">PQE</a>).
+    </p>),
+  },
+  {
+    date: "October 18, 2021",
+    slug: "vitessce-preprint",
+    description: (<p>
+      Vitessce preprint uploaded to <a href="https://osf.io/y8thv/">OSF Preprints</a>.
+    </p>),
+  },
 ];
 
 const featuredProjects = [
@@ -93,7 +107,7 @@ export default function Intro() {
         </Column>
       </Row>
       <Row>
-        <Column sm={4} lg={6} className="mk--pt-1">
+        <Column sm={4} lg={6} className="mk--pt-1 projects-col">
           <h3>featured projects</h3>
           <Accordion className="mk--pt-1">
             {featuredProjects.map(project => (
@@ -103,7 +117,7 @@ export default function Intro() {
             ))}
           </Accordion>
         </Column>
-        <Column sm={4} lg={6} className="mk--pt-1">
+        <Column sm={4} lg={6} className="mk--pt-1 news-col">
           <h3>news</h3>
           <div>
             {news.map(item => (
