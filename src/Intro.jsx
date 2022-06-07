@@ -33,6 +33,13 @@ const news = [
       Vitessce preprint uploaded to <a href="https://osf.io/y8thv/">OSF Preprints</a>.
     </p>),
   },
+  {
+    date: "September 2, 2020",
+    slug: "start-gradschool",
+    description: (<p>
+      First day of PhD program.
+    </p>),
+  },
 ];
 
 const featuredProjects = [
@@ -93,7 +100,7 @@ const featuredProjects = [
 export default function Intro() {
 
   return (
-    <Grid>
+    <Grid className="main-grid">
       <Row>
         <Column sm={4} md={1} className="intro-img-col">
           <div style={{ backgroundImage: `url(${imgUrl})` }} />

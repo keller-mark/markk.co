@@ -26,7 +26,7 @@ export default function MyHeader() {
     );
 
     return (
-        <Header>
+        <Header className="bg-gradient2">
             <SkipToContent />
             <HeaderMenuButton
                 aria-label="Open menu"

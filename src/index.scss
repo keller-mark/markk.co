@@ -1,8 +1,8 @@
 @import "carbon-components/css/carbon-components.min.css";
 
-$blue: #354C79;
-$forest: #185851;
-$turquoise: #49A997;
+$blue: #609fe4;
+$forest: #04d18e;
+$turquoise: #04d18e;
 $yellow: #EACA3F;
 $orange: #F59E32;
 $red: #EE2E2F;
@@ -22,27 +22,35 @@ a {
 }
 
 .bx--header__nav::before {
-    background-color: lighten($blue, 10) !important;
+    background-color: lighten($blue, 1) !important;
+}
+
+.bx--header__menu-title[aria-expanded="true"] + .bx--header__menu {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.mk--lg-header-nav a.bx--header__menu-item {
+    color: white;
 }
 
 .mk--lg-header-nav a.bx--header__menu-item:hover {
-    background-color: lighten($forest, 10) !important;
+    background-color: lighten($forest, 1) !important;
 }
 
 .mk--lg-header-nav a.bx--header__menu-item:active {
-    background-color: lighten($blue, 3) !important;
+    background-color: lighten($blue, 1) !important;
 }
 
 .mk--lg-header-nav .bx--header__menu-title[aria-expanded=true] {
-    background-color: lighten($blue, 3) !important;
+    background-color: lighten($blue, 1) !important;
 }
 
 .mk--lg-header-nav .bx--header__menu-title[aria-expanded=true] + .bx--header__menu {
-    background-color: lighten($blue, 3) !important;
+    background-color: lighten($blue, 1) !important;
 }
 
 .bx--accordion__item:nth-child(1) .bx--accordion__heading:hover::before {
-    background-color: lighten($blue, 40) !important;
+    background-color: lighten($blue, 3) !important;
 }
 .bx--accordion__item:nth-child(2) .bx--accordion__heading:hover::before {
     background-color: lighten($turquoise, 30) !important;
@@ -84,4 +92,46 @@ a.bx--side-nav__link:focus, .bx--side-nav a.bx--header__menu-item:focus {
 
 .news-col h3 {
     margin-bottom: 10px;
+}
+
+.bg-gradient1 {
+    --gradient-color-stop1: rgb(255, 59, 59);
+    --gradient-color-stop2: rgb(221, 24, 196);
+    --gradient-color-stop3: rgb(84, 126, 255);
+    --gradient-stop1: 0%;
+    --gradient-stop2: 50%;
+    --gradient-stop3: 100%;
+    background: linear-gradient(
+        90deg,
+        var(--gradient-color-stop1) var(--gradient-stop1),
+        var(--gradient-color-stop2) var(--gradient-stop2),
+        var(--gradient-color-stop3) var(--gradient-stop3)
+    );
+}
+
+.bg-gradient2 {
+    --gradient-color-stop1: #dc36fa;
+    --gradient-color-stop2: #a167ef;
+    --gradient-color-stop3: #609fe4;
+    --gradient-color-stop4: #3abfde;
+    --gradient-color-stop5: #04d18e;
+    --gradient-stop1: 0%;
+    --gradient-stop2: 30%;
+    --gradient-stop3: 45%;
+    --gradient-stop4: 70%;
+    --gradient-stop5: 85%;
+    background: linear-gradient(
+        110deg,
+        var(--gradient-color-stop1) var(--gradient-stop1),
+        var(--gradient-color-stop2) var(--gradient-stop2),
+        var(--gradient-color-stop3) var(--gradient-stop3),
+        var(--gradient-color-stop4) var(--gradient-stop4),
+        var(--gradient-color-stop5) var(--gradient-stop5)
+    );
+    
+    border-bottom: 0;
+}
+
+.main-grid {
+    margin-top: 1rem;
 }
