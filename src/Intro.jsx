@@ -16,7 +16,14 @@ const news = [
     date: "April 6, 2022",
     slug: "keystone-scb-2022",
     description: (<p>
-      Presented <a href="http://vitessce.io/">Vitessce</a> at Keystone Symposium on <a href="https://www.keystonesymposia.org/conferences/conference-listing/meeting?eventid=6802">Single Cell Biology</a> in Florence.
+      Presented at Keystone Symposium on <a href="https://www.keystonesymposia.org/conferences/conference-listing/meeting?eventid=6802">Single Cell Biology</a> in Florence.
+    </p>),
+  },
+  {
+    date: "March 31, 2022",
+    slug: "polyphony-preprint",
+    description: (<p>
+      Polyphony preprint uploaded to <a href="https://osf.io/b76nt/">OSF Preprints</a>.
     </p>),
   },
   {
@@ -53,6 +60,14 @@ const featuredProjects = [
       Vitessce can be used as a <a href="https://github.com/vitessce/vitessce">React component</a>, <a href="https://github.com/vitessce/vitessce-python">Jupyter widget</a>, or <a href="https://github.com/vitessce/vitessceR">R htmlwidget</a>, and the React component has been integrated into the <a href="https://portal.hubmapconsortium.org/">HuBMAP data portal</a>.
 
       This work was presented as a poster at BioVis@ISMB 2019 and BioVis@ISMB 2020.
+    </p>),
+  },
+  {
+    title: "Polyphony",
+    slug: "polyphony",
+    img: "polyphony.png",
+    description: (<p>
+      In 2022, I contributed to the development of <a href="https://github.com/scPolyphony">Polyphony</a>, an interactive transfer learning framework for single-cell data analysis.
     </p>),
   },
   {
