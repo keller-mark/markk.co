@@ -83,11 +83,11 @@ a.bx--side-nav__link:focus, .bx--side-nav a.bx--header__menu-item:focus {
 
 .intro-img-col > div {
     width: 100%;
-    height: 200px;
+    max-height: 200px;
+    aspect-ratio: 1 / 1;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
-    border-radius: 20px;
 }
 
 .news-col h3 {
@@ -134,4 +134,22 @@ a.bx--side-nav__link:focus, .bx--side-nav a.bx--header__menu-item:focus {
 
 .main-grid {
     margin-top: 1rem;
+}
+
+.intro-img {
+    border-radius: 20px;
+}
+@supports(mask-image: paint(smooth-corners)) {
+    .intro-img {
+        border-radius: 0;
+        mask-image: paint(smooth-corners);
+        --smooth-corners: 5.5;
+    }
+}
+@supports(-webkit-mask-image: paint(smooth-corners)) {
+    .intro-img {
+        border-radius: 0;
+        -webkit-mask-image: paint(smooth-corners);
+        --smooth-corners: 5.5;
+    }
 }

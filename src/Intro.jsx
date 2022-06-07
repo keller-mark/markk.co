@@ -118,7 +118,7 @@ export default function Intro() {
     <Grid className="main-grid">
       <Row>
         <Column sm={4} md={1} className="intro-img-col">
-          <div style={{ backgroundImage: `url(${imgUrl})` }} />
+          <div className="intro-img" style={{ backgroundImage: `url(${imgUrl})` }} />
         </Column>
         <Column sm={4} md={7} className="mk--pt-1">
           <p>
