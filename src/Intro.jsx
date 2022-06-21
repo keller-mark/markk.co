@@ -13,6 +13,13 @@ import imgUrl from './img/mark.png'
 
 const news = [
   {
+    date: "June 16, 2022",
+    slug: "cistrome-explorer-preprint",
+    description: (<p>
+      Cistrome Explorer preprint uploaded to <a href="https://osf.io/asbz2/">OSF Preprints</a>.
+    </p>),
+  },
+  {
     date: "April 6, 2022",
     slug: "keystone-scb-2022",
     description: (<p>
