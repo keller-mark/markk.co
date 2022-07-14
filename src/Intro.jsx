@@ -13,6 +13,20 @@ import imgUrl from './img/mark.png'
 
 const news = [
   {
+    date: "July 13, 2022",
+    slug: "ismb-polyphony-biovis",
+    description: (<p>
+      Presented Polyphony at the ISMB <a href="https://www.iscb.org/ismb2022-program/abstracts/biovis">BioVis COSI</a>, winning the best long abstract award.
+    </p>),
+  },
+  {
+    date: "July 11, 2022",
+    slug: "ismb-vitessce-tech-track",
+    description: (<p>
+      Presented Vitessce at the ISMB <a href="https://www.iscb.org/ismb2022-program/tech-track">Technology Track</a>.
+    </p>),
+  },
+  {
     date: "June 16, 2022",
     slug: "cistrome-explorer-preprint",
     description: (<p>
