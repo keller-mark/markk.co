@@ -143,7 +143,7 @@ export default function Intro() {
         </Column>
         <Column sm={4} md={7} className="mk--pt-1">
           <p>
-            I am a second-year PhD student in the Bioinformatics and Integrative Genomics (<a href="https://bigphd.hms.harvard.edu/" target="_blank">BIG</a>) program at Harvard Medical School, advised by Professor <a href="http://gehlenborglab.org/">Nils Gehlenborg</a>.
+            I am a third-year PhD student in the Bioinformatics and Integrative Genomics (<a href="https://bigphd.hms.harvard.edu/" target="_blank">BIG</a>) program at Harvard Medical School, advised by Professor <a href="http://gehlenborglab.org/">Nils Gehlenborg</a>.
             I graduated from the University of Maryland, College Park in 2019, where I studied Computer Science.
             My research interests include data visualization and computational biology.
           </p>
