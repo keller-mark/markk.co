@@ -153,3 +153,10 @@ a.bx--side-nav__link:focus, .bx--side-nav a.bx--header__menu-item:focus {
         --smooth-corners: 5.5;
     }
 }
+
+.blog-item {
+    margin-top: 20px;
+    a {
+        font-size: 18px;
+    }
+}

@@ -1,6 +1,7 @@
 import React, { useLayoutEffect } from 'react';
 import Header from './Header';
 import Intro from './Intro';
+import Blog from './Blog';
 import {
     HashRouter as Router,
     Switch,
@@ -65,7 +66,7 @@ export default function App() {
             <Header/>
             <Switch>
                 <Route path="/blog">
-                    <p>Coming soon.</p>
+                    <Blog/>
                 </Route>
                 <Route path="/photos">
                     <p>Coming soon. For now some photos can be viewed on <a href="https://www.flickr.com/photos/83712651@N04/">Flickr</a>.</p>

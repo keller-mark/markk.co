@@ -14,6 +14,9 @@ export default function MyHeader() {
 
     const nav = (
         <>
+            <HeaderMenuItem href="#/blog">
+                blog
+            </HeaderMenuItem>
             <HeaderMenu aria-label="Elsewhere" menuLinkName="elsewhere">
                 <HeaderMenuItem href="https://www.linkedin.com/in/keller-mark/">LinkedIn</HeaderMenuItem>
                 <HeaderMenuItem href="https://scholar.google.com/citations?user=hnKZ5mwAAAAJ">Google Scholar</HeaderMenuItem>
