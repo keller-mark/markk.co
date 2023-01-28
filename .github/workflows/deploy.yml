@@ -5,11 +5,16 @@ on:
     branches:
     - main
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Setup Node 14
         uses: actions/setup-node@v1
         with:
@@ -19,8 +24,19 @@ jobs:
           npm ci
           npm run build
           echo "markk.co" > dist/CNAME
-      - name: Deploy site to gh-pages branch
-        uses: alex-page/blazing-fast-gh-pages-deploy@v1.1.0
+      - uses: actions/upload-pages-artifact@v1
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
         with:
-          repo-token: ${{ secrets.GH_PAT }}
-          site-directory: dist
+          path: ./dist
+  
+  deploy:
+    runs-on: ubuntu-22.04
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+        id: deployment
+        uses: actions/deploy-pages@v1
