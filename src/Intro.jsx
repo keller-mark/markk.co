@@ -13,6 +13,55 @@ import imgUrl from './img/mark.png'
 
 const news = [
   {
+    date: "March 28, 2023",
+    slug: "beat-pd-published",
+    description: (<p>
+      BEAT-PD manuscript published.
+    </p>),
+  },
+  {
+    date: "March 20, 2023",
+    slug: "dac-initial",
+    description: (<p>
+      Initial dissertation advisory committee meeting.
+    </p>),
+  },
+  {
+    date: "February 28, 2023",
+    slug: "vitessce-kpmp-segmentations",
+    description: (<p>
+      Presented at the 2023 Kidney Precision Medicine Project spring meeting in Washington, DC.
+    </p>),
+  },
+  {
+    date: "February 25, 2023",
+    slug: "ome-zarr-usage-preprint",
+    description: (<p>
+      Contributed to <a href="https://doi.org/10.1101/2023.02.17.528834">preprint</a> about tools for OME-Zarr.
+    </p>),
+  },
+  {
+    date: "January 23, 2023",
+    slug: "cistrome-explorer-published",
+    description: (<p>
+      Cistrome Explorer published in <a href="https://doi.org/10.1093/bioinformatics/btad018">Bioinformatics</a>.
+    </p>),
+  },
+  {
+    date: "October 19, 2022",
+    slug: "polyphony-ieee-vis",
+    description: (<p>
+      Polyphony was presented at <a href="https://ieeevis.org/year/2022/info/papers-sessions">IEEE VIS 2022</a> in Oklahoma City, OK by Furui Cheng.
+    </p>),
+  },
+  {
+    date: "September 26, 2022",
+    slug: "polyphony-published",
+    description: (<p>
+      Polyphony published in <a href="http://doi.org/10.1109/TVCG.2022.3209408">IEEE TVCG</a>.
+    </p>),
+  },
+  {
     date: "July 13, 2022",
     slug: "ismb-polyphony-biovis",
     description: (<p>
@@ -23,30 +72,37 @@ const news = [
     date: "July 11, 2022",
     slug: "ismb-vitessce-tech-track",
     description: (<p>
-      Presented Vitessce at the ISMB <a href="https://www.iscb.org/ismb2022-program/tech-track">Technology Track</a>.
+      Presented Vitessce at the ISMB <a href="https://www.iscb.org/ismb2022-program/tech-track">Technology Track</a> in Madison, WI.
     </p>),
   },
-  {
+  /*{
     date: "June 16, 2022",
     slug: "cistrome-explorer-preprint",
     description: (<p>
       Cistrome Explorer preprint uploaded to <a href="https://osf.io/asbz2/">OSF Preprints</a>.
+    </p>),
+  },*/
+  {
+    date: "May 11, 2022",
+    slug: "viv-published",
+    description: (<p>
+      Viv published in <a href="https://doi.org/10.1038/s41592-022-01482-7">Nature Methods</a>.
     </p>),
   },
   {
     date: "April 6, 2022",
     slug: "keystone-scb-2022",
     description: (<p>
-      Presented at Keystone Symposium on <a href="https://www.keystonesymposia.org/conferences/conference-listing/meeting?eventid=6802">Single Cell Biology</a> in Florence.
+      Presented Vitessce at Keystone Symposium on <a href="https://www.keystonesymposia.org/conferences/conference-listing/meeting?eventid=6802">Single Cell Biology</a> in Florence, Italy.
     </p>),
   },
-  {
+  /*{
     date: "March 31, 2022",
     slug: "polyphony-preprint",
     description: (<p>
       Polyphony preprint uploaded to <a href="https://osf.io/b76nt/">OSF Preprints</a>.
     </p>),
-  },
+  },*/
   {
     date: "January 19, 2022",
     slug: "big-pqe",
@@ -143,9 +199,9 @@ export default function Intro() {
         </Column>
         <Column sm={4} md={7} className="mk--pt-1">
           <p>
-            I am a third-year PhD student in the Bioinformatics and Integrative Genomics (<a href="https://bigphd.hms.harvard.edu/" target="_blank">BIG</a>) program at Harvard Medical School, advised by Professor <a href="http://gehlenborglab.org/">Nils Gehlenborg</a>.
+            I am a PhD candidate in the Bioinformatics and Integrative Genomics (<a href="https://bigphd.hms.harvard.edu/" target="_blank">BIG</a>) program at Harvard Medical School, advised by Professor <a href="http://gehlenborglab.org/">Nils Gehlenborg</a>.
             I graduated from the University of Maryland, College Park in 2019, where I studied Computer Science.
-            My research interests include data visualization and computational biology.
+            My research lies in the intersection of data visualization, bioinformatics, and human-computer interaction.
           </p>
         </Column>
       </Row>

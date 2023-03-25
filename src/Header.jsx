@@ -22,7 +22,7 @@ export default function MyHeader() {
                 <HeaderMenuItem href="https://scholar.google.com/citations?user=hnKZ5mwAAAAJ">Google Scholar</HeaderMenuItem>
                 <HeaderMenuItem href="https://github.com/keller-mark">GitHub</HeaderMenuItem>
                 <HeaderMenuItem href="https://beta.observablehq.com/@keller-mark">Observable</HeaderMenuItem>
-                <HeaderMenuItem href="https://vis.social/@mkeller7" rel="me">Mastodon</HeaderMenuItem>
+                <HeaderMenuItem href="https://vis.social/@mkeller7">Mastodon</HeaderMenuItem>
                 <HeaderMenuItem href="https://soundcloud.com/keller-mark-7">SoundCloud</HeaderMenuItem>
             </HeaderMenu>
         </>
