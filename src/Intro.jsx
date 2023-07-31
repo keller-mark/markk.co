@@ -13,10 +13,31 @@ import imgUrl from './img/mark.png'
 
 const news = [
   {
+    date: "July 10, 2023",
+    slug: "ome-zarr-published",
+    description: (<p>
+      OME-Zarr ecosystem manuscript published in <a href="https://doi.org/10.1007/s00418-023-02209-1">Histochemistry and Cell Biology</a>.
+    </p>),
+  },
+  {
+    date: "June 13, 2023",
+    slug: "nsf-workshop",
+    description: (<p>
+      Attended NSF workshop on <a href="https://www.mines.edu/id4/vis-workshop/">Interactive Visualization and Analysis of High-Dimensional Scientific Data</a>.
+    </p>),
+  },
+  {
+    date: "June 10, 2023",
+    slug: "chromatin-landscape-preprint",
+    description: (<p>
+      Contributed to <a href="https://doi.org/10.1101/2023.06.07.543965 ">preprint</a> about the kidney chromatin landscape by developing a visualization tool to <a href="https://kpmp.github.io/gisch-et-al-2023/">explore the data</a>.
+    </p>),
+  },
+  {
     date: "March 28, 2023",
     slug: "beat-pd-published",
     description: (<p>
-      BEAT-PD manuscript published.
+      BEAT-PD manuscript published in <a href="https://doi.org/10.1371/journal.pdig.0000208">PLOS Digital Health</a>.
     </p>),
   },
   {
@@ -37,7 +58,7 @@ const news = [
     date: "February 25, 2023",
     slug: "ome-zarr-usage-preprint",
     description: (<p>
-      Contributed to <a href="https://doi.org/10.1101/2023.02.17.528834">preprint</a> about tools for OME-Zarr.
+      Contributed to <a href="https://doi.org/10.1101/2023.02.17.528834">preprint</a> about OME-Zarr ecosystem.
     </p>),
   },
   {
@@ -221,7 +242,7 @@ export default function Intro() {
           <div>
             {news.map(item => (
               <Row key={item.slug}>
-                <Column sm={1}>{item.date}</Column>
+                <Column sm={1} className="date-col">{item.date}</Column>
                 <Column sm={3}>{item.description}</Column>
               </Row>
             ))}
