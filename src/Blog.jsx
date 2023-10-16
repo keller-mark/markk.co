@@ -13,6 +13,11 @@ import imgUrl from './img/mark.png'
 
 const posts = [
   {
+    date: "September 5, 2023",
+    url: "http://vitessce.io/blog/spatial-beta/",
+    title: "Vitessce: Next-generation spatial views",
+  },
+  {
     date: "October 13, 2022",
     url: "http://vitessce.io/blog/internal-refactoring/",
     title: "Vitessce: Internal code refactoring",

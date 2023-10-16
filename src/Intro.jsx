@@ -13,10 +13,53 @@ import imgUrl from './img/mark.png'
 
 const news = [
   {
+    date: "October 4, 2023",
+    slug: "kpmp-f2f-fall-2023",
+    description: (<p>
+      Attended the 2023 Kidney Precision Medicine Project fall <a href="https://www.kpmp.org/meetings">meeting</a> in Bethesda, MD.
+    </p>),
+  },
+  {
+    date: "September 21, 2023",
+    slug: "alpenglow-fall-2023",
+    description: (<p>
+      Attended the <a href="https://www.alpenglowbiosciences.com/events/p/3d-spatial-summit">Spatial Biology Summit</a> hosted by Alpenglow Biosciences in Cambridge, MA.
+    </p>),
+  },
+  {
+    date: "September 14, 2023",
+    slug: "dbmi-science-day-fall-2023",
+    description: (<p>
+      Presented a poster at the HMS Department of Biomedical Informatics <a href="https://www.eventbrite.com/e/dbmi-science-day-2023-tickets-686569075587">Science Day</a>.
+    </p>),
+  },
+  {
+    date: "September 6, 2023",
+    slug: "trainee-talk-fall-2023",
+    description: (<p>
+      Presented research-in-progress at the HMS Department of Biomedical Informatics trainee talk series.
+    </p>),
+  },
+  {
+    date: "August 28, 2023",
+    slug: "sennet-fall-2023",
+    description: (<p>
+      Attended the SenNet Consortium Meeting on <a href="https://sennetconsortium.org/fall-2023-2/">Single Cell Spatial Transcriptomics/Proteomics</a> in Washington, DC.
+    </p>),
+  },
+  // TODO
+  {
     date: "July 10, 2023",
     slug: "ome-zarr-published",
     description: (<p>
       OME-Zarr ecosystem manuscript published in <a href="https://doi.org/10.1007/s00418-023-02209-1">Histochemistry and Cell Biology</a>.
+    </p>),
+  },
+  {
+    date: "June 16, 2023",
+    slug: "vim-meeting-2023",
+    description: (<p>
+      Presented at the Inter-Lab Meeting on <a href="https://vis-image-management.github.io/vim-web/">Visualization and Image Data Management</a>.
     </p>),
   },
   {
@@ -44,14 +87,14 @@ const news = [
     date: "March 20, 2023",
     slug: "dac-initial",
     description: (<p>
-      Initial dissertation advisory committee meeting.
+      Initial <a href="https://bmiphd.hms.harvard.edu/big-track/BIG-dac">dissertation advisory committee</a> meeting.
     </p>),
   },
   {
     date: "February 28, 2023",
     slug: "vitessce-kpmp-segmentations",
     description: (<p>
-      Presented at the 2023 Kidney Precision Medicine Project spring meeting in Washington, DC.
+      Presented at the 2023 Kidney Precision Medicine Project spring <a href="https://www.kpmp.org/meetings">meeting</a> in Washington, DC.
     </p>),
   },
   {
@@ -128,7 +171,7 @@ const news = [
     date: "January 19, 2022",
     slug: "big-pqe",
     description: (<p>
-      Completed preliminary qualifying exam (<a href="https://bigphd.hms.harvard.edu/program/pqe">PQE</a>).
+      Completed preliminary qualifying exam (<a href="https://bmiphd.hms.harvard.edu/big-track/BIG-pqe">PQE</a>).
     </p>),
   },
   {
