@@ -20,10 +20,12 @@ const DEFAULT_GL_OPTIONS = { webgl2: true };
 function Zoomable(props) {
     const {
         imgUrl,
+        imgWidth,
+        imgHeight,
     } = props;
 
     const [viewState, setViewState] = useState({
-        target: [4896/2, 3264/2],
+        target: [imgWidth/2, imgHeight/2],
         zoom: -1,
         minZoom: -40,
         maxZoom: 40
@@ -33,13 +35,8 @@ function Zoomable(props) {
     const layers = [
         new BitmapLayer({
             id: 'BitmapLayer',
-            //_imageCoordinateSystem: COORDINATE_SYSTEM.CARTESIAN,
-  
-            /* props from BitmapLayer class */
-            
-            bounds: [0, 0, 4896, 3264],
-            // desaturate: 0,
-            image: 'https://pub-890deb189e5f4258b3201b990118f16b.r2.dev/20220408_florence/20220408-DSCF6185.png',
+            bounds: [0, 0, imgWidth, imgHeight],
+            image: imgUrl,
         }),
     ];
 
@@ -50,7 +47,7 @@ function Zoomable(props) {
     ];
 
     return (
-        <div style={{ width: '500px', height: '500px', border: '1px solid gray', display: 'inline-block'}}>
+        <div style={{ width: '100%', height: '80vh', backgroundColor: 'rgb(146, 146, 146)', display: 'inline-block', position: 'relative'}}>
             <DeckGL
                 glOptions={DEFAULT_GL_OPTIONS}
                 onWebGLInitialized={setGl}
@@ -66,10 +63,22 @@ function Zoomable(props) {
 }
 
 function MasonryCard({ index, data: { id, name, src, handleClick }, width }) {
+    const imgUrl = `https://pub-890deb189e5f4258b3201b990118f16b.r2.dev/${src}`;
+    const [imgHeight, setImgHeight] = useState(null);
+    const [imgWidth, setImgWidth] = useState(null);
+
+    function handleLoad({ nativeEvent: { target } }) {
+        setImgHeight(target.naturalHeight);
+        setImgWidth(target.naturalWidth);
+    }
+
     return (
-    <div onClick={handleClick}>
-      {/*<img src={`https://pub-890deb189e5f4258b3201b990118f16b.r2.dev/${src}`} width={width} />*/}
-    </div>
+        <img
+            src={imgUrl}
+            width={width}
+            onLoad={handleLoad}
+            onClick={() => handleClick(imgUrl, imgWidth, imgHeight)}
+        />
   );
 }
 
@@ -79,14 +88,20 @@ function MasonryCard({ index, data: { id, name, src, handleClick }, width }) {
 export default function Gallery() {
     const [showZoomable, setShowZoomable] = useState(false);
 
-    const handleClick = () => {
-        setShowZoomable(true);
+    function handleClick(imgUrl, imgWidth, imgHeight) {
+        setShowZoomable({ imgUrl, imgWidth, imgHeight });
     }
 
     return (
         <Grid className="main-grid">
             <h3>Gallery</h3>
-            <Zoomable />
+            {showZoomable ? (
+                <Zoomable
+                    imgUrl={showZoomable.imgUrl}
+                    imgWidth={showZoomable.imgWidth}
+                    imgHeight={showZoomable.imgHeight}
+                />
+            ) : null}
             <Masonry
                 items={photoList.map(v => ({ id: v, name: v, src: v, handleClick }))}
                 render={MasonryCard}
