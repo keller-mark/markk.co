@@ -27,31 +27,57 @@ function Zoomable(props) {
     const [viewState, setViewState] = useState({
         target: [imgWidth/2, imgHeight/2],
         zoom: -1,
-        minZoom: -40,
-        maxZoom: 40
+        minZoom: -3,
+        maxZoom: 3
     });
     const [gl, setGl] = useState(null);
+    const [isLoading, setIsLoading] = useState(null);
+
+    const bitmapLayer = new BitmapLayer({
+        id: imgUrl,
+        bounds: [0, 0, imgWidth, imgHeight],
+        image: imgUrl,
+        loadOptions: {
+            fetch: async (p1, p2) => {
+                const r = await fetch(p1, p2);
+                setIsLoading(p1);
+                return r;
+            },
+        },
+        visible: true,
+        updateTriggers: {
+            image: [imgUrl],
+            bounds: [imgUrl]
+        }
+    });
 
     const layers = [
-        new BitmapLayer({
-            id: 'BitmapLayer',
-            bounds: [0, 0, imgWidth, imgHeight],
-            image: imgUrl,
-        }),
+        bitmapLayer,
     ];
 
     const views = [
         new OrthographicView({
-            id: 'ortho', flipY: false,
+            id: 'ortho',
+            flipY: false,
         })
     ];
 
     return (
         <div style={{ width: '100%', height: '80vh', backgroundColor: 'rgb(146, 146, 146)', display: 'inline-block', position: 'relative'}}>
+            {isLoading === imgUrl ? null : (
+                <div style={{ position: 'absolute', top: 0, left: 0 }}>
+                    <h3>Loading...</h3>
+                </div>
+            )}
             <DeckGL
                 glOptions={DEFAULT_GL_OPTIONS}
                 onWebGLInitialized={setGl}
-                onViewStateChange={({ viewState: nextViewState }) => setViewState({ target: nextViewState.target, zoom: nextViewState.zoom })}
+                onViewStateChange={({ viewState: nextViewState }) => setViewState({
+                    target: nextViewState.target,
+                    zoom: nextViewState.zoom,
+                    minZoom: nextViewState.minZoom,
+                    maxZoom: nextViewState.maxZoom,
+                })}
                 useDevicePixels={true}
                 viewState={viewState}
                 controller={true}
@@ -87,14 +113,21 @@ function MasonryCard({ index, data: { id, name, src, handleClick }, width }) {
 
 export default function Gallery() {
     const [showZoomable, setShowZoomable] = useState(false);
+    const [thumbnailSize, setThumbnailSize] = useState(300);
 
     function handleClick(imgUrl, imgWidth, imgHeight) {
         setShowZoomable({ imgUrl, imgWidth, imgHeight });
     }
 
+    function handleSliderChange(event) {
+        setThumbnailSize(parseInt(event.target.value));
+    }
+
     return (
-        <Grid className="main-grid">
+        <div>
             <h3>Gallery</h3>
+            <input type="range" min={100} max={500} step={1} value={thumbnailSize} onChange={handleSliderChange} />
+            <p>Old photos can be viewed on <a href="https://www.flickr.com/photos/83712651@N04/">Flickr</a>.</p>
             {showZoomable ? (
                 <Zoomable
                     imgUrl={showZoomable.imgUrl}
@@ -105,13 +138,13 @@ export default function Gallery() {
             <Masonry
                 items={photoList.map(v => ({ id: v, name: v, src: v, handleClick }))}
                 render={MasonryCard}
-                // Adds 8px of space between the grid cells
-                columnGutter={8}
+                // Adds 5px of space between the grid cells
+                columnGutter={5}
                 // Sets the minimum column width to 172px
-                columnWidth={400}
+                columnWidth={thumbnailSize}
                 // Pre-renders 5 windows worth of content
                 overscanBy={2}
             />
-        </Grid>
+        </div>
     );
 }
