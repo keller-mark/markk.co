@@ -4,11 +4,15 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
+    "@deck.gl/layers": "^8.9.32",
+    "@deck.gl/react": "^8.9.32",
     "carbon-components": "^10.30.0",
     "carbon-components-react": "^7.30.0",
     "carbon-icons": "^7.0.7",
+    "deck.gl": "^8.9.32",
+    "masonic": "^3.7.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
     "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
