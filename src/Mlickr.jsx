@@ -95,13 +95,13 @@ function ImageView(props) {
 
     return (
         <div className="image-view-inner">
-            <button>Previous</button>
+            {/*<button>Previous</button>*/}
             <Zoomable
                 imgUrl={imgUrl}
                 imgWidth={imgWidth}
                 imgHeight={imgHeight}
             />
-            <button>Next</button>
+            {/*<button>Next</button>*/}
         </div>
     );
 }
@@ -178,6 +178,25 @@ function AlbumView(props) {
     );
 }
 
+function AlbumListMasonryCard({ index, data: { id, albumName, albumList, setAlbum, baseUrl }, width }) {
+    return (
+        <div key={albumName} className="album-card-container">
+            <div key={albumName} className="album-card" onClick={() => setAlbum(albumName)}>
+                <img
+                    width="300px"
+                    src={`${baseUrl}/${albumList[0]}`}
+                />
+                <div className="album-card-overlay">
+                    <div className="album-card-text">
+                        <p className="album-title">{niceAlbumName(albumName)}</p>
+                        <p className="album-subtitle">{albumList.length} photos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
+
 function AlbumList(props) {
     const {
         albums,
@@ -187,22 +206,16 @@ function AlbumList(props) {
     
     return (
         <div className="album-grid">
-            {Object.entries(albums).map(([albumName, albumList]) => (
-                <div key={albumName} className="album-card-container">
-                    <div key={albumName} className="album-card" onClick={() => setAlbum(albumName)}>
-                        <img
-                            width="300px"
-                            src={`${baseUrl}/${albumList[0]}`}
-                        />
-                        <div className="album-card-overlay">
-                            <div className="album-card-text">
-                                <p className="album-title">{niceAlbumName(albumName)}</p>
-                                <p className="album-subtitle">{albumList.length} photos</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            ))}
+            <Masonry
+                items={Object.entries(albums).map(([albumName, albumList]) => ({ id: albumName, albumName, albumList, setAlbum, baseUrl }))}
+                render={AlbumListMasonryCard}
+                // Adds 5px of space between the grid cells
+                columnGutter={5}
+                // Sets the minimum column width to 172px
+                columnWidth={300}
+                // Pre-renders 5 windows worth of content
+                overscanBy={2}
+            />
         </div>
     )
 }
