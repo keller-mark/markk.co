@@ -13,6 +13,13 @@ import imgUrl from './img/mark.png'
 
 const news = [
   {
+    date: "October 26, 2023",
+    slug: "ieee-vis-fall-2023",
+    description: (<p>
+      Presented at the 2023 <a href="https://ieeevis.org">IEEE VIS</a> conference during the Application Spotlight titled <a href="https://ieeevis.org/year/2023/info/spotlights#spot1">Visualization for spatial single-cell atlases</a> in Melbourne, Australia.
+    </p>),
+  },
+  {
     date: "October 4, 2023",
     slug: "kpmp-f2f-fall-2023",
     description: (<p>
