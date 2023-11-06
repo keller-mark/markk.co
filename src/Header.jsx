@@ -17,6 +17,9 @@ export default function MyHeader() {
             <HeaderMenuItem href="#/blog">
                 blog
             </HeaderMenuItem>
+            <HeaderMenuItem href="#/photos">
+                photos
+            </HeaderMenuItem>
             <HeaderMenu aria-label="Elsewhere" menuLinkName="elsewhere">
                 <HeaderMenuItem href="https://www.linkedin.com/in/keller-mark/">LinkedIn</HeaderMenuItem>
                 <HeaderMenuItem href="https://scholar.google.com/citations?user=hnKZ5mwAAAAJ">Google Scholar</HeaderMenuItem>
