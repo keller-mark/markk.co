@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { DeckGL } from '@deck.gl/react';
 import { BitmapLayer } from '@deck.gl/layers';
 import { OrthographicView } from '@deck.gl/core';
@@ -14,8 +14,8 @@ function Zoomable(props) {
     } = props;
 
     const [viewState, setViewState] = useState({
-        target: [imgWidth/2, imgHeight/2],
-        zoom: -1,
+        target: [0, 0],
+        zoom: -2,
         minZoom: -3,
         maxZoom: 3
     });
@@ -24,7 +24,7 @@ function Zoomable(props) {
 
     const bitmapLayer = new BitmapLayer({
         id: imgUrl,
-        bounds: [0, 0, imgWidth, imgHeight],
+        bounds: [-imgWidth/2, -imgHeight/2, imgWidth/2, imgHeight/2],
         image: imgUrl,
         loadOptions: {
             fetch: async (p1, p2) => {
@@ -52,7 +52,7 @@ function Zoomable(props) {
     ];
 
     return (
-        <div style={{ width: '100%', height: '80vh', backgroundColor: 'rgb(146, 146, 146)', display: 'inline-block', position: 'relative'}}>
+        <div style={{ width: '100%', height: '80vh', backgroundColor: 'rgb(33, 33, 36)', display: 'inline-block', position: 'relative'}}>
             {isLoading === imgUrl ? null : (
                 <div style={{ position: 'absolute', top: 0, left: 0 }}>
                     <h3>Loading...</h3>
@@ -77,8 +77,8 @@ function Zoomable(props) {
     )
 }
 
-function MasonryCard({ index, data: { id, name, src, handleClick }, width }) {
-    const imgUrl = `https://pub-890deb189e5f4258b3201b990118f16b.r2.dev/${src}`;
+function MasonryCard({ index, data: { id, name, src, handleClick, baseUrl }, width }) {
+    const imgUrl = `${baseUrl}/${src}`;
     const [imgHeight, setImgHeight] = useState(null);
     const [imgWidth, setImgWidth] = useState(null);
 
@@ -97,13 +97,13 @@ function MasonryCard({ index, data: { id, name, src, handleClick }, width }) {
   );
 }
 
-
-
-
-export default function Mlickr(props) {
+function AlbumView(props) {
     const {
         photoList,
+        setAlbum,
+        baseUrl,
     } = props;
+
     const [showZoomable, setShowZoomable] = useState(false);
     const [thumbnailSize, setThumbnailSize] = useState(300);
 
@@ -117,6 +117,7 @@ export default function Mlickr(props) {
 
     return (
         <div>
+            <button onClick={() => setAlbum(null)}>Back to albums list</button>
             <input type="range" min={100} max={500} step={1} value={thumbnailSize} onChange={handleSliderChange} />
             {showZoomable ? (
                 <Zoomable
@@ -126,7 +127,7 @@ export default function Mlickr(props) {
                 />
             ) : null}
             <Masonry
-                items={photoList.map(v => ({ id: v, name: v, src: v, handleClick }))}
+                items={photoList.map(v => ({ id: v, name: v, src: v, handleClick, baseUrl }))}
                 render={MasonryCard}
                 // Adds 5px of space between the grid cells
                 columnGutter={5}
@@ -137,4 +138,77 @@ export default function Mlickr(props) {
             />
         </div>
     );
+}
+
+
+function niceAlbumName(albumName) {
+    const [date, place] = albumName.split('_');
+
+    const year = date.substring(0, 4);
+    const month = date.substring(4, 6);
+
+    return place.charAt(0).toUpperCase() + place.slice(1) + ' (' + month + '-' + year + ')';
+}
+
+function AlbumList(props) {
+    const {
+        albums,
+        baseUrl,
+        setAlbum,
+    } = props;
+    
+    return (
+        <div className="album-grid">
+            {Object.entries(albums).map(([albumName, albumList]) => (
+                <div key={albumName} className="album-card-container">
+                    <div key={albumName} className="album-card" onClick={() => setAlbum(albumName)}>
+                        <img
+                            width="300px"
+                            src={`${baseUrl}/${albumList[0]}`}
+                        />
+                        <div className="album-card-overlay">
+                            <div className="album-card-text">
+                                <p className="album-title">{niceAlbumName(albumName)}</p>
+                                <p className="album-subtitle">{albumList.length} photos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            ))}
+        </div>
+    )
+}
+
+
+export default function Mlickr(props) {
+    const {
+        baseUrl,
+        photoList,
+    } = props;
+
+    const [currAlbum, setAlbum] = useState(null);
+
+    const albums = useMemo(() => photoList.reduce((a, h) => {
+        const [album] = h.split('/');
+        if (!a[album]) {
+            a[album] = [h];
+        } else {
+            a[album].push(h);
+        }
+        return a;
+    }, {}), [photoList]);
+
+    return (currAlbum ? (
+        <AlbumView
+            photoList={albums[currAlbum]}
+            setAlbum={setAlbum}
+            baseUrl={baseUrl}
+        />
+    ) : (
+        <AlbumList
+            albums={albums}
+            baseUrl={baseUrl}
+            setAlbum={setAlbum}
+        />
+    ));
 }
