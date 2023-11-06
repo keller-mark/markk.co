@@ -6,6 +6,15 @@ import { Masonry } from "masonic";
 
 const DEFAULT_GL_OPTIONS = { webgl2: true };
 
+function niceAlbumName(albumName) {
+    const [date, place] = albumName.split('_');
+
+    const year = date.substring(0, 4);
+    const month = date.substring(4, 6);
+
+    return place.charAt(0).toUpperCase() + place.slice(1) + ' (' + month + '-' + year + ')';
+}
+
 function Zoomable(props) {
     const {
         imgUrl,
@@ -52,7 +61,7 @@ function Zoomable(props) {
     ];
 
     return (
-        <div style={{ width: '100%', height: '80vh', backgroundColor: 'rgb(33, 33, 36)', display: 'inline-block', position: 'relative'}}>
+        <div style={{ width: '100%', height: '100%', backgroundColor: 'rgb(33, 33, 36)', display: 'inline-block', position: 'relative'}}>
             {isLoading === imgUrl ? null : (
                 <div style={{ position: 'absolute', top: 0, left: 0 }}>
                     <h3>Loading...</h3>
@@ -77,6 +86,26 @@ function Zoomable(props) {
     )
 }
 
+function ImageView(props) {
+    const {
+        imgUrl,
+        imgWidth,
+        imgHeight,
+    } = props;
+
+    return (
+        <div className="image-view-inner">
+            <button>Previous</button>
+            <Zoomable
+                imgUrl={imgUrl}
+                imgWidth={imgWidth}
+                imgHeight={imgHeight}
+            />
+            <button>Next</button>
+        </div>
+    );
+}
+
 function MasonryCard({ index, data: { id, name, src, handleClick, baseUrl }, width }) {
     const imgUrl = `${baseUrl}/${src}`;
     const [imgHeight, setImgHeight] = useState(null);
@@ -89,6 +118,7 @@ function MasonryCard({ index, data: { id, name, src, handleClick, baseUrl }, wid
 
     return (
         <img
+            style={{ cursor: 'pointer' }}
             src={imgUrl}
             width={width}
             onLoad={handleLoad}
@@ -99,6 +129,7 @@ function MasonryCard({ index, data: { id, name, src, handleClick, baseUrl }, wid
 
 function AlbumView(props) {
     const {
+        albumId,
         photoList,
         setAlbum,
         baseUrl,
@@ -116,38 +147,35 @@ function AlbumView(props) {
     }
 
     return (
-        <div>
-            <button onClick={() => setAlbum(null)}>Back to albums list</button>
-            <input type="range" min={100} max={500} step={1} value={thumbnailSize} onChange={handleSliderChange} />
+        <div className="album-view">
+            <div className="album-view-toolbar">
+                {!showZoomable ? (<button onClick={() => setAlbum(null)}>Back to albums list</button>) : null}
+                {showZoomable ? (<button onClick={() => setShowZoomable(false)}>Back to album</button>) : null}
+                <h4 style={{ display: 'inline-block'}}>{niceAlbumName(albumId)}</h4>
+                {!showZoomable ? (<input type="range" min={100} max={500} step={1} value={thumbnailSize} onChange={handleSliderChange} />) : null}
+            </div>
             {showZoomable ? (
-                <Zoomable
-                    imgUrl={showZoomable.imgUrl}
-                    imgWidth={showZoomable.imgWidth}
-                    imgHeight={showZoomable.imgHeight}
+                <div className="image-view">
+                    <ImageView
+                        imgUrl={showZoomable.imgUrl}
+                        imgWidth={showZoomable.imgWidth}
+                        imgHeight={showZoomable.imgHeight}
+                    />
+                </div>
+            ) : (
+                <Masonry
+                    items={photoList.map(v => ({ id: v, name: v, src: v, handleClick, baseUrl }))}
+                    render={MasonryCard}
+                    // Adds 5px of space between the grid cells
+                    columnGutter={5}
+                    // Sets the minimum column width to 172px
+                    columnWidth={thumbnailSize}
+                    // Pre-renders 5 windows worth of content
+                    overscanBy={2}
                 />
-            ) : null}
-            <Masonry
-                items={photoList.map(v => ({ id: v, name: v, src: v, handleClick, baseUrl }))}
-                render={MasonryCard}
-                // Adds 5px of space between the grid cells
-                columnGutter={5}
-                // Sets the minimum column width to 172px
-                columnWidth={thumbnailSize}
-                // Pre-renders 5 windows worth of content
-                overscanBy={2}
-            />
+            )}
         </div>
     );
-}
-
-
-function niceAlbumName(albumName) {
-    const [date, place] = albumName.split('_');
-
-    const year = date.substring(0, 4);
-    const month = date.substring(4, 6);
-
-    return place.charAt(0).toUpperCase() + place.slice(1) + ' (' + month + '-' + year + ')';
 }
 
 function AlbumList(props) {
@@ -200,6 +228,7 @@ export default function Mlickr(props) {
 
     return (currAlbum ? (
         <AlbumView
+            albumId={currAlbum}
             photoList={albums[currAlbum]}
             setAlbum={setAlbum}
             baseUrl={baseUrl}
