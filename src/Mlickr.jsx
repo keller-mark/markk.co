@@ -1,8 +1,17 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect, useCallback } from 'react';
 import { DeckGL } from '@deck.gl/react';
 import { BitmapLayer } from '@deck.gl/layers';
 import { OrthographicView } from '@deck.gl/core';
 import { Masonry } from "masonic";
+import { create } from 'zustand'
+
+const useThumbnailStore = create((set) => ({
+    // Mapping from thumbnail path to [width, height]
+    thumbnailToShapeMap: {},
+    setThumbnailShape: (imgPath, width, height) => set((state) => ({
+        thumbnailToShapeMap: { ...state.thumbnailToShapeMap, [imgPath]: [width, height] }
+    })),
+}))
 
 const DEFAULT_GL_OPTIONS = { webgl2: true };
 
@@ -97,26 +106,58 @@ function Zoomable(props) {
 
 function ImageView(props) {
     const {
-        imgUrl,
-        imgWidth,
-        imgHeight,
+        photoList,
+        currIndex,
+        setCurrIndex,
+        baseUrl,
     } = props;
+
+
+
+    const imgPath = photoList[currIndex];
+    const fullUrl = getFullUrl(baseUrl, imgPath);
+
+    const thumbnailToShapeMap = useThumbnailStore((state) => state.thumbnailToShapeMap);
+
+    const [imgWidth, imgHeight] = thumbnailToShapeMap?.[imgPath] || [1, 1];
+
+    const handlePrev = useCallback(() => {
+        setCurrIndex(prev => (prev - 1 < 0 ? photoList.length-1 : prev-1))
+    }, [photoList]);
+
+    const handleNext = useCallback(() => {
+        setCurrIndex(prev => (prev+1 > photoList.length-1 ? 0 : prev+1));
+    }, [photoList]);
+
+    useEffect(() => {
+        function onKeyDown(e) {
+            if(e.key === "ArrowLeft") {
+                handlePrev();
+            }
+            if(e.key === "ArrowRight") {
+                handleNext();
+            }
+        }
+        window.addEventListener("keydown", onKeyDown);
+        return () => {
+            window.removeEventListener("keydown", onKeyDown);
+        }
+    }, [handlePrev, handleNext]);
 
     return (
         <div className="image-view-inner">
-            {/*<button>Previous</button>*/}
+            <button onClick={handlePrev}>Previous</button>
             <Zoomable
-                imgUrl={imgUrl}
+                imgUrl={fullUrl}
                 imgWidth={imgWidth}
                 imgHeight={imgHeight}
             />
-            {/*<button>Next</button>*/}
+            <button onClick={handleNext}>Next</button>
         </div>
     );
 }
 
-function MasonryCard({ index, data: { id, name, src, handleClick, baseUrl }, width }) {
-    const fullUrl = getFullUrl(baseUrl, src);
+function MasonryCard({ index, data: { id, name, src, handleClick, setThumbnailShape, baseUrl }, width }) {
     const thumbUrl = getThumbnailUrl(baseUrl, src);
     const [imgHeight, setImgHeight] = useState(null);
     const [imgWidth, setImgWidth] = useState(null);
@@ -124,6 +165,7 @@ function MasonryCard({ index, data: { id, name, src, handleClick, baseUrl }, wid
     function handleLoad({ nativeEvent: { target } }) {
         setImgHeight(target.naturalHeight);
         setImgWidth(target.naturalWidth);
+        setThumbnailShape(src, target.naturalWidth, target.naturalHeight)
     }
 
     return (
@@ -133,7 +175,7 @@ function MasonryCard({ index, data: { id, name, src, handleClick, baseUrl }, wid
                 width={width}
                 height={(width/imgWidth * imgHeight) || 300}
                 onLoad={handleLoad}
-                onClick={() => handleClick(fullUrl, imgWidth, imgHeight)}
+                onClick={() => handleClick(index)}
             />
   );
 }
@@ -146,37 +188,43 @@ function AlbumView(props) {
         baseUrl,
     } = props;
 
-    const [showZoomable, setShowZoomable] = useState(false);
+    const setThumbnailShape = useThumbnailStore((state) => state.setThumbnailShape);
+
+    const [currIndex, setCurrIndex] = useState(null);
+
     const [thumbnailSize, setThumbnailSize] = useState(300);
 
-    function handleClick(imgUrl, imgWidth, imgHeight) {
-        setShowZoomable({ imgUrl, imgWidth, imgHeight });
+    function handleClick(nextIndex) {
+        setCurrIndex(nextIndex);
     }
 
     function handleSliderChange(event) {
         setThumbnailSize(parseInt(event.target.value));
     }
 
+    const isSingleImage = currIndex !== null;
+
     return (
         <div className="album-view">
             <div className="album-view-toolbar">
-                {!showZoomable ? (<button onClick={() => setAlbum(null)}>Back to albums list</button>) : null}
-                {showZoomable ? (<button onClick={() => setShowZoomable(false)}>Back to album</button>) : null}
+                {!isSingleImage ? (<button onClick={() => setAlbum(null)}>Back to albums list</button>) : null}
+                {isSingleImage ? (<button onClick={() => setCurrIndex(null)}>Back to album</button>) : null}
                 <h4 className="album-view-title">{niceAlbumName(albumId)}</h4>
-                {!showZoomable ? (<input type="range" min={100} max={500} step={1} value={thumbnailSize} onChange={handleSliderChange} />) : null}
+                {!isSingleImage ? (<input type="range" min={100} max={500} step={1} value={thumbnailSize} onChange={handleSliderChange} />) : null}
             </div>
-            {showZoomable ? (
+            {isSingleImage ? (
                 <div className="image-view">
                     <ImageView
-                        imgUrl={showZoomable.imgUrl}
-                        imgWidth={showZoomable.imgWidth}
-                        imgHeight={showZoomable.imgHeight}
+                        photoList={photoList}
+                        currIndex={currIndex}
+                        setCurrIndex={setCurrIndex}
+                        baseUrl={baseUrl}
                     />
                 </div>
             ) : (
                 <div style={{ backgroundColor: 'rgb(33, 33, 36)' }}>
                     <Masonry
-                        items={photoList.map(v => ({ id: v, name: v, src: v, handleClick, baseUrl }))}
+                        items={photoList.map((v) => ({ id: v, name: v, src: v, handleClick, setThumbnailShape, baseUrl }))}
                         render={MasonryCard}
                         // Adds 5px of space between the grid cells
                         columnGutter={5}
