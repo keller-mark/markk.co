@@ -6,6 +6,15 @@ import { Masonry } from "masonic";
 
 const DEFAULT_GL_OPTIONS = { webgl2: true };
 
+function getThumbnailUrl(baseUrl, imgPath) {
+    const [album, img] = imgPath.split('/');
+    return `${baseUrl}/${album}/thumbnails/${img}`;
+}
+
+function getFullUrl(baseUrl, imgPath) {
+    return `${baseUrl}/${imgPath}`;
+}
+
 function niceAlbumName(albumName) {
     const [date, place] = albumName.split('_');
 
@@ -24,9 +33,9 @@ function Zoomable(props) {
 
     const [viewState, setViewState] = useState({
         target: [0, 0],
-        zoom: -2,
-        minZoom: -3,
-        maxZoom: 3
+        zoom: 0.5,
+        minZoom: 0,
+        maxZoom: 5
     });
     const [gl, setGl] = useState(null);
     const [isLoading, setIsLoading] = useState(null);
@@ -64,7 +73,7 @@ function Zoomable(props) {
         <div style={{ width: '100%', height: '100%', backgroundColor: 'rgb(33, 33, 36)', display: 'inline-block', position: 'relative'}}>
             {isLoading === imgUrl ? null : (
                 <div style={{ position: 'absolute', top: 0, left: 0 }}>
-                    <h3>Loading...</h3>
+                    <h3 style={{ color: 'silver' }}>Loading...</h3>
                 </div>
             )}
             <DeckGL
@@ -107,7 +116,8 @@ function ImageView(props) {
 }
 
 function MasonryCard({ index, data: { id, name, src, handleClick, baseUrl }, width }) {
-    const imgUrl = `${baseUrl}/${src}`;
+    const fullUrl = getFullUrl(baseUrl, src);
+    const thumbUrl = getThumbnailUrl(baseUrl, src);
     const [imgHeight, setImgHeight] = useState(null);
     const [imgWidth, setImgWidth] = useState(null);
 
@@ -117,13 +127,14 @@ function MasonryCard({ index, data: { id, name, src, handleClick, baseUrl }, wid
     }
 
     return (
-        <img
-            style={{ cursor: 'pointer' }}
-            src={imgUrl}
-            width={width}
-            onLoad={handleLoad}
-            onClick={() => handleClick(imgUrl, imgWidth, imgHeight)}
-        />
+            <img
+                style={{ cursor: 'pointer' }}
+                src={thumbUrl}
+                width={width}
+                height={(width/imgWidth * imgHeight) || 300}
+                onLoad={handleLoad}
+                onClick={() => handleClick(fullUrl, imgWidth, imgHeight)}
+            />
   );
 }
 
@@ -151,7 +162,7 @@ function AlbumView(props) {
             <div className="album-view-toolbar">
                 {!showZoomable ? (<button onClick={() => setAlbum(null)}>Back to albums list</button>) : null}
                 {showZoomable ? (<button onClick={() => setShowZoomable(false)}>Back to album</button>) : null}
-                <h4 style={{ display: 'inline-block'}}>{niceAlbumName(albumId)}</h4>
+                <h4 className="album-view-title">{niceAlbumName(albumId)}</h4>
                 {!showZoomable ? (<input type="range" min={100} max={500} step={1} value={thumbnailSize} onChange={handleSliderChange} />) : null}
             </div>
             {showZoomable ? (
@@ -163,28 +174,31 @@ function AlbumView(props) {
                     />
                 </div>
             ) : (
-                <Masonry
-                    items={photoList.map(v => ({ id: v, name: v, src: v, handleClick, baseUrl }))}
-                    render={MasonryCard}
-                    // Adds 5px of space between the grid cells
-                    columnGutter={5}
-                    // Sets the minimum column width to 172px
-                    columnWidth={thumbnailSize}
-                    // Pre-renders 5 windows worth of content
-                    overscanBy={2}
-                />
+                <div style={{ backgroundColor: 'rgb(33, 33, 36)' }}>
+                    <Masonry
+                        items={photoList.map(v => ({ id: v, name: v, src: v, handleClick, baseUrl }))}
+                        render={MasonryCard}
+                        // Adds 5px of space between the grid cells
+                        columnGutter={5}
+                        // Sets the minimum column width to 172px
+                        columnWidth={thumbnailSize}
+                        // Pre-renders 5 windows worth of content
+                        itemHeightEstimate={300}
+                    />
+                </div>
             )}
         </div>
     );
 }
 
 function AlbumListMasonryCard({ index, data: { id, albumName, albumList, setAlbum, baseUrl }, width }) {
+    const firstImgUrl = getThumbnailUrl(baseUrl, albumList[0]);
     return (
         <div key={albumName} className="album-card-container">
             <div key={albumName} className="album-card" onClick={() => setAlbum(albumName)}>
                 <img
                     width="300px"
-                    src={`${baseUrl}/${albumList[0]}`}
+                    src={firstImgUrl}
                 />
                 <div className="album-card-overlay">
                     <div className="album-card-text">
@@ -205,19 +219,21 @@ function AlbumList(props) {
     } = props;
     
     return (
-        <div className="album-grid">
-            <Masonry
-                items={Object.entries(albums).map(([albumName, albumList]) => ({ id: albumName, albumName, albumList, setAlbum, baseUrl }))}
-                render={AlbumListMasonryCard}
-                // Adds 5px of space between the grid cells
-                columnGutter={5}
-                // Sets the minimum column width to 172px
-                columnWidth={300}
-                // Pre-renders 5 windows worth of content
-                overscanBy={2}
-            />
+        <div className="album-grid-container">
+            <div className="album-grid">
+                <Masonry
+                    items={Object.entries(albums).map(([albumName, albumList]) => ({ id: albumName, albumName, albumList, setAlbum, baseUrl }))}
+                    render={AlbumListMasonryCard}
+                    // Adds 5px of space between the grid cells
+                    columnGutter={5}
+                    // Sets the minimum column width to 172px
+                    columnWidth={300}
+                    // Pre-renders 5 windows worth of content
+                    overscanBy={2}
+                />
+            </div>
         </div>
-    )
+    );
 }
 
 

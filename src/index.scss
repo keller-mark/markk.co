@@ -169,7 +169,15 @@ a.bx--side-nav__link:focus, .bx--side-nav a.bx--header__menu-item:focus {
     margin-bottom: 20px;
 }
 
-.album-list {
+.album-grid-container {
+    position: relative;
+    padding: 20px;
+}
+
+.album-grid {
+    display: block;
+    position: relative;
+
 }
 
 .album-card {
@@ -218,6 +226,12 @@ a.bx--side-nav__link:focus, .bx--side-nav a.bx--header__menu-item:focus {
     height: 100%;
 }
 
+.album-view-title {
+    display: inline-block;
+    color: white;
+    padding-left: 10px;
+}
+
 .image-view {
     width: 100%;
     flex-grow: 1;
@@ -225,6 +239,15 @@ a.bx--side-nav__link:focus, .bx--side-nav a.bx--header__menu-item:focus {
 
 .album-view-toolbar {
     width: 100%;
+}
+
+.album-view-toolbar button {
+    background: transparent;
+    color: silver;
+    border: 0;
+    outline: 0;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .album-view-toolbar input {
