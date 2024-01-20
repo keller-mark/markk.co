@@ -66,15 +66,14 @@ export default function App() {
         <Router>
             <Header/>
             <Switch>
-                <Route path="/blog">
-                    <Blog/>
-                </Route>
-                <Route path="/photos">
-                    <Gallery/>
-                </Route>
-                <Route path="/">
-                    <Intro/>
-                </Route>
+                <Route path="/blog/:postId" component={Blog} />
+                <Route path="/blog" component={Blog} />
+
+                <Route path="/photos/:albumId/:photoId" component={Gallery} />
+                <Route path="/photos/:albumId" component={Gallery} />
+                <Route path="/photos" component={Gallery} />
+                
+                <Route path="/" component={Intro} />
             </Switch>    
         </Router>
     );

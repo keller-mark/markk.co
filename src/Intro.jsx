@@ -13,6 +13,13 @@ import imgUrl from './img/mark.png'
 
 const news = [
   {
+    date: "December 5, 2023",
+    slug: "ascb-cellbio-fall-2023",
+    description: (<p>
+      Co-led a roundtable discussion at the 2023 <a href="https://www.ascb.org/cellbio2023/organize/roundtables/">ASCB Cell Bio</a> conference titled <em>Data Visualization in the Age of Cell Atlases: How will spatial technologies influence visualization in cell biology?</em> in Boston, MA.
+    </p>),
+  },
+  {
     date: "October 26, 2023",
     slug: "ieee-vis-fall-2023",
     description: (<p>

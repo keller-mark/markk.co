@@ -29,7 +29,13 @@ const posts = [
   },
 ];
 
-export default function Blog() {
+export default function Blog(props) {
+  const {
+    match,
+  } = props;
+
+  // From router
+  const postId = match?.params?.postId;
 
   return (
     <Grid className="main-grid">
