@@ -13,10 +13,45 @@ import imgUrl from './img/mark.png'
 
 const news = [
   {
+    date: "April 2, 2024",
+    slug: "scverse-boston-2024",
+    description: (<p>
+      Co-organized the <a href="https://scverse.org/">Scverse</a> <a href="https://hms-dbmi.github.io/scverse-hackathon-spring-2024/">hackathon</a> in Boston and co-led a project to improve visualization of <a href="https://spatialdata.scverse.org/">SpatialData</a> in Vitessce.
+    </p>),
+  },
+  {
+    date: "April 1, 2024",
+    slug: "mr-hybrid-preprint-2024",
+    description: (<p>
+      Contributed to <a href="https://osf.io/preprints/osf/zka2j">preprint</a> describing our approach to visualize 3D spatial data in a mixed reality environment with linked views on a 2D display.
+    </p>),
+  },
+  {
+    date: "March 20, 2024",
+    slug: "curegn-2024",
+    description: (<p>
+      Presented our work on interactive visualization of kidney micro-compartmental segmentations at both the <a href="https://repository.niddk.nih.gov/studies/curegn_prime/">CureGN</a> Analytic Workshop and <a href="https://repository.niddk.nih.gov/studies/neptune/">NEPTUNE</a> Pathology Committee meetings.
+    </p>),
+  },
+  {
+    date: "March 17, 2024",
+    slug: "ji-atlas-builders-2024",
+    description: (<p>
+      Presented a poster at the NIH-CZI Junior Investigators <a href="https://events.cancer.gov/nci/juniorinvestigatorsatlasbuilders/">Atlas Builders</a> meeting in Bethesda, MD.
+    </p>),
+  },
+  {
     date: "December 5, 2023",
     slug: "ascb-cellbio-fall-2023",
     description: (<p>
       Co-led a roundtable discussion at the 2023 <a href="https://www.ascb.org/cellbio2023/organize/roundtables/">ASCB Cell Bio</a> conference titled <em>Data Visualization in the Age of Cell Atlases: How will spatial technologies influence visualization in cell biology?</em> in Boston, MA.
+    </p>),
+  },
+  {
+    date: "October 30, 2023",
+    slug: "bmi-709-fall-2023",
+    description: (<p>
+      Served as a teaching fellow for <a href="https://dbmi.hms.harvard.edu/education/courses/bmi-709">BMI 709</a> Creating Biomedical Dashboards with R Shiny.
     </p>),
   },
   {
@@ -181,6 +216,13 @@ const news = [
       Polyphony preprint uploaded to <a href="https://osf.io/b76nt/">OSF Preprints</a>.
     </p>),
   },*/
+  {
+    date: "January 24, 2022",
+    slug: "bst-281-spring-2022",
+    description: (<p>
+      Served as a teaching fellow for <a href="https://www.hsph.harvard.edu/pqg/courses/">BST 281</a> Genomic Data Manipulation.
+    </p>),
+  },
   {
     date: "January 19, 2022",
     slug: "big-pqe",
