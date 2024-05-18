@@ -13,6 +13,13 @@ import imgUrl from './img/mark.png'
 
 const news = [
   {
+    date: "April 27, 2024",
+    slug: "use-coordination-preprint",
+    description: (<p>
+      Use-Coordination preprint uploaded to <a href="https://osf.io/vhs7m">OSF Preprints</a>.
+    </p>),
+  },
+  {
     date: "April 2, 2024",
     slug: "scverse-boston-2024",
     description: (<p>
