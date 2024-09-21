@@ -13,6 +13,55 @@ import imgUrl from './img/mark.png'
 
 const news = [
   {
+    date: "September 16, 2024",
+    slug: "kpmp-f2f-fall-2024",
+    description: (<p>
+      Presented at the 2024 Kidney Precision Medicine Project fall <a href="https://www.kpmp.org/meetings-events">meeting</a> in Bethesda, MD.
+    </p>),
+  },
+  {
+    date: "September 12, 2024",
+    slug: "dbmi-science-day-2024",
+    description: (<p>
+      Presented a poster at the 2024 HMS Department of Biomedical Informatics Science Day.
+    </p>),
+  },
+  {
+    date: "August 28, 2024",
+    slug: "amgen-biotech-day-2024",
+    description: (<p>
+      Attended the 2024 Amgen Biotech Day in Cambridge, MA.
+    </p>),
+  },
+  {
+    date: "August 16, 2024",
+    slug: "vitessce-paper-acceptance",
+    description: (<p>
+      Vitessce paper accepted.
+    </p>),
+  },
+  {
+    date: "July 9, 2024",
+    slug: "sibmi-2024-workshop",
+    description: (<p>
+      Presented at a workshop for trainees during the 2024 <a href="https://dbmi.hms.harvard.edu/education/sibmi">Summer Institute in Biomedical Informatics</a>.
+    </p>),
+  },
+  {
+    date: "June 15, 2024",
+    slug: "use-coordination-acceptance",
+    description: (<p>
+      Use-Coordination short paper accepted.
+    </p>),
+  },
+  {
+    date: "May 1, 2024",
+    slug: "dac-meeting-2",
+    description: (<p>
+      Second meeting with dissertation advisory committee.
+    </p>),
+  },
+  {
     date: "April 27, 2024",
     slug: "use-coordination-preprint",
     description: (<p>
@@ -72,7 +121,7 @@ const news = [
     date: "October 4, 2023",
     slug: "kpmp-f2f-fall-2023",
     description: (<p>
-      Attended the 2023 Kidney Precision Medicine Project fall <a href="https://www.kpmp.org/meetings">meeting</a> in Bethesda, MD.
+      Attended the 2023 Kidney Precision Medicine Project fall <a href="https://www.kpmp.org/meetings-events">meeting</a> in Bethesda, MD.
     </p>),
   },
   {
@@ -83,10 +132,17 @@ const news = [
     </p>),
   },
   {
+    date: "September 17, 2023",
+    slug: "asn-kidney-week-2023",
+    description: (<p>
+      Poster accepted for presentation at the 2023 ASN Kidney Week meeting in Philadelphia, PA.
+    </p>),
+  },
+  {
     date: "September 14, 2023",
     slug: "dbmi-science-day-fall-2023",
     description: (<p>
-      Presented a poster at the HMS Department of Biomedical Informatics <a href="https://www.eventbrite.com/e/dbmi-science-day-2023-tickets-686569075587">Science Day</a>.
+      Presented a poster at the 2023 HMS Department of Biomedical Informatics <a href="https://www.eventbrite.com/e/dbmi-science-day-2023-tickets-686569075587">Science Day</a>.
     </p>),
   },
   {
@@ -133,6 +189,13 @@ const news = [
     </p>),
   },
   {
+    date: "May 19, 2023",
+    slug: "big-retreat-2023",
+    description: (<p>
+      Presented a lightning talk at the 2023 HMS BIG PhD program retreat.
+    </p>),
+  },
+  {
     date: "March 28, 2023",
     slug: "beat-pd-published",
     description: (<p>
@@ -150,7 +213,7 @@ const news = [
     date: "February 28, 2023",
     slug: "vitessce-kpmp-segmentations",
     description: (<p>
-      Presented at the 2023 Kidney Precision Medicine Project spring <a href="https://www.kpmp.org/meetings">meeting</a> in Washington, DC.
+      Presented at the 2023 Kidney Precision Medicine Project spring <a href="https://www.kpmp.org/meetings-events">meeting</a> in Washington, DC.
     </p>),
   },
   {
