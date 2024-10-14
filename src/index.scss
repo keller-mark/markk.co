@@ -90,6 +90,22 @@ a.bx--side-nav__link:focus, .bx--side-nav a.bx--header__menu-item:focus {
     background-position: center;
 }
 
+.open-source-title {
+    margin-top: 20px;
+}
+
+.open-source-list {
+    font-size: 16px;
+}
+.open-source-list li {
+    margin-top: 10px;
+    list-style-type: circle;
+    margin-left: 16px;
+}
+.open-source-list li a {
+    color: rgb(99,	190,	212);
+}
+
 .news-col h3 {
     margin-bottom: 10px;
 }

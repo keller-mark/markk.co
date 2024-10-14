@@ -13,6 +13,27 @@ import imgUrl from './img/mark.png'
 
 const news = [
   {
+    date: "October 16, 2024",
+    slug: "use-coordination-published",
+    description: (<p>
+      🎉 Our paper describing <a href="https://use-coordination.dev">Use-Coordination</a> will be presented at <a href="https://ieeevis.org/year/2024/program/paper_v-short-1096.html">IEEE VIS 2024</a>!
+    </p>),
+  },
+  {
+    date: "October 8, 2024",
+    slug: "dac-meeting-3",
+    description: (<p>
+      ✅ Third meeting with dissertation advisory committee.
+    </p>),
+  },
+  {
+    date: "September 27, 2024",
+    slug: "vitessce-published",
+    description: (<p>
+      🎉 Our paper describing <a href="https://vitessce.io">Vitessce</a> has been published in <a href="https://doi.org/10.1038/s41592-024-02436-x">Nature Methods</a>!
+    </p>),
+  },
+  {
     date: "September 16, 2024",
     slug: "kpmp-f2f-fall-2024",
     description: (<p>
@@ -33,13 +54,13 @@ const news = [
       Attended the 2024 Amgen Biotech Day in Cambridge, MA.
     </p>),
   },
-  {
+  /*{
     date: "August 16, 2024",
     slug: "vitessce-paper-acceptance",
     description: (<p>
       Vitessce paper accepted.
     </p>),
-  },
+  },*/
   {
     date: "July 9, 2024",
     slug: "sibmi-2024-workshop",
@@ -47,13 +68,13 @@ const news = [
       Presented at a workshop for trainees during the 2024 <a href="https://dbmi.hms.harvard.edu/education/sibmi">Summer Institute in Biomedical Informatics</a>.
     </p>),
   },
-  {
+  /*{
     date: "June 15, 2024",
     slug: "use-coordination-acceptance",
     description: (<p>
       Use-Coordination short paper accepted.
     </p>),
-  },
+  },*/
   {
     date: "May 1, 2024",
     slug: "dac-meeting-2",
@@ -164,7 +185,7 @@ const news = [
     date: "July 10, 2023",
     slug: "ome-zarr-published",
     description: (<p>
-      OME-Zarr ecosystem manuscript published in <a href="https://doi.org/10.1007/s00418-023-02209-1">Histochemistry and Cell Biology</a>.
+      🎉 OME-Zarr ecosystem manuscript published in <a href="https://doi.org/10.1007/s00418-023-02209-1">Histochemistry and Cell Biology</a>.
     </p>),
   },
   {
@@ -199,7 +220,7 @@ const news = [
     date: "March 28, 2023",
     slug: "beat-pd-published",
     description: (<p>
-      BEAT-PD manuscript published in <a href="https://doi.org/10.1371/journal.pdig.0000208">PLOS Digital Health</a>.
+      🎉 BEAT-PD manuscript published in <a href="https://doi.org/10.1371/journal.pdig.0000208">PLOS Digital Health</a>.
     </p>),
   },
   {
@@ -227,7 +248,7 @@ const news = [
     date: "January 23, 2023",
     slug: "cistrome-explorer-published",
     description: (<p>
-      Cistrome Explorer published in <a href="https://doi.org/10.1093/bioinformatics/btad018">Bioinformatics</a>.
+      🎉 Cistrome Explorer published in <a href="https://doi.org/10.1093/bioinformatics/btad018">Bioinformatics</a>.
     </p>),
   },
   {
@@ -241,7 +262,7 @@ const news = [
     date: "September 26, 2022",
     slug: "polyphony-published",
     description: (<p>
-      Polyphony published in <a href="http://doi.org/10.1109/TVCG.2022.3209408">IEEE TVCG</a>.
+      🎉 Polyphony published in <a href="http://doi.org/10.1109/TVCG.2022.3209408">IEEE TVCG</a>.
     </p>),
   },
   {
@@ -269,7 +290,7 @@ const news = [
     date: "May 11, 2022",
     slug: "viv-published",
     description: (<p>
-      Viv published in <a href="https://doi.org/10.1038/s41592-022-01482-7">Nature Methods</a>.
+      🎉 Viv published in <a href="https://doi.org/10.1038/s41592-022-01482-7">Nature Methods</a>.
     </p>),
   },
   {
@@ -311,7 +332,7 @@ const news = [
     date: "September 2, 2020",
     slug: "start-gradschool",
     description: (<p>
-      First day of PhD program.
+      🎒 First day of PhD program.
     </p>),
   },
 ];
@@ -405,6 +426,18 @@ export default function Intro() {
               </AccordionItem>
             ))}
           </Accordion>
+          <h3 className="open-source-title">open source</h3>
+          <p>I maintain the following open-source tools and utilities.</p>
+          <ul className="open-source-list">
+            <li><a target="_blank" href="https://github.com/keller-mark/pizzarr">pizzarr</a></li>
+            <li><a target="_blank" href="https://github.com/keller-mark/esbuild-py">esbuild-py</a> and <a target="_blank" href="https://github.com/keller-mark/esbuildR">esbuildR</a></li>
+            <li><a target="_blank" href="https://github.com/keller-mark/dynamic-importmap">dynamic-importmap</a></li>
+            <li><a target="_blank" href="https://github.com/keller-mark/anyhtmlwidget">anyhtmlwidget</a></li>
+            <li><a target="_blank" href="https://github.com/keller-mark/miqc-py">miqc-py</a></li>
+            <li><a target="_blank" href="https://github.com/keller-mark/qdpx-to-json">qdpx-to-json</a></li>
+            <li><a target="_blank" href="https://github.com/higlass/higlass-zarr-datafetchers">higlass-zarr-datafetchers</a></li>
+            <li><a target="_blank" href="https://github.com/keller-mark/hd-vis-scripts">hd-vis-scripts</a></li>
+          </ul>
         </Column>
         <Column sm={4} lg={6} className="mk--pt-1 news-col">
           <h3>news</h3>
