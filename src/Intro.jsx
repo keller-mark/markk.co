@@ -13,6 +13,13 @@ import imgUrl from './img/mark.png'
 
 const news = [
   {
+    date: "November 12, 2024",
+    slug: "spatialdata-workshop-2024",
+    description: (<p>
+     Co-led the visualization interoperability track at the 2024 <a href="https://spatialdata.scverse.org/en/stable/">SpatialData</a> Workshop in Basel, Switzerland.
+    </p>),
+  },
+  {
     date: "October 16, 2024",
     slug: "use-coordination-published",
     description: (<p>
@@ -345,9 +352,9 @@ const featuredProjects = [
     description: (<p>
       Since 2019, I have worked with the Gehlenborg Lab
       on <a href="http://vitessce.io/">Vitessce</a>, an interactive visualization tool for spatial single-cell multi-omics experiments.
-      Vitessce can be used as a <a href="https://github.com/vitessce/vitessce">React component</a>, <a href="https://github.com/vitessce/vitessce-python">Jupyter widget</a>, or <a href="https://github.com/vitessce/vitessceR">R htmlwidget</a>, and the React component has been integrated into the <a href="https://portal.hubmapconsortium.org/">HuBMAP data portal</a>.
+      Vitessce can be used as a <a href="https://github.com/vitessce/vitessce">React component</a>, <a href="https://github.com/vitessce/vitessce-python">Jupyter widget</a>, or <a href="https://github.com/vitessce/vitessceR">R htmlwidget</a>, and has been integrated into the <a href="https://portal.hubmapconsortium.org/">HuBMAP data portal</a> as well as <a href="https://vitessce.io/docs/showcase/">several other projects</a>.
 
-      This work was presented as a poster at BioVis@ISMB 2019 and BioVis@ISMB 2020.
+      {/*This work was presented as a poster at BioVis@ISMB 2019 and BioVis@ISMB 2020.*/}
     </p>),
   },
   {
@@ -412,7 +419,7 @@ export default function Intro() {
           <p>
             I am a PhD candidate in the Bioinformatics and Integrative Genomics (<a href="https://bigphd.hms.harvard.edu/" target="_blank">BIG</a>) program at Harvard Medical School, advised by Professor <a href="http://gehlenborglab.org/">Nils Gehlenborg</a>.
             I graduated from the University of Maryland, College Park in 2019, where I studied Computer Science.
-            My research lies in the intersection of data visualization, bioinformatics, and human-computer interaction.
+            My research focuses on interactive visualization of single-cell atlas data.
           </p>
         </Column>
       </Row>
