@@ -23,7 +23,7 @@ const news = [
     date: "October 16, 2024",
     slug: "use-coordination-published",
     description: (<p>
-      🎉 Our paper describing <a href="https://use-coordination.dev">Use-Coordination</a> was presented at <a href="https://ieeevis.org/year/2024/program/paper_v-short-1096.html">IEEE VIS 2024</a> and is available via [IEEE Xplore](https://doi.org/10.1109/VIS55277.2024.00041)!
+      🎉 Our paper describing <a href="https://use-coordination.dev">Use-Coordination</a> was presented at <a href="https://ieeevis.org/year/2024/program/paper_v-short-1096.html">IEEE VIS 2024</a> and is available via <a href="https://doi.org/10.1109/VIS55277.2024.00041">IEEE Xplore</a>!
     </p>),
   },
   {
