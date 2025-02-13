@@ -16,8 +16,8 @@ const news = [
     date: "January 28, 2025",
     slug: "scstar-preprint-jan-2025",
     description: (<p>
-     The State of Single-Cell Atlas Data Visualization in the Biological Literature preprint uploaded to <a href="https://osf.io/preprints/osf/yt3xz_v1">OSF Preprints</a>.
-     The preprint is accompanied by a <a href="https://keller-mark.github.io/sc-star-site/">survey browser</a>.
+     Our report on <i>The State of Single-Cell Atlas Data Visualization in the Biological Literature</i> has been uploaded to <a href="https://osf.io/preprints/osf/yt3xz_v1">OSF Preprints</a>.
+     It is accompanied by an interactive <a href="https://keller-mark.github.io/sc-star-site/">survey browser</a>.
     </p>),
   },
   {
