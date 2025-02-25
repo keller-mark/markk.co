@@ -24,7 +24,7 @@ const news = [
     date: "November 12, 2024",
     slug: "spatialdata-workshop-2024",
     description: (<p>
-     Co-led the visualization interoperability track at the 2024 <a href="https://spatialdata.scverse.org/en/stable/">SpatialData</a> Workshop in Basel, Switzerland.
+     Co-led the visualization interoperability track at the 2024 <a href="https://spatialdata.scverse.org/en/stable/">SpatialData</a> Workshop in Basel, Switzerland (described in a BioHackRxiv <a href="https://osf.io/preprints/biohackrxiv/8ck3e_v1">preprint</a>).
     </p>),
   },
   {
