@@ -405,7 +405,7 @@ const featuredProjects = [
     slug: "explosig",
     img: "explosig.png",
     description: (<p>
-      As an undergraduate research assistant in the <a href="https://lrgr.io">Leiserson Research Group</a> at the University of Maryland,
+      As an undergraduate research assistant in the <a href="https://web.archive.org/web/20240708034205/https://lrgr.io/">Leiserson Research Group</a> at the University of Maryland,
       I led the development of <a href="https://github.com/lrgr/explosig">ExploSig</a>, a web-based tool to enable exploration and interactive visualization of mutation signatures in human cancer and their etiology.
       ExploSig was presented as a late-breaking poster at <a href="https://recombccb.recomb2019.org/abstracts/">RECOMB 2019</a> and won best poster at <a href="http://biovis.net/2019/index.html">BioVis@ISMB 2019</a>.
       <br/><br/>
