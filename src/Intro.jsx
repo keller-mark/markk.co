@@ -408,6 +408,8 @@ const featuredProjects = [
       As an undergraduate research assistant in the <a href="https://web.archive.org/web/20240708034205/https://lrgr.io/">Leiserson Research Group</a> at the University of Maryland,
       I led the development of <a href="https://github.com/lrgr/explosig">ExploSig</a>, a web-based tool to enable exploration and interactive visualization of mutation signatures in human cancer and their etiology.
       ExploSig was presented as a late-breaking poster at <a href="https://recombccb.recomb2019.org/abstracts/">RECOMB 2019</a> and won best poster at <a href="http://biovis.net/2019/index.html">BioVis@ISMB 2019</a>.
+      A screenshot is featured in a <a href="https://youtu.be/671Tn7ASHtA?si=747j6tnwVp_HS9nL&t=68">video</a> about the research group.
+      More details can be found in my <a href="https://github.com/keller-mark/cmsc499a-visualization-paper/blob/gh-pages/main.pdf">final paper</a> for the course CMSC499A.
       <br/><br/>
       This work also included writing a pipeline for processing somatic mutation data and clinical data from TCGA, ICGC, PCAWG, and cBioPortal.
       This data processing is acknowledged in <a href="https://doi.org/10.1093/bioinformatics/btz340">Robinson et al. Bioinformatics 2019</a> and <a href="http://doi.org/10.1007/978-3-030-17083-7_15">Sason et al. RECOMB 2019</a>.
