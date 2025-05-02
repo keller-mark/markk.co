@@ -13,10 +13,17 @@ import imgUrl from './img/mark.png'
 
 const news = [
   {
+    date: "April 29, 2025",
+    slug: "phd-defense-2025",
+    description: (<p>
+     Defense of PhD
+    </p>),
+  },
+  {
     date: "January 28, 2025",
     slug: "scstar-preprint-jan-2025",
     description: (<p>
-     Our report on <i>The State of Single-Cell Atlas Data Visualization in the Biological Literature</i> has been uploaded to <a href="https://osf.io/preprints/osf/yt3xz">OSF Preprints</a>.
+     Our report on <em>The State of Single-Cell Atlas Data Visualization in the Biological Literature</em> has been uploaded to <a href="https://osf.io/preprints/osf/yt3xz">OSF Preprints</a>.
      It is accompanied by an interactive <a href="https://keller-mark.github.io/sc-star-site/">survey browser</a>.
     </p>),
   },
@@ -24,7 +31,7 @@ const news = [
     date: "November 12, 2024",
     slug: "spatialdata-workshop-2024",
     description: (<p>
-     Co-led the visualization interoperability track at the 2024 <a href="https://spatialdata.scverse.org/en/stable/">SpatialData</a> Workshop in Basel, Switzerland.
+     Co-led the visualization interoperability track at the 2024 <a href="https://spatialdata.scverse.org/en/stable/">SpatialData</a> Workshop in Basel, Switzerland (described in a BioHackrXiv <a href="https://osf.io/preprints/biohackrxiv/8ck3e_v1">preprint</a>).
     </p>),
   },
   {
@@ -405,9 +412,11 @@ const featuredProjects = [
     slug: "explosig",
     img: "explosig.png",
     description: (<p>
-      As an undergraduate research assistant in the <a href="https://web.archive.org/web/20240616060132/https://lrgr.io/">Leiserson Research Group</a> at the University of Maryland,
+      As an undergraduate research assistant in the <a href="https://web.archive.org/web/20240708034205/https://lrgr.io/">Leiserson Research Group</a> at the University of Maryland,
       I led the development of <a href="https://github.com/lrgr/explosig">ExploSig</a>, a web-based tool to enable exploration and interactive visualization of mutation signatures in human cancer and their etiology.
       ExploSig was presented as a late-breaking poster at <a href="https://recombccb.recomb2019.org/abstracts/">RECOMB 2019</a> and won best poster at <a href="http://biovis.net/2019/index.html">BioVis@ISMB 2019</a>.
+      A screenshot is featured in a <a href="https://youtu.be/671Tn7ASHtA?si=747j6tnwVp_HS9nL&t=68">video</a> about the research group.
+      More details can be found in my <a href="https://github.com/keller-mark/cmsc499a-visualization-paper/blob/gh-pages/main.pdf">final paper</a> for the course CMSC499A.
       <br/><br/>
       This work also included writing a pipeline for processing somatic mutation data and clinical data from TCGA, ICGC, PCAWG, and cBioPortal.
       This data processing is acknowledged in <a href="https://doi.org/10.1093/bioinformatics/btz340">Robinson et al. Bioinformatics 2019</a> and <a href="http://doi.org/10.1007/978-3-030-17083-7_15">Sason et al. RECOMB 2019</a>.
@@ -425,7 +434,7 @@ export default function Intro() {
         </Column>
         <Column sm={4} md={7} className="mk--pt-1">
           <p>
-            I recently completed my PhD, pursued through the Bioinformatics and Integrative Genomics (<a href="https://bigphd.hms.harvard.edu/" target="_blank">BIG</a>) program at Harvard Medical School where I was advised by Professor <a href="http://gehlenborglab.org/">Nils Gehlenborg</a>.
+            I recently defended my PhD in <a href="https://bigphd.hms.harvard.edu/" target="_blank">Bioinformatics and Integrative Genomics</a> at Harvard Medical School, advised by Professor <a href="http://gehlenborglab.org/">Nils Gehlenborg</a>.
             I graduated from the University of Maryland, College Park in 2019, where I studied Computer Science.
             My research focuses on interactive visualization of single-cell atlas data.
           </p>
