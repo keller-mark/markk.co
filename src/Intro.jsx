@@ -16,7 +16,7 @@ const news = [
     date: "January 28, 2025",
     slug: "scstar-preprint-jan-2025",
     description: (<p>
-     Our report on <i>The State of Single-Cell Atlas Data Visualization in the Biological Literature</i> has been uploaded to <a href="https://osf.io/preprints/osf/yt3xz_v1">OSF Preprints</a>.
+     Our report on <i>The State of Single-Cell Atlas Data Visualization in the Biological Literature</i> has been uploaded to <a href="https://osf.io/preprints/osf/yt3xz">OSF Preprints</a>.
      It is accompanied by an interactive <a href="https://keller-mark.github.io/sc-star-site/">survey browser</a>.
     </p>),
   },
@@ -405,7 +405,7 @@ const featuredProjects = [
     slug: "explosig",
     img: "explosig.png",
     description: (<p>
-      As an undergraduate research assistant in the <a href="https://lrgr.io">Leiserson Research Group</a> at the University of Maryland,
+      As an undergraduate research assistant in the <a href="https://web.archive.org/web/20240616060132/https://lrgr.io/">Leiserson Research Group</a> at the University of Maryland,
       I led the development of <a href="https://github.com/lrgr/explosig">ExploSig</a>, a web-based tool to enable exploration and interactive visualization of mutation signatures in human cancer and their etiology.
       ExploSig was presented as a late-breaking poster at <a href="https://recombccb.recomb2019.org/abstracts/">RECOMB 2019</a> and won best poster at <a href="http://biovis.net/2019/index.html">BioVis@ISMB 2019</a>.
       <br/><br/>
@@ -425,7 +425,7 @@ export default function Intro() {
         </Column>
         <Column sm={4} md={7} className="mk--pt-1">
           <p>
-            I am a PhD candidate in the Bioinformatics and Integrative Genomics (<a href="https://bigphd.hms.harvard.edu/" target="_blank">BIG</a>) program at Harvard Medical School, advised by Professor <a href="http://gehlenborglab.org/">Nils Gehlenborg</a>.
+            I recently completed my PhD, pursued through the Bioinformatics and Integrative Genomics (<a href="https://bigphd.hms.harvard.edu/" target="_blank">BIG</a>) program at Harvard Medical School where I was advised by Professor <a href="http://gehlenborglab.org/">Nils Gehlenborg</a>.
             I graduated from the University of Maryland, College Park in 2019, where I studied Computer Science.
             My research focuses on interactive visualization of single-cell atlas data.
           </p>
