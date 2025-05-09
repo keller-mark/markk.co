@@ -14,9 +14,9 @@ export default function MyHeader() {
 
     const nav = (
         <>
-            <HeaderMenuItem href="#/blog">
+            {/*<HeaderMenuItem href="#/blog">
                 blog
-            </HeaderMenuItem>
+            </HeaderMenuItem>*/}
             <HeaderMenuItem href="#/photos">
                 photos
             </HeaderMenuItem>

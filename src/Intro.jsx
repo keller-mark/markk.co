@@ -13,10 +13,17 @@ import imgUrl from './img/mark.png'
 
 const news = [
   {
+    date: "May 5, 2025",
+    slug: "sydney-pdsc-may-2025",
+    description: (<p>
+     Presented at The University of Sydney Precision Data Science Centre's <a href="https://spds.sydney.edu.au/event/vitessce-framework-for-interactive-visualization-of-single-cell-data-and-its-applications/">Statistical Bioinformatics Seminar</a> series.
+    </p>),
+  },
+  {
     date: "April 29, 2025",
     slug: "phd-defense-2025",
     description: (<p>
-     Defense of PhD
+     ✅ Defense of PhD
     </p>),
   },
   {
@@ -45,7 +52,7 @@ const news = [
     date: "October 8, 2024",
     slug: "dac-meeting-3",
     description: (<p>
-      ✅ Third meeting with dissertation advisory committee.
+      Third meeting with dissertation advisory committee.
     </p>),
   },
   {
@@ -368,6 +375,7 @@ const featuredProjects = [
       Since 2019, I have worked with the Gehlenborg Lab
       on <a href="http://vitessce.io/">Vitessce</a>, an interactive visualization tool for spatial single-cell multi-omics experiments.
       Vitessce can be used as a <a href="https://github.com/vitessce/vitessce">React component</a>, <a href="https://github.com/vitessce/vitessce-python">Jupyter widget</a>, or <a href="https://github.com/vitessce/vitessceR">R htmlwidget</a>, and has been integrated into the <a href="https://portal.hubmapconsortium.org/">HuBMAP data portal</a> as well as <a href="https://vitessce.io/docs/showcase/">several other projects</a>.
+      My blog posts related to this project can be found at the Vitessce <a href="https://vitessce.io/blog/">blog</a>.
 
       {/*This work was presented as a poster at BioVis@ISMB 2019 and BioVis@ISMB 2020.*/}
     </p>),
