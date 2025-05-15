@@ -5,7 +5,6 @@ import {
 import {
     Grid, Row, Column
 } from 'carbon-components-react/es/components/Grid';
-import ProjectCompostPile from './blog/2024-01-20-project-compost-pile';
 
 const presentations = [];
 
