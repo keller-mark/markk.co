@@ -8,6 +8,7 @@ import {
     Switch,
     Route,
 } from "react-router-dom";
+import Demos from './Demos';
 
 export default function App() {
     // Support squircles.
@@ -68,6 +69,7 @@ export default function App() {
             <Switch>
                 <Route path="/blog/:postId" component={Blog} />
                 <Route path="/blog" component={Blog} />
+                <Route path="/demos" component={Demos} />
 
                 <Route path="/photos/:albumId/:photoId" component={Gallery} />
                 <Route path="/photos/:albumId" component={Gallery} />
