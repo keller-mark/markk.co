@@ -13,6 +13,13 @@ import imgUrl from './img/mark.png'
 
 const news = [
   {
+    date: "June 17, 2025",
+    slug: "scstar-acceptance-june-2025",
+    description: (<p>
+     Our report on <em>The State of Single-Cell Atlas Data Visualization in the Biological Literature</em> has been accepted at <a href="https://doi.org/10.1109/MCG.2025.3583979">IEEE Computer Graphics and Applications</a>.
+    </p>),
+  },
+  {
     date: "May 5, 2025",
     slug: "sydney-pdsc-may-2025",
     description: (<p>
