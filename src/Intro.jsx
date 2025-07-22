@@ -49,6 +49,13 @@ const news = [
     </p>),
   },
   {
+    date: "October 24, 2024",
+    slug: "bmi-709-fall-2024",
+    description: (<p>
+      Served as a teaching fellow for <a href="https://dbmi.hms.harvard.edu/education/courses/bmi-709">BMI 709</a> Creating Biomedical Dashboards with R Shiny.
+    </p>),
+  },
+  {
     date: "October 16, 2024",
     slug: "use-coordination-published",
     description: (<p>
