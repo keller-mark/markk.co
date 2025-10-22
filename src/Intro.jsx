@@ -13,10 +13,24 @@ import imgUrl from './img/mark.png'
 
 const news = [
   {
+    date: "October 16, 2025",
+    slug: "embl-conf-2025",
+    description: (<p>
+     Presented a mini-talk describing recent updates to Vitessce during the data visualization session of the <a href="https://www.embl.org/about/info/course-and-conference-office/events/spb25-01/">Spatial biology</a> conference organized by EMBL and the European Society for Spatial Biology (ESSB).
+    </p>),
+  },
+  {
+    date: "September 30, 2025",
+    slug: "dbmi-science-day-2025",
+    description: (<p>
+      Presented a poster at the 2025 HMS Department of Biomedical Informatics Science Day.
+    </p>),
+  },
+  {
     date: "June 17, 2025",
     slug: "scstar-acceptance-june-2025",
     description: (<p>
-     Our report on <em>The State of Single-Cell Atlas Data Visualization in the Biological Literature</em> has been accepted at <a href="https://doi.org/10.1109/MCG.2025.3583979">IEEE Computer Graphics and Applications</a>.
+     🎉 Our report on <em>The State of Single-Cell Atlas Data Visualization in the Biological Literature</em> has been published at <a href="https://doi.org/10.1109/MCG.2025.3583979">IEEE Computer Graphics and Applications</a>. It is accompanied by extensive supplementary materials and an interactive <a href="https://keller-mark.github.io/sc-star-site/">survey browser</a>.
     </p>),
   },
   {
@@ -38,7 +52,6 @@ const news = [
     slug: "scstar-preprint-jan-2025",
     description: (<p>
      Our report on <em>The State of Single-Cell Atlas Data Visualization in the Biological Literature</em> has been uploaded to <a href="https://osf.io/preprints/osf/yt3xz">OSF Preprints</a>.
-     It is accompanied by an interactive <a href="https://keller-mark.github.io/sc-star-site/">survey browser</a>.
     </p>),
   },
   {
@@ -59,7 +72,7 @@ const news = [
     date: "October 16, 2024",
     slug: "use-coordination-published",
     description: (<p>
-      🎉 Our paper describing <a href="https://use-coordination.dev">Use-Coordination</a> was presented at <a href="https://ieeevis.org/year/2024/program/paper_v-short-1096.html">IEEE VIS 2024</a> and is available via <a href="https://doi.org/10.1109/VIS55277.2024.00041">IEEE Xplore</a>!
+      🎉 Our paper describing <a href="https://use-coordination.dev">Use-Coordination</a> was presented at <a href="https://ieeevis.org/year/2024/program/paper_v-short-1096.html">IEEE VIS 2024</a> and is published in <a href="https://doi.org/10.1109/VIS55277.2024.00041">IEEE Xplore</a>!
     </p>),
   },
   {
@@ -456,8 +469,8 @@ export default function Intro() {
         </Column>
         <Column sm={4} md={7} className="mk--pt-1">
           <p>
-            I recently defended my PhD in <a href="https://bigphd.hms.harvard.edu/" target="_blank">Bioinformatics and Integrative Genomics</a> at Harvard Medical School, advised by Professor <a href="http://gehlenborglab.org/">Nils Gehlenborg</a>.
-            I graduated from the University of Maryland, College Park in 2019, where I studied Computer Science.
+            In 2025, I graduated from the PhD Program in <a href="https://bigphd.hms.harvard.edu/" target="_blank">Bioinformatics and Integrative Genomics</a> at Harvard Medical School, advised by Professor <a href="http://gehlenborglab.org/">Nils Gehlenborg</a>.
+            I received my undergraduate degree from the University of Maryland, College Park in 2019, where I studied Computer Science.
             My research focuses on interactive visualization of single-cell atlas data.
           </p>
         </Column>
