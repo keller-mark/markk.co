@@ -388,7 +388,7 @@ const news = [
     date: "September 2, 2020",
     slug: "start-gradschool",
     description: (<p>
-      🎒 First day of PhD program.
+      🎒 First day of PhD <a href="https://bigphd.hms.harvard.edu/" target="_blank">program</a>.
     </p>),
   },
 ];
@@ -469,7 +469,7 @@ export default function Intro() {
         </Column>
         <Column sm={4} md={7} className="mk--pt-1">
           <p>
-            In 2025, I graduated from the PhD Program in <a href="https://bigphd.hms.harvard.edu/" target="_blank">Bioinformatics and Integrative Genomics</a> at Harvard Medical School, advised by Professor <a href="http://gehlenborglab.org/">Nils Gehlenborg</a>.
+            In 2025, I completed my <a href="https://phd.markk.co" target="_blank">PhD</a> in Bioinformatics and Integrative Genomics at Harvard Medical School, advised by Professor <a href="http://gehlenborglab.org/">Nils Gehlenborg</a>.
             I received my undergraduate degree from the University of Maryland, College Park in 2019, where I studied Computer Science.
             My research focuses on interactive visualization of single-cell atlas data.
           </p>
