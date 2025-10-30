@@ -13,6 +13,20 @@ import imgUrl from './img/mark.png'
 
 const news = [
   {
+    date: "October 23, 2025",
+    slug: "segmentations-and-pathomics-preprint",
+    description: (<p>
+      Preprint on visualization of micro-compartmental segmentations and pathomic features uploaded to <a href="https://doi.org/10.48550/arXiv.2510.19499">arXiv</a>.
+    </p>),
+  },
+  {
+    date: "October 22, 2025",
+    slug: "easy-vitessce-preprint",
+    description: (<p>
+      EasyVitessce preprint uploaded to <a href="https://doi.org/10.48550/arXiv.2510.19532">arXiv</a>.
+    </p>),
+  },
+  {
     date: "October 16, 2025",
     slug: "embl-conf-2025",
     description: (<p>
