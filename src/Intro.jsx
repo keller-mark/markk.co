@@ -503,7 +503,7 @@ export default function Intro() {
           <p>I maintain the following open-source tools and utilities.</p>
           <ul className="open-source-list">
             <li><a target="_blank" href="https://github.com/keller-mark/pizzarr">pizzarr</a></li>
-            <li><a target="_blank" href="https://github.com/keller-mark/esbuild-py">esbuild-py</a> and <a target="_blank" href="https://github.com/keller-mark/esbuildR">esbuildR</a></li>
+            <li><a target="_blank" href="https://github.com/keller-mark/esbuild-py">esbuild-py</a>, <a target="_blank" href="https://github.com/keller-mark/esbuildR">esbuildR</a>, and <a target="_blank" href="https://github.com/keller-mark/oxc-py">oxc-py</a></li>
             <li><a target="_blank" href="https://github.com/keller-mark/dynamic-importmap">dynamic-importmap</a></li>
             <li><a target="_blank" href="https://github.com/keller-mark/anyhtmlwidget">anyhtmlwidget</a></li>
             <li><a target="_blank" href="https://github.com/keller-mark/miqc-py">miqc-py</a></li>
