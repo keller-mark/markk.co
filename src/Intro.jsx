@@ -452,7 +452,7 @@ const featuredProjects = [
     slug: "beat-pd",
     img: "beat-pd.png",
     description: (<p>
-      During the summer of 2020, I participated in the <a href="https://www.braincommons.org/beat-pd-dream-challenge-winners-announced/">BEAT-PD DREAM Challenge</a> on winning team dbmi.
+      During the summer of 2020, I participated in the <a href="https://web.archive.org/web/20240423212221/https://www.braincommons.org/beat-pd-dream-challenge-winners-announced/">BEAT-PD DREAM Challenge</a> on winning team dbmi.
       My contributions included exploratory data analysis and a <a href="https://github.com/huangy6/beat_pd/tree/keller-mark/more-snakemake">snakemake pipeline</a> for our team's feature extraction and training code.
     </p>),
   },
