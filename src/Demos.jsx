@@ -102,7 +102,7 @@ export default function Demos() {
           <div className="demo-grid">
             {screenRecordings.map(item => (
               <div key={item.url} className="demo-item">
-                <iframe height="400" src={getYoutubeEmbedUrl(item.url)}></iframe>
+                <iframe height="400" src={getYoutubeEmbedUrl(item.url)} allow="fullscreen;" allowfullscreen></iframe>
                 <span>{item.title}</span>
                 
               </div>
