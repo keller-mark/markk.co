@@ -16,7 +16,7 @@ const news = [
     date: "November 18, 2025",
     slug: "easyvitessce-talk",
     description: (<p>
-      Our work on <a href="https://github.com/vitessce/easy_vitessce">EasyVitessce</a> was presented at the <a href="https://scverse.org/conference2025">Scverse Conference 2025</a>.
+      Our work on <a href="https://github.com/vitessce/easy_vitessce">EasyVitessce</a> was presented at the <a href="https://scverse.org/conference2025">Scverse Conference 2025</a> and in a <a href="https://www.vues.events/past-events/easyvitessce:-adding-interactivity-to-scverse-single-cell-and-spatial-biology-plots">VUES seminar</a>.
     </p>),
   },
   {
