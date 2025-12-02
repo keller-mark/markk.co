@@ -13,6 +13,20 @@ import imgUrl from './img/mark.png'
 
 const news = [
   {
+    date: "November 18, 2025",
+    slug: "easyvitessce-talk",
+    description: (<p>
+      Our work on <a href="https://github.com/vitessce/easy_vitessce">EasyVitessce</a> was presented at the <a href="https://scverse.org/conference2025">Scverse Conference 2025</a>.
+    </p>),
+  },
+  {
+    date: "November 7, 2025",
+    slug: "hubmap-portal-preprint",
+    description: (<p>
+      Preprint on the HuBMAP Data Portal uploaded to <a href="https://doi.org/10.48550/arXiv.2511.05708">arXiv</a>.
+    </p>),
+  },
+  {
     date: "October 23, 2025",
     slug: "segmentations-and-pathomics-preprint",
     description: (<p>
