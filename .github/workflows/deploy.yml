@@ -12,25 +12,30 @@ permissions:
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Setup Node 14
-        uses: actions/setup-node@v2
+      - name: Setup Node 24
+        uses: actions/setup-node@v3
         with:
-          node-version: 18
-      - name: npm install and build
+          node-version: 24
+          registry-url: https://registry.npmjs.org/
+      - uses: pnpm/action-setup@v4
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          run_install: true
+      - name: Build app
         run: |
-          npm ci
-          npm run build
-          echo "markk.co" > dist/CNAME
+          pnpm run build
+          echo "markk.co" > dist/public/CNAME
       - uses: actions/upload-pages-artifact@v3
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
         with:
-          path: ./dist
-  
+          path: ./dist/public
+
   deploy:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     needs: build
     environment:
       name: github-pages

@@ -1,29 +1,31 @@
 {
   "name": "markk.co",
-  "version": "1.0.0",
-  "license": "MIT",
+  "version": "0.1.0",
+  "type": "module",
   "private": true,
+  "scripts": {
+    "dev": "waku dev",
+    "build": "waku build",
+    "start": "waku start"
+  },
   "dependencies": {
+    "react": "~19.2.3",
+    "react-dom": "~19.2.3",
+    "react-server-dom-webpack": "~19.2.3",
+    "waku": "1.0.0-alpha.0",
+    "open-props": "^1.7.16",
+    "@deck.gl/core": "^8.9.32",
     "@deck.gl/layers": "^8.9.32",
     "@deck.gl/react": "^8.9.32",
-    "carbon-components": "^10.30.0",
-    "carbon-components-react": "^7.30.0",
-    "carbon-icons": "^7.0.7",
     "deck.gl": "^8.9.32",
     "masonic": "^3.7.0",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-router-dom": "^5.2.0",
     "zustand": "^4.4.6"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^4.0.0",
-    "sass": "^1.32.8",
-    "vite": "^4.3.0"
-  },
-  "scripts": {
-    "start": "vite",
-    "build": "vite build",
-    "serve": "vite preview"
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "rollup": "4.52.4",
+    "typescript": "5.9.3",
+    "vite": "7.3.0"
   }
 }

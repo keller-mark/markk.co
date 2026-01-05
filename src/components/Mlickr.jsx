@@ -1,3 +1,7 @@
+'use client';
+
+// Mlicker = Mark's Flickr alternative (RIP)
+
 import React, { useState, useMemo, useEffect, useCallback } from 'react';
 import { DeckGL } from '@deck.gl/react';
 import { BitmapLayer } from '@deck.gl/layers';
@@ -265,7 +269,7 @@ function AlbumList(props) {
         baseUrl,
         setAlbum,
     } = props;
-    
+
     return (
         <div className="album-grid-container">
             <div className="album-grid">

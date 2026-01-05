@@ -1,0 +1,327 @@
+/* the props */
+@import "open-props/style";
+
+/* optional imports that use the props */
+@import "open-props/normalize";
+@import "open-props/buttons";
+@import "open-props/fonts";
+
+body {
+    font-family: var(--font-system-ui);
+    font-weight: var(--font-weight-3);
+}
+
+.layout-container, main {
+    height: 100%;
+}
+
+.bg-gradient1 {
+  --gradient-color-stop1: rgb(255, 59, 59);
+  --gradient-color-stop2: rgb(221, 24, 196);
+  --gradient-color-stop3: rgb(84, 126, 255);
+  --gradient-stop1: 0%;
+  --gradient-stop2: 50%;
+  --gradient-stop3: 100%;
+  background:linear-gradient(90deg,var(--gradient-color-stop1) var(--gradient-stop1),var(--gradient-color-stop2) var(--gradient-stop2),var(--gradient-color-stop3) var(--gradient-stop3))
+}
+.bg-gradient2 {
+  --gradient-color-stop1: #dc36fa;
+  --gradient-color-stop2: #a167ef;
+  --gradient-color-stop3: #609fe4;
+  --gradient-color-stop4: #3abfde;
+  --gradient-color-stop5: #04d18e;
+  --gradient-stop1: 0%;
+  --gradient-stop2: 30%;
+  --gradient-stop3: 45%;
+  --gradient-stop4: 70%;
+  --gradient-stop5: 85%;
+  background:linear-gradient(110deg,var(--gradient-color-stop1) var(--gradient-stop1),var(--gradient-color-stop2) var(--gradient-stop2),var(--gradient-color-stop3) var(--gradient-stop3),var(--gradient-color-stop4) var(--gradient-stop4),var(--gradient-color-stop5) var(--gradient-stop5));
+}
+
+header.navbar {
+    /*background-image: var(--gradient-22);*/
+    display: flex;
+    flex-direction: row;
+
+    & .name {
+        font-size: var(--font-size-4);
+        margin-right: 20px;
+        margin-left: 10px;
+    }
+
+    & .social-spacer {
+        flex: 1;
+    }
+
+    & ul {
+        list-style: none;
+        padding-left: 0;
+        display: flex;
+        flex-direction: row;
+
+        & li {
+            padding: 0;
+            margin-right: 20px;
+
+        }
+
+    }
+
+
+    & a {
+        color: var(--gray-0);
+        vertical-align: middle;
+    }
+}
+
+
+
+.blob {
+    width: 150px;
+    height: 150px;
+    margin: 0px;
+    background-size: cover;
+    border-radius: var(--radius-blob-2);
+    box-shadow: var(--shadow-4);
+    display: inline-block;
+    float: left;
+    margin-right: 20px;
+}
+p.about {
+    font-family: var(--font-system-ui);
+    font-weight: var(--font-weight-3);
+    padding: 5px 10px;
+}
+
+.open-source-list {
+    & li {
+        & a {
+            font-weight: bold;
+        }
+    }
+}
+
+.software-page {
+    display: flex;
+    flex-direction: row;
+    & .software-text-col {
+        flex: 1;
+        padding-right: 20px;
+    }
+    & .software-videos-col {
+        flex: 3;
+        & h4 {
+            font-size: 24px;
+            font-weight: var(--font-weight-6);
+        }
+        & .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px 40px;
+        }
+
+
+        .demo-item {
+            display: flex;
+            flex-direction: column;
+        }
+        .demo-item iframe {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    .software-page .software-videos-col .demo-grid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+    }
+}
+
+.padded-content {
+    margin: 10px;
+}
+
+.theme-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    & h3 {
+        font-size: 24px;
+        font-weight: var(--font-weight-6);
+    }
+    & .pills {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        & span {
+            border: 1px solid silver;
+            padding: 0px 6px;
+            border-radius: 10px;
+            margin-right: 6px;
+        }
+    }
+}
+
+.research-news {
+    display: flex;
+    flex-direction: column;
+    & .news-item {
+        display: flex;
+        flex-direction: row;
+        margin: 5px 0px;
+        & .date-col {
+            width: 170px;
+            font-weight: var(--font-weight-6);
+            font-size: 14px;
+            color: var(--color-text-2);
+            text-align: right;
+            padding-top: 3px;
+            padding-right: 10px;
+        }
+        & .desc-col {
+            font-weight: var(--font-weight-3);
+            font-size: 16px;
+        }
+    }
+}
+
+@media (max-width: 810px) {
+    .research-news .news-item {
+        display: flex;
+        flex-direction: column;
+        & .date-col {
+            text-align: left;
+        }
+    }
+}
+
+@media (max-width: 1180px) {
+    header.navbar {
+        flex-direction: column;
+        & .social-spacer {
+            display: none;
+        }
+        & ul {
+            padding-left: 10px;
+        }
+        & .social-links {
+            font-size: 14px;
+            margin-top: 5px;
+            margin-bottom: 8px;
+        }
+    }
+    .theme-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+    header.navbar {
+        & .social-links {
+            flex-direction: column;
+        }
+    }
+}
+
+
+.album-grid-container {
+    position: relative;
+    padding: 20px;
+}
+
+.album-grid {
+    display: block;
+    position: relative;
+
+}
+
+.album-card {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.album-card, .album-card-overlay, .album-card > img {
+    border-radius: 10px;
+}
+
+.album-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0) 100%);
+}
+
+.album-card-text {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    text-shadow: 0 1px 1px #000;
+    transition: bottom 0.3s ease-in-out;
+}
+
+.album-card-overlay:hover > .album-card-text {
+    bottom: 20px;
+}
+
+.album-title {
+    font-size: 24px;
+}
+.album-subtitle {
+
+}
+
+.album-view {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.album-view-title {
+    display: inline-block;
+    color: white;
+    padding-left: 10px;
+}
+
+.image-view {
+    width: 100%;
+    flex-grow: 1;
+}
+
+.album-view-toolbar {
+    width: 100%;
+}
+
+.album-view-toolbar button {
+    background: transparent;
+    color: silver;
+    border: 0;
+    outline: 0;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.album-view-toolbar input {
+    float: right;
+}
+
+
+.image-view-inner {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+.image-view-inner button {
+    writing-mode: vertical-lr;
+}
+
+#deckgl-wrapper {
+    position: relative !important;
+    height: 100%;
+}
