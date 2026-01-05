@@ -1,16 +1,6 @@
-import React from 'react';
-import {
-    Link
-} from "react-router-dom";
-import {
-    Grid, Row, Column
-} from 'carbon-components-react/es/components/Grid';
-import {
-    default as Accordion,
-    AccordionItem, 
-} from 'carbon-components-react/es/components/Accordion';
-import imgUrl from './img/mark.png'
+import { Link } from 'waku';
 
+// Copied from https://github.com/keller-mark/markk.co/blob/87ecbd028c2409e80c6f1b243e9913a48d11bf12/src/Intro.jsx
 const news = [
   {
     date: "November 18, 2025",
@@ -421,123 +411,131 @@ const news = [
   },
 ];
 
-const featuredProjects = [
-  {
-    title: "Vitessce",
-    slug: "vitessce",
-    img: "vitessce.png",
-    description: (<p>
-      Since 2019, I have worked with the Gehlenborg Lab
-      on <a href="http://vitessce.io/">Vitessce</a>, an interactive visualization tool for spatial single-cell multi-omics experiments.
-      Vitessce can be used as a <a href="https://github.com/vitessce/vitessce">React component</a>, <a href="https://github.com/vitessce/vitessce-python">Jupyter widget</a>, or <a href="https://github.com/vitessce/vitessceR">R htmlwidget</a>, and has been integrated into the <a href="https://portal.hubmapconsortium.org/">HuBMAP data portal</a> as well as <a href="https://vitessce.io/docs/showcase/">several other projects</a>.
-      My blog posts related to this project can be found at the Vitessce <a href="https://vitessce.io/blog/">blog</a>.
-
-      {/*This work was presented as a poster at BioVis@ISMB 2019 and BioVis@ISMB 2020.*/}
-    </p>),
-  },
-  {
-    title: "Polyphony",
-    slug: "polyphony",
-    img: "polyphony.png",
-    description: (<p>
-      In 2022, I contributed to the development of <a href="https://github.com/scPolyphony">Polyphony</a>, an interactive transfer learning framework for single-cell data analysis.
-    </p>),
-  },
-  {
-    title: "Cistrome Explorer",
-    slug: "cistrome-explorer",
-    img: "cistrome-explorer.png",
-    description: (<p>
-      Prior to starting graduate studies, I worked with the <a href="http://gehlenborglab.org">Gehlenborg Lab</a> on <a href="http://cisvis.gehlenborglab.org">Cistrome Explorer</a>, a wrapper component for <a href="http://higlass.io">HiGlass</a> with features for viewing <a href="http://cistrome.org/db/">CistromeDB</a> data and querying <a href="http://toolkit.cistrome.org/">CistromeDB Toolkit</a>.
-
-      This work was presented as a poster at BioVis@ISMB 2020, NCI ITCR 2020, and Genome Informatics 2020.
-    </p>),
-  },
-  {
-    title: "4CE",
-    slug: "forsee",
-    img: "4ce.png",
-    description: (<p>
-      During the COVID-19 pandemic, I contributed to <a href="https://github.com/covidclinical/visualization-notebooks">data visualization &amp; analysis</a> and <a href="https://github.com/covidclinical/website">web development</a> with the Consortium for Clinical Characterization of COVID-19 by EHR (<a href="http://covidclinical.net">4CE</a>).
-    </p>),
-  },
-  {
-    title: "BEAT-PD",
-    slug: "beat-pd",
-    img: "beat-pd.png",
-    description: (<p>
-      During the summer of 2020, I participated in the <a href="https://web.archive.org/web/20240423212221/https://www.braincommons.org/beat-pd-dream-challenge-winners-announced/">BEAT-PD DREAM Challenge</a> on winning team dbmi.
-      My contributions included exploratory data analysis and a <a href="https://github.com/huangy6/beat_pd/tree/keller-mark/more-snakemake">snakemake pipeline</a> for our team's feature extraction and training code.
-    </p>),
-  },
-  {
-    title: "ExploSig",
-    slug: "explosig",
-    img: "explosig.png",
-    description: (<p>
-      As an undergraduate research assistant in the <a href="https://web.archive.org/web/20240708034205/https://lrgr.io/">Leiserson Research Group</a> at the University of Maryland,
-      I led the development of <a href="https://github.com/lrgr/explosig">ExploSig</a>, a web-based tool to enable exploration and interactive visualization of mutation signatures in human cancer and their etiology.
-      ExploSig was presented as a late-breaking poster at <a href="https://recombccb.recomb2019.org/abstracts/">RECOMB 2019</a> and won best poster at <a href="http://biovis.net/2019/index.html">BioVis@ISMB 2019</a>.
-      A screenshot is featured in a <a href="https://youtu.be/671Tn7ASHtA?si=747j6tnwVp_HS9nL&t=68">video</a> about the research group.
-      More details can be found in my <a href="https://github.com/keller-mark/cmsc499a-visualization-paper/blob/gh-pages/main.pdf">final paper</a> for the course CMSC499A.
-      <br/><br/>
-      This work also included writing a pipeline for processing somatic mutation data and clinical data from TCGA, ICGC, PCAWG, and cBioPortal.
-      This data processing is acknowledged in <a href="https://doi.org/10.1093/bioinformatics/btz340">Robinson et al. Bioinformatics 2019</a> and <a href="http://doi.org/10.1007/978-3-030-17083-7_15">Sason et al. RECOMB 2019</a>.
-    </p>),
-  },
-]
-
-export default function Intro() {
+export default async function ResearchPage() {
+  const data = await getData();
 
   return (
-    <Grid className="main-grid">
-      <Row>
-        <Column sm={4} md={1} className="intro-img-col">
-          <div className="intro-img" style={{ backgroundImage: `url(${imgUrl})` }} />
-        </Column>
-        <Column sm={4} md={7} className="mk--pt-1">
+    <div className="padded-content">
+      <title>{data.title}</title>
+      <h2 style={{ marginBottom: '10px' }}>Research Themes</h2>
+      <div className="theme-grid">
+        <div>
+          <h3>Visual Analytics Systems for Multi-Modal and Spatial Single-Cell Data</h3>
           <p>
-            In 2025, I completed my <a href="https://phd.markk.co" target="_blank">PhD</a> in Bioinformatics and Integrative Genomics at Harvard Medical School, advised by Professor <a href="http://gehlenborglab.org/">Nils Gehlenborg</a>.
-            I received my undergraduate degree from the University of Maryland, College Park in 2019, where I studied Computer Science.
-            My research focuses on interactive visualization of single-cell atlas data.
+            Since 2019, I have led the development of the <a href="https://vitessce.io">Vitessce</a> framework, which enables visualization of data from widely used single-cell data formats directly in a web browser.
+            <div className="pills">
+              <span><a href="https://vitessce.io">Vitessce</a></span>
+              <span><a href="https://github.com/vitessce/easy_vitessce">EasyVitessce</a></span>
+              <span className="thesis-pill"><a href="https://phd.markk.co">Thesis Chapter 3</a></span>
+            </div>
+            <details>
+              <summary>Details</summary>
+              Vitessce supports multiple interactive plot types, ranging from dimensionality reduction
+              scatterplots to scalable heatmaps to domain-specific dot plots to statistical charts such as histograms and
+              violin plots. Leveraging my experience in working with genome-mapped and bioimaging data, Vitessce also
+              enables analysts to integratively view these data types alongside single-cell data in a single interactive tool,
+              reducing friction and enabling relation of findings across data modalities. Vitessce has been integrated into
+              specialized applications, such as Polyphony for human-in-the-loop cell type annotation, as well as large
+              atlas mapping consortia data portals and commercial software solutions. Analysts can use Vitessce directly
+              in scripts and notebooks via packages in Python and R.
+            </details>
           </p>
-        </Column>
-      </Row>
-      <Row>
-        <Column sm={4} lg={6} className="mk--pt-1 projects-col">
-          <h3>featured projects</h3>
-          <Accordion className="mk--pt-1">
-            {featuredProjects.map(project => (
-              <AccordionItem key={project.slug} title={project.title}>
-                {project.description}
-              </AccordionItem>
-            ))}
-          </Accordion>
-          <h3 className="open-source-title">open source</h3>
-          <p>I maintain the following open-source tools and utilities.</p>
-          <ul className="open-source-list">
-            <li><a target="_blank" href="https://github.com/keller-mark/pizzarr">pizzarr</a></li>
-            <li><a target="_blank" href="https://github.com/keller-mark/esbuild-py">esbuild-py</a>, <a target="_blank" href="https://github.com/keller-mark/esbuildR">esbuildR</a>, and <a target="_blank" href="https://github.com/keller-mark/oxc-py">oxc-py</a></li>
-            <li><a target="_blank" href="https://github.com/keller-mark/dynamic-importmap">dynamic-importmap</a></li>
-            <li><a target="_blank" href="https://github.com/keller-mark/anyhtmlwidget">anyhtmlwidget</a></li>
-            <li><a target="_blank" href="https://github.com/keller-mark/miqc-py">miqc-py</a></li>
-            <li><a target="_blank" href="https://github.com/keller-mark/qdpx-to-json">qdpx-to-json</a></li>
-            <li><a target="_blank" href="https://github.com/higlass/higlass-zarr-datafetchers">higlass-zarr-datafetchers</a></li>
-            <li><a target="_blank" href="https://github.com/keller-mark/hd-vis-scripts">hd-vis-scripts</a></li>
-          </ul>
-        </Column>
-        <Column sm={4} lg={6} className="mk--pt-1 news-col">
-          <h3>news</h3>
-          <div>
-            {news.map(item => (
-              <Row key={item.slug}>
-                <Column sm={1} className="date-col">{item.date}</Column>
-                <Column sm={3}>{item.description}</Column>
-              </Row>
-            ))}
+        </div>
+        <div>
+          <h3>Comparative Analysis of Data from Multiple Single-Cell Experiments</h3>
+          <p>
+            In multiple projects, I have used Vitessce to build interactive visualization systems
+            tailored to comparison of multiple single-cell datasets (i.e., between conditions, such as health vs. disease or between disease subtypes).
+            <div className="pills">
+              <span><a href="https://github.com/scpolyphony">Polyphony</a></span>
+              <span><a href="https://github.com/hms-dbmi/cistrome-explorer">Cistrome Explorer</a></span>
+              <span className="thesis-pill"><a href="https://phd.markk.co">Thesis Chapter 4</a></span>
+            </div>
+            <details>
+              <summary>Details</summary>
+              A key goal of the single-cell field is to leverage metadata (e.g., clinical variables of tissue donors) to make comparisons between conditions
+              that can inform the development of diagnostics, prognostics, and therapeutics.
+              <br/>
+              <br/>
+              In the Polyphony project, I contributed to the development of an interactive system for reference-based cell
+              type annotation. Reference-based cell type annotation reduces the effort required
+              to annotate cells by projecting a new "query" dataset onto an existing, well-annotated
+              "reference" dataset and transferring cell type labels from reference to query.
+              Polyphony is a human-in-the-loop system that enables expert users to steer a machine learning model to make improved cell
+              type annotation predictions.
+              <br/>
+              <br/>
+              In the Compasce (COMPAre Single Cell Experiments) project, I developed an interactive system to explore and confirm the
+              results of comparative analysis of single-cell data, focusing on comparisons between
+              case and control conditions (e.g., samples from donors with Acute Kidney Injury versus
+              reference/non-disease samples).
+              The design of this system has been informed by interviews that I conducted with individuals from its intended user audience, comprising biologists, pathologists, and clinicians within the Kidney Precision Medicine Project (KPMP).
+              Compasce contains both confirmatory (e.g., How does abundance of a biomarker of interest differ between groups?) and exploratory (e.g., What are the most significant differences between groups?) interfaces and visualizations.
+            </details>
+          </p>
+        </div>
+        <div>
+          <h3>Reproducibility in Research Software Development and Scientific Data Processing</h3>
+          <p>
+            I am passionate about reproducibility in my scientific and software development work
+            <div className="pills">
+              <span><a href="https://github.com/keller-mark/use-coordination">Use-Coordination</a></span>
+              <span className="thesis-pill"><a href="https://phd.markk.co">Thesis Appendix A</a></span>
+            </div>
+            <details>
+              <summary>Details</summary>
+              I use and advocate for workflow management tools such as <a href={`https://github.com/search?q=owner%3Akeller-mark%20snakemake&type=code`}>Snakemake</a> to develop efficient data processing pipelines that can be executed with a single command.
+              In my visualization tool development, I have integrated techniques such as <a href="https://use-coordination.dev/docs/provenance-example/">provenance tracking</a> (e.g., undo/redo for action recovery).
+              My tools load data from community standard data formats (e.g., AnnData, SpatialData, OME-TIFF, OME-Zarr).
+              When possible, I use client-side web architectures that avoid complex server-side infrastructure requirements.
+            </details>
+          </p>
+        </div>
+        <div>
+          <h3>Domain-Specific Literature Surveys to inform Visualization Research</h3>
+          <p>
+            I am interested in meta-science and leveraging the wealth of information that is contained in the scientific literature to inform future visualization research.
+            <div className="pills">
+              <span><a href="https://keller-mark.github.io/sc-star-site/">Single-Cell Survey</a></span>
+              <span><a href="https://dimension-reduction-vis.github.io/">Dimensionality Reduction Survey</a></span>
+              <span className="thesis-pill"><a href="https://phd.markk.co">Thesis Chapter 2</a></span>
+            </div>
+            <details>
+              <summary>Details</summary>
+              I conducted a survey of over 1,800 figures appearing within 45 publications describing
+              single-cell data to provide an overview of the landscape of static single-cell data visualizations.
+              I annotated the figures with 85 categories related to plot types, data types,
+              figure purpose, and other visualization characteristics.
+              This survey has enabled quantification of visualization usage patterns within the single-cell literature and provides background on the single-cell field for researchers from other domains.
+            </details>
+          </p>
+        </div>
+      </div>
+      <h2 style={{ marginTop: '30px', marginBottom: '10px' }}>Latest News</h2>
+      <div className="research-news">
+        {news.map(item => (
+          <div className="news-item" key={item.slug}>
+            <div className="date-col">{item.date}</div>
+            <div className="desc-col">{item.description}</div>
           </div>
-        </Column>
-      </Row>
-    </Grid>
+        ))}
+      </div>
+    </div>
   );
 }
+
+const getData = async () => {
+  const data = {
+    title: 'Research | Mark',
+    headline: 'Research page',
+    body: 'Some publications page contents here...',
+  };
+
+  return data;
+};
+
+export const getConfig = async () => {
+  return {
+    render: 'static',
+  } as const;
+};
