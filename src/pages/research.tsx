@@ -3,6 +3,13 @@ import { Link } from 'waku';
 // Copied from https://github.com/keller-mark/markk.co/blob/87ecbd028c2409e80c6f1b243e9913a48d11bf12/src/Intro.jsx
 const news = [
   {
+    date: "January 28, 2026",
+    slug: "bwh-seminar-jan-2026",
+    description: (<p>
+      Presented at the Multiple Omics Seminar at Channing Division of Network Medicine at Brigham and Women's Hospital, Boston, MA.
+    </p>),
+  },
+  {
     date: "November 18, 2025",
     slug: "easyvitessce-talk",
     description: (<p>
