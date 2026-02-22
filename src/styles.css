@@ -6,9 +6,32 @@
 @import "open-props/buttons";
 @import "open-props/fonts";
 
+
+/* Serif font */
+@import '@fontsource/piazzolla';
+
+/* Monospace font */
+@import '@fontsource/maple-mono';
+
+:root {
+    --title-font-family: 'Piazzolla', serif;
+    --content-font-family: 'Helvetica Neue', sans-serif;
+    --mono-font-family: 'Maple Mono', monospace;
+
+    --title-font-weight: normal;
+    --content-font-weight: 300;
+    --mono-font-weight: normal;
+}
+
+
 body {
-    font-family: var(--font-system-ui);
-    font-weight: var(--font-weight-3);
+    font-family: var(--content-font-family);
+    font-weight: var(--content-font-weight);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--title-font-family);
+    font-weight: var(--title-font-weight);
 }
 
 .layout-container, main {
@@ -44,9 +67,13 @@ header.navbar {
     flex-direction: row;
 
     & .name {
-        font-size: var(--font-size-4);
+        font-size: 24px;
+        font-family: var(--title-font-family);
+        font-weight: var(--title-font-weight);
         margin-right: 20px;
         margin-left: 10px;
+        margin-bottom: 2px;
+        margin-top: 0.5px;
     }
 
     & .social-spacer {
@@ -62,6 +89,10 @@ header.navbar {
         & li {
             padding: 0;
             margin-right: 20px;
+            font-family: var(--mono-font-family);
+            font-weight: var(--mono-font-weight);
+            font-size: 17px;
+            margin-top: 5px;
 
         }
 
@@ -88,8 +119,8 @@ header.navbar {
     margin-right: 20px;
 }
 p.about {
-    font-family: var(--font-system-ui);
-    font-weight: var(--font-weight-3);
+    font-family: var(--content-font-family);
+    font-weight: var(--content-font-weight);
     padding: 5px 10px;
 }
 
@@ -112,7 +143,6 @@ p.about {
         flex: 3;
         & h4 {
             font-size: 24px;
-            font-weight: var(--font-weight-6);
         }
         & .demo-grid {
             display: grid;
@@ -148,7 +178,6 @@ p.about {
     grid-gap: 20px;
     & h3 {
         font-size: 24px;
-        font-weight: var(--font-weight-6);
     }
     & .pills {
         margin-top: 5px;
@@ -158,6 +187,8 @@ p.about {
             padding: 0px 6px;
             border-radius: 10px;
             margin-right: 6px;
+            font-family: var(--mono-font-family);
+            font-size: 12px;
         }
     }
 }
@@ -179,7 +210,7 @@ p.about {
             padding-right: 10px;
         }
         & .desc-col {
-            font-weight: var(--font-weight-3);
+            font-weight: var(--content-font-weight);
             font-size: 16px;
         }
     }
@@ -285,6 +316,8 @@ p.about {
     display: inline-block;
     color: white;
     padding-left: 10px;
+    font-size: 22px;
+    margin-top: 6px;
 }
 
 .image-view {
@@ -301,8 +334,15 @@ p.about {
     color: silver;
     border: 0;
     outline: 0;
-    text-decoration: underline;
+    text-decoration: none;
     cursor: pointer;
+    text-shadow: none;
+    box-shadow: none;
+    font-weight: var(--content-font-weight);
+    &:hover {
+        text-decoration: underline;
+    }
+
 }
 
 .album-view-toolbar input {

@@ -86,7 +86,7 @@ function Zoomable(props) {
         <div style={{ width: '100%', height: '100%', backgroundColor: 'rgb(33, 33, 36)', display: 'inline-block', position: 'relative'}}>
             {isLoading === imgUrl ? null : (
                 <div style={{ position: 'absolute', top: 0, left: 0 }}>
-                    <h3 style={{ color: 'silver' }}>Loading...</h3>
+                    <p style={{ color: 'silver' }}>Loading...</p>
                 </div>
             )}
             <DeckGL
@@ -254,7 +254,7 @@ function AlbumListMasonryCard({ index, data: { id, albumName, albumList, setAlbu
                 />
                 <div className="album-card-overlay">
                     <div className="album-card-text">
-                        <p className="album-title">{niceAlbumName(albumName)}</p>
+                        <h5 className="album-title">{niceAlbumName(albumName)}</h5>
                         <p className="album-subtitle">{albumList.length} photos</p>
                     </div>
                 </div>

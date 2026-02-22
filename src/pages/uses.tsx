@@ -11,13 +11,13 @@ export default async function UsesPage() {
         <li>macOS</li>
         <li><a href="https://workflowy.com/">Workflowy</a>: For note-taking.</li>
         <li><a href="https://soundcloud.com/keller-mark-7">SoundCloud</a>: For music listening and discovery.</li>
-        <li>VSCode and Zed: For text editing and writing code.</li>
+        <li>Zed and VSCode: For text editing and writing code.</li>
         <li>React: For web development.</li>
-        <li>Zotero+Overleaf: For reference management and paper writing. (Paperpile+GDocs when working with non-CS collaborators.)</li>
-        <li>iTerm2 + oh-my-zsh or Starship</li>
+        <li>Zotero: For reference management. {/*(Paperpile+GDocs when working with non-CS collaborators.)*/}</li>
+        <li>Ghostty and Starship</li>
         <li>Figma</li>
         <li>Screen Studio</li>
-        <li>eReader + Goodreads</li>
+        <li>Kobo e-reader</li>
       </ul>
       <p>Inspired by <a href="https://github.com/wesbos/awesome-uses">awesome-uses</a>.</p>
     </div>
