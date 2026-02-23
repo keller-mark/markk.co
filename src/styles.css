@@ -23,6 +23,10 @@
     --mono-font-weight: normal;
 }
 
+p {
+    max-inline-size: none;
+}
+
 
 body {
     font-family: var(--content-font-family);
@@ -92,7 +96,7 @@ header.navbar {
             font-family: var(--mono-font-family);
             font-weight: var(--mono-font-weight);
             font-size: 17px;
-            margin-top: 5px;
+            margin-top: 4.5px;
 
         }
 
@@ -172,10 +176,25 @@ p.about {
     margin: 10px;
 }
 
+.home-columns {
+    display: flex;
+    flex-direction: row;
+    & > div {
+        flex: 1;
+    }
+}
+
+& ::details-content {
+    font-size: 16px;
+}
+& summary {
+    font-size: 16px;
+    font-weight: normal;
+}
+
 .theme-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
+    display: flex;
+    flex-direction: column;
     & h3 {
         font-size: 24px;
     }
@@ -197,21 +216,29 @@ p.about {
     display: flex;
     flex-direction: column;
     & .news-item {
-        display: flex;
-        flex-direction: row;
+        display: inline-block;
+        width: 100%;
         margin: 5px 0px;
+        box-sizing: border-box;
         & .date-col {
+            display: inline-block;
             width: 170px;
+            font-family: var(--mono-font-family);
             font-weight: var(--font-weight-6);
-            font-size: 14px;
+            font-size: 13px;
             color: var(--color-text-2);
             text-align: right;
             padding-top: 3px;
             padding-right: 10px;
+            vertical-align: top;
         }
         & .desc-col {
+            display: inline-block;
+            width: calc(100% - 171px);
             font-weight: var(--content-font-weight);
-            font-size: 16px;
+            & p {
+                font-size: 16px;
+            }
         }
     }
 }
@@ -226,7 +253,7 @@ p.about {
     }
 }
 
-@media (max-width: 1180px) {
+@media (max-width: 1000px) {
     header.navbar {
         flex-direction: column;
         & .social-spacer {
@@ -241,8 +268,8 @@ p.about {
             margin-bottom: 8px;
         }
     }
-    .theme-grid {
-        grid-template-columns: 1fr;
+    .home-columns {
+        flex-direction: column;
     }
 }
 

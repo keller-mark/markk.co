@@ -1,3 +1,6 @@
+'use client';
+
+import React from 'react';
 import { Link } from 'waku';
 
 // Copied from https://github.com/keller-mark/markk.co/blob/87ecbd028c2409e80c6f1b243e9913a48d11bf12/src/Intro.jsx
@@ -418,16 +421,16 @@ const news = [
   },
 ];
 
-export default async function ResearchPage() {
-  const data = await getData();
+export function Research() {
+  //const data = await getData();
 
   return (
-    <div className="padded-content">
-      <title>{data.title}</title>
-      <h2 style={{ marginBottom: '10px' }}>Research Themes</h2>
+    <div className="research">
+      {/*<title>{data.title}</title>*/}
+      <h3 style={{ marginBottom: '10px', marginTop: '5px' }}>Research Themes</h3>
       <div className="theme-grid">
         <div>
-          <h3>Visual Analytics Systems for Multi-Modal and Spatial Single-Cell Data</h3>
+          <h4>Visual Analytics Systems for Multi-Modal and Spatial Single-Cell Data</h4>
           <p>
             Since 2019, I have led the development of the <a href="https://vitessce.io">Vitessce</a> framework, which enables visualization of data from widely used single-cell data formats directly in a web browser.
             <div className="pills">
@@ -441,7 +444,9 @@ export default async function ResearchPage() {
               scatterplots to scalable heatmaps to domain-specific dot plots to statistical charts such as histograms and
               violin plots. Leveraging my experience in working with genome-mapped and bioimaging data, Vitessce also
               enables analysts to integratively view these data types alongside single-cell data in a single interactive tool,
-              reducing friction and enabling relation of findings across data modalities. Vitessce has been integrated into
+              reducing friction and enabling relation of findings across data modalities.
+              <br/><br/>
+              Vitessce has been integrated into
               specialized applications, such as Polyphony for human-in-the-loop cell type annotation, as well as large
               atlas mapping consortia data portals and commercial software solutions. Analysts can use Vitessce directly
               in scripts and notebooks via packages in Python and R.
@@ -449,7 +454,7 @@ export default async function ResearchPage() {
           </p>
         </div>
         <div>
-          <h3>Comparative Analysis of Data from Multiple Single-Cell Experiments</h3>
+          <h4>Comparative Analysis of Data from Multiple Single-Cell Experiments</h4>
           <p>
             In multiple projects, I have used Vitessce to build interactive visualization systems
             tailored to comparison of multiple single-cell datasets (i.e., between conditions, such as health vs. disease or between disease subtypes).
@@ -482,7 +487,7 @@ export default async function ResearchPage() {
           </p>
         </div>
         <div>
-          <h3>Reproducibility in Research Software Development and Scientific Data Processing</h3>
+          <h4>Reproducibility in Research Software Development and Scientific Data Processing</h4>
           <p>
             I am passionate about reproducibility in my scientific and software development work
             <div className="pills">
@@ -499,7 +504,7 @@ export default async function ResearchPage() {
           </p>
         </div>
         <div>
-          <h3>Domain-Specific Literature Surveys to inform Visualization Research</h3>
+          <h4>Domain-Specific Literature Surveys to inform Visualization Research</h4>
           <p>
             I am interested in meta-science and leveraging the wealth of information that is contained in the scientific literature to inform future visualization research.
             <div className="pills">
@@ -518,15 +523,25 @@ export default async function ResearchPage() {
           </p>
         </div>
       </div>
-      <h2 style={{ marginTop: '30px', marginBottom: '10px' }}>Latest News</h2>
-      <div className="research-news">
-        {news.map(item => (
-          <div className="news-item" key={item.slug}>
-            <div className="date-col">{item.date}</div>
-            <div className="desc-col">{item.description}</div>
-          </div>
-        ))}
-      </div>
+    </div>
+  );
+}
+
+export function ResearchNews() {
+  return (
+    <div className="research-news">
+      <h3 style={{ marginTop: '30px', marginBottom: '10px' }}>Research News</h3>
+      <details>
+        <summary>View</summary>
+        <div className="research-news">
+          {news.map(item => (
+            <div className="news-item" key={item.slug}>
+              <div className="date-col"><div>{item.date}</div></div>
+              <div className="desc-col">{item.description}</div>
+            </div>
+          ))}
+        </div>
+      </details>
     </div>
   );
 }

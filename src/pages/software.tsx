@@ -92,7 +92,7 @@ export default async function SoftwarePage() {
       <title>{data.title}</title>
       <div className="software-text-col">
         <p>
-          To achieve my <Link to="/research">research goals</Link>, I develop software.
+          To achieve my research goals, I develop software.
           This includes web-based tools for interactive visualization, as well as many utilities that solve common problems that have arisen in my work.
           <br/>
           <br/>

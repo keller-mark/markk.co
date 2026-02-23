@@ -24,11 +24,6 @@ export const Header = () => {
       </h2>
       <ul className="links">
         <li>
-          <Link to="/research">
-            Research
-          </Link>
-        </li>
-        <li>
           <Link to="/software">
             Software
           </Link>

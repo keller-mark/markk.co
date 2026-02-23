@@ -18,8 +18,6 @@ import type { getConfig as File_PhotosAlbumIndex_getConfig } from './pages/photo
 // prettier-ignore
 import type { getConfig as File_PhotosIndex_getConfig } from './pages/photos/index';
 // prettier-ignore
-import type { getConfig as File_Research_getConfig } from './pages/research';
-// prettier-ignore
 import type { getConfig as File_Software_getConfig } from './pages/software';
 // prettier-ignore
 import type { getConfig as File_Uses_getConfig } from './pages/uses';
@@ -33,7 +31,6 @@ type Page =
 | ({ path: '/photos/[album]/[photo]' } & GetConfigResponse<typeof File_PhotosAlbumPhoto_getConfig>)
 | ({ path: '/photos/[album]' } & GetConfigResponse<typeof File_PhotosAlbumIndex_getConfig>)
 | ({ path: '/photos' } & GetConfigResponse<typeof File_PhotosIndex_getConfig>)
-| ({ path: '/research' } & GetConfigResponse<typeof File_Research_getConfig>)
 | ({ path: '/software' } & GetConfigResponse<typeof File_Software_getConfig>)
 | ({ path: '/uses' } & GetConfigResponse<typeof File_Uses_getConfig>);
 
