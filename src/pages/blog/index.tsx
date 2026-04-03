@@ -1,41 +1,24 @@
 import { Link } from 'waku';
-
-// TODO: see https://github.com/wakujs/waku/blob/main/examples/03_demo/src/pages/%5Bslug%5D.tsx
+import { getBlogPosts } from '../../lib';
 
 export default async function BlogIndexPage() {
-  const data = await getData();
+  const posts = await getBlogPosts();
 
   return (
     <div>
-      <title>{data.title}</title>
-      <h1>{data.headline}</h1>
-      <p>{data.body}</p>
+      <title>Blog | Mark</title>
+      <h1>Blog</h1>
+      <p>Not sparkling words; these have come from the Broca region of my brain.</p>
 
-      {/*
-        <p>TODO: link to posts in blog repo?</p>
-        <p>TODO: embed some bluesky posts?</p>
-        <p>TODO: link to old vitessce posts?</p>
-      */}
-      {data.articles.map((article) => (
-        <Link key={article} to={`/blog/${article}`}>
-          {article}
+      {posts.map(({ slug, title }) => (
+        <Link key={slug} to={`/blog/${slug}`}>
+          {title}
         </Link>
       ))}
 
     </div>
   );
 }
-
-const getData = async () => {
-  const data = {
-    title: 'Blog | Mark',
-    headline: 'Blog page',
-    body: 'Some blog page contents here...',
-    articles: ['post1', 'post2'] as const,
-  };
-
-  return data;
-};
 
 export const getConfig = async () => {
   return {

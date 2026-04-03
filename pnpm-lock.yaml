@@ -16,7 +16,7 @@ importers:
         version: 8.9.36(@deck.gl/core@8.9.36)(@loaders.gl/core@3.4.15)(@luma.gl/core@8.5.21)
       '@deck.gl/react':
         specifier: ^8.9.32
-        version: 8.9.36(@deck.gl/core@8.9.36)(@types/react@19.2.7)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+        version: 8.9.36(@deck.gl/core@8.9.36)(@types/react@19.2.7)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       '@fontsource/maple-mono':
         specifier: ^5.2.6
         version: 5.2.6
@@ -25,28 +25,31 @@ importers:
         version: 5.2.8
       deck.gl:
         specifier: ^8.9.32
-        version: 8.9.36(@loaders.gl/core@3.4.15)(@loaders.gl/gltf@3.4.15)(@loaders.gl/images@3.4.15)(@luma.gl/constants@8.5.21)(@luma.gl/core@8.5.21)(@luma.gl/engine@8.5.21)(@luma.gl/gltools@8.5.21)(@luma.gl/shadertools@8.5.21)(@luma.gl/webgl@8.5.21)(@math.gl/core@3.6.3)(@math.gl/web-mercator@3.6.3)(@types/react@19.2.7)(gl-matrix@3.4.4)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+        version: 8.9.36(@loaders.gl/core@3.4.15)(@loaders.gl/gltf@3.4.15)(@loaders.gl/images@3.4.15)(@luma.gl/constants@8.5.21)(@luma.gl/core@8.5.21)(@luma.gl/engine@8.5.21)(@luma.gl/gltools@8.5.21)(@luma.gl/shadertools@8.5.21)(@luma.gl/webgl@8.5.21)(@math.gl/core@3.6.3)(@math.gl/web-mercator@3.6.3)(@types/react@19.2.7)(gl-matrix@3.4.4)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      marked:
+        specifier: ^17.0.5
+        version: 17.0.5
       masonic:
         specifier: ^3.7.0
-        version: 3.7.0(react@19.2.3)
+        version: 3.7.0(react@19.2.4)
       open-props:
         specifier: ^1.7.16
         version: 1.7.16
       react:
-        specifier: ~19.2.3
-        version: 19.2.3
+        specifier: ~19.2.4
+        version: 19.2.4
       react-dom:
-        specifier: ~19.2.3
-        version: 19.2.3(react@19.2.3)
+        specifier: ~19.2.4
+        version: 19.2.4(react@19.2.4)
       react-server-dom-webpack:
-        specifier: ~19.2.3
-        version: 19.2.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(webpack@5.102.1)
+        specifier: ~19.2.4
+        version: 19.2.4(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(webpack@5.102.1)
       waku:
-        specifier: 1.0.0-alpha.0
-        version: 1.0.0-alpha.0(@types/node@24.9.1)(jiti@2.6.1)(lightningcss@1.30.1)(react-dom@19.2.3(react@19.2.3))(react-server-dom-webpack@19.2.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(webpack@5.102.1))(react@19.2.3)(terser@5.44.0)
+        specifier: 1.0.0-alpha.6
+        version: 1.0.0-alpha.6(@types/node@24.9.1)(jiti@2.6.1)(lightningcss@1.30.1)(react-dom@19.2.4(react@19.2.4))(react-server-dom-webpack@19.2.4(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(webpack@5.102.1))(react@19.2.4)(terser@5.44.0)
       zustand:
         specifier: ^4.4.6
-        version: 4.5.7(@types/react@19.2.7)(react@19.2.3)
+        version: 4.5.7(@types/react@19.2.7)(react@19.2.4)
     devDependencies:
       '@types/react':
         specifier: ^19.2.7
@@ -406,8 +409,8 @@ packages:
   '@fontsource/piazzolla@5.2.8':
     resolution: {integrity: sha512-Ms1cPvGJ5DkVeb0PU1s++q97gJMLth4Vho4IP1JpcLfAH19kIu5JlR8896TZORqF2UAB+jr3lY2O31Nu/egHpQ==}
 
-  '@hono/node-server@1.19.1':
-    resolution: {integrity: sha512-h44e5s+ByUriaRIbeS/C74O8v90m0A95luyYQGMF7KEn96KkYMXO7bZAwombzTpjQTU4e0TkU8U1WBIXlwuwtA==}
+  '@hono/node-server@1.19.12':
+    resolution: {integrity: sha512-txsUW4SQ1iilgE0l9/e9VQWmELXifEFvmdA1j6WFh/aFPj99hIntrSsq/if0UWyGVkmrRPKA1wCeP+UCr1B9Uw==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
       hono: ^4
@@ -597,6 +600,9 @@ packages:
   '@rolldown/pluginutils@1.0.0-beta.53':
     resolution: {integrity: sha512-vENRlFU4YbrwVqNDZ7fLvy+JR1CRkyr01jhSiDpE1u6py3OMzQfztQU2jxykW3ALNxO4kSlqIDeYyD0Y9RcQeQ==}
 
+  '@rolldown/pluginutils@1.0.0-rc.5':
+    resolution: {integrity: sha512-RxlLX/DPoarZ9PtxVrQgZhPoor987YtKQqCo5zkjX+0S0yLJ7Vv515Wk6+xtTL67VONKJKxETWZwuZjss2idYw==}
+
   '@rollup/rollup-android-arm-eabi@4.52.4':
     resolution: {integrity: sha512-BTm2qKNnWIQ5auf4deoetINJm2JzvihvGb9R6K/ETwKLql/Bb3Eg2H1FBp1gUb4YGbydMA3jcmQTR73q7J+GAA==}
     cpu: [arm]
@@ -781,8 +787,8 @@ packages:
     peerDependencies:
       vite: ^4.2.0 || ^5.0.0 || ^6.0.0 || ^7.0.0
 
-  '@vitejs/plugin-rsc@0.5.9':
-    resolution: {integrity: sha512-DNFFkFDwnJXrwp3eWqjfYZIQQjtMfeqqHCYEECJ7kPV1xqh9tV35qHxWLtO/+D5Hv6dlA88dpBIsOz3rsNls1w==}
+  '@vitejs/plugin-rsc@0.5.21':
+    resolution: {integrity: sha512-uNayLT8IKvWoznvQyfwKuGiEFV28o7lxUDnw/Av36VCuGpDFZnMmvVCwR37gTvnSmnpul9V0tdJqY3tBKEaDqw==}
     peerDependencies:
       react: '*'
       react-dom: '*'
@@ -974,8 +980,8 @@ packages:
     resolution: {integrity: sha512-Btj2BOOO83o3WyH59e8MgXsxEQVcarkUOpEYrubB0urwnN10yQ364rsiByU11nZlqWYZm05i/of7io4mzihBtQ==}
     engines: {node: '>=8'}
 
-  dotenv@17.2.3:
-    resolution: {integrity: sha512-JVUnt+DUIzu87TABbhPmNfVdBDt18BLOWjMUFJMSi/Qqg7NTYtabbvSNJGOJ7afbRuv9D/lngizHtP7QyLQ+9w==}
+  dotenv@17.4.0:
+    resolution: {integrity: sha512-kCKF62fwtzwYm0IGBNjRUjtJgMfGapII+FslMHIjMR5KTnwEmBmWLDRSnc3XSNP8bNy34tekgQyDT0hr7pERRQ==}
     engines: {node: '>=12'}
 
   draco3d@1.5.5:
@@ -1082,8 +1088,8 @@ packages:
     resolution: {integrity: sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==}
     engines: {node: '>=8'}
 
-  hono@4.11.3:
-    resolution: {integrity: sha512-PmQi306+M/ct/m5s66Hrg+adPnkD5jiO6IjA7WhWw0gSBSo1EcRegwuI1deZ+wd5pzCGynCcn2DprnE4/yEV4w==}
+  hono@4.12.10:
+    resolution: {integrity: sha512-mx/p18PLy5og9ufies2GOSUqep98Td9q4i/EF6X7yJgAiIopxqdfIO3jbqsi3jRgTgw88jMDEzVKi+V2EF+27w==}
     engines: {node: '>=16.9.0'}
 
   iconv-lite@0.4.24:
@@ -1229,6 +1235,11 @@ packages:
   magic-string@0.30.21:
     resolution: {integrity: sha512-vd2F4YUyEXKGcLHoq+TEyCjxueSeHnFxyyjNp80yg0XV4vUhnDer/lvvlqM/arB5bXQN5K2/3oinyCRyx8T2CQ==}
 
+  marked@17.0.5:
+    resolution: {integrity: sha512-6hLvc0/JEbRjRgzI6wnT2P1XuM1/RrrDEX0kPt0N7jGm1133g6X7DlxFasUIx+72aKAr904GTxhSLDrd5DIlZg==}
+    engines: {node: '>= 20'}
+    hasBin: true
+
   masonic@3.7.0:
     resolution: {integrity: sha512-viOOyebcKsDrYRyO1+AzjX78UZz0SaWkVrfc4lV44Kf6A4X3I7r4MJKq+Rx0S15H/M1ClqIQbuTHAzxtWUuPbQ==}
     peerDependencies:
@@ -1306,25 +1317,25 @@ packages:
   randombytes@2.1.0:
     resolution: {integrity: sha512-vYl3iOX+4CKUWuxGi9Ukhie6fsqXqS9FE2Zaic4tNFD2N2QQaXOMFbuKK4QmDHC0JO6B1Zp41J0LpT0oR68amQ==}
 
-  react-dom@19.2.3:
-    resolution: {integrity: sha512-yELu4WmLPw5Mr/lmeEpox5rw3RETacE++JgHqQzd2dg+YbJuat3jH4ingc+WPZhxaoFzdv9y33G+F7Nl5O0GBg==}
+  react-dom@19.2.4:
+    resolution: {integrity: sha512-AXJdLo8kgMbimY95O2aKQqsz2iWi9jMgKJhRBAxECE4IFxfcazB2LmzloIoibJI3C12IlY20+KFaLv+71bUJeQ==}
     peerDependencies:
-      react: ^19.2.3
+      react: ^19.2.4
 
   react-refresh@0.18.0:
     resolution: {integrity: sha512-QgT5//D3jfjJb6Gsjxv0Slpj23ip+HtOpnNgnb2S5zU3CB26G/IDPGoy4RJB42wzFE46DRsstbW6tKHoKbhAxw==}
     engines: {node: '>=0.10.0'}
 
-  react-server-dom-webpack@19.2.3:
-    resolution: {integrity: sha512-ifo7aqqdNJyV6U2zuvvWX4rRQ51pbleuUFNG7ZYhIuSuWZzQPbfmYv11GNsyJm/3uGNbt8buJ9wmoISn/uOAfw==}
+  react-server-dom-webpack@19.2.4:
+    resolution: {integrity: sha512-zEhkWv6RhXDctC2N7yEUHg3751nvFg81ydHj8LTTZuukF/IF1gcOKqqAL6Ds+kS5HtDVACYPik0IvzkgYXPhlQ==}
     engines: {node: '>=0.10.0'}
     peerDependencies:
-      react: ^19.2.3
-      react-dom: ^19.2.3
+      react: ^19.2.4
+      react-dom: ^19.2.4
       webpack: ^5.59.0
 
-  react@19.2.3:
-    resolution: {integrity: sha512-Ku/hhYbVjOQnXDZFv2+RibmLFGwFdeeKHFcOTlrt7xplBnya5OGn/hIRDsqDiSUcfORsDC7MPxwork8jBwsIWA==}
+  react@19.2.4:
+    resolution: {integrity: sha512-9nfp2hYpCwOjAN+8TZFGhtWEwgvWHXqESH8qT89AT/lWklpLON22Lc8pEtnpsZz7VmawabSU0gCjnj8aC0euHQ==}
     engines: {node: '>=0.10.0'}
 
   require-from-string@2.0.2:
@@ -1379,8 +1390,8 @@ packages:
   sprintf-js@1.0.3:
     resolution: {integrity: sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==}
 
-  srvx@0.9.8:
-    resolution: {integrity: sha512-RZaxTKJEE/14HYn8COLuUOJAt0U55N9l1Xf6jj+T0GoA01EUH1Xz5JtSUOI+EHn+AEgPCVn7gk6jHJffrr06fQ==}
+  srvx@0.11.15:
+    resolution: {integrity: sha512-iXsux0UcOjdvs0LCMa2Ws3WwcDUozA3JN3BquNXkaFPP7TpRqgunKdEgoZ/uwb1J6xaYHfxtz9Twlh6yzwM6Tg==}
     engines: {node: '>=20.16.0'}
     hasBin: true
 
@@ -1504,14 +1515,14 @@ packages:
       vite:
         optional: true
 
-  waku@1.0.0-alpha.0:
-    resolution: {integrity: sha512-DU5rAFi7Cm+wVNPN+fYy7ljinUnxe7n77HIOx59bv5cP1hSHRVNLQRn9NofPccWzE6ktT+pOubaStY14KBPDuA==}
+  waku@1.0.0-alpha.6:
+    resolution: {integrity: sha512-Mp57otg27DMixncNvOaliIK5X9awtGIEtjuBoW9OgCPaghGvb4W4lFXmOTHseOWuZh3LynerfdqbvWOmEoIHUw==}
     engines: {node: ^24.0.0 || ^22.12.0 || ^20.19.0}
     hasBin: true
     peerDependencies:
-      react: ~19.2.3
-      react-dom: ~19.2.3
-      react-server-dom-webpack: ~19.2.3
+      react: ~19.2.4
+      react-dom: ~19.2.4
+      react-server-dom-webpack: ~19.2.4
 
   watchpack@2.4.4:
     resolution: {integrity: sha512-c5EGNOiyxxV5qmTtAB7rbiXxi1ooX1pQKMLX/MIabJjRA0SJBQOjKF+KSVfHkr9U1cADPon0mRiVe/riyaiDUA==}
@@ -1817,13 +1828,13 @@ snapshots:
       - '@luma.gl/gltools'
       - '@luma.gl/webgl'
 
-  '@deck.gl/react@8.9.36(@deck.gl/core@8.9.36)(@types/react@19.2.7)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
+  '@deck.gl/react@8.9.36(@deck.gl/core@8.9.36)(@types/react@19.2.7)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
     dependencies:
       '@babel/runtime': 7.28.4
       '@deck.gl/core': 8.9.36
       '@types/react': 19.2.7
-      react: 19.2.3
-      react-dom: 19.2.3(react@19.2.3)
+      react: 19.2.4
+      react-dom: 19.2.4(react@19.2.4)
 
   '@esbuild/aix-ppc64@0.27.2':
     optional: true
@@ -1917,9 +1928,9 @@ snapshots:
 
   '@fontsource/piazzolla@5.2.8': {}
 
-  '@hono/node-server@1.19.1(hono@4.11.3)':
+  '@hono/node-server@1.19.12(hono@4.12.10)':
     dependencies:
-      hono: 4.11.3
+      hono: 4.12.10
 
   '@jridgewell/gen-mapping@0.3.13':
     dependencies:
@@ -2184,42 +2195,44 @@ snapshots:
     dependencies:
       '@babel/runtime': 7.28.4
 
-  '@react-hook/debounce@3.0.0(react@19.2.3)':
+  '@react-hook/debounce@3.0.0(react@19.2.4)':
     dependencies:
-      '@react-hook/latest': 1.0.3(react@19.2.3)
-      react: 19.2.3
+      '@react-hook/latest': 1.0.3(react@19.2.4)
+      react: 19.2.4
 
-  '@react-hook/event@1.2.6(react@19.2.3)':
+  '@react-hook/event@1.2.6(react@19.2.4)':
     dependencies:
-      react: 19.2.3
+      react: 19.2.4
 
-  '@react-hook/latest@1.0.3(react@19.2.3)':
+  '@react-hook/latest@1.0.3(react@19.2.4)':
     dependencies:
-      react: 19.2.3
+      react: 19.2.4
 
-  '@react-hook/passive-layout-effect@1.2.1(react@19.2.3)':
+  '@react-hook/passive-layout-effect@1.2.1(react@19.2.4)':
     dependencies:
-      react: 19.2.3
+      react: 19.2.4
 
-  '@react-hook/throttle@2.2.0(react@19.2.3)':
+  '@react-hook/throttle@2.2.0(react@19.2.4)':
     dependencies:
-      '@react-hook/latest': 1.0.3(react@19.2.3)
-      react: 19.2.3
+      '@react-hook/latest': 1.0.3(react@19.2.4)
+      react: 19.2.4
 
-  '@react-hook/window-scroll@1.3.0(react@19.2.3)':
+  '@react-hook/window-scroll@1.3.0(react@19.2.4)':
     dependencies:
-      '@react-hook/event': 1.2.6(react@19.2.3)
-      '@react-hook/throttle': 2.2.0(react@19.2.3)
-      react: 19.2.3
+      '@react-hook/event': 1.2.6(react@19.2.4)
+      '@react-hook/throttle': 2.2.0(react@19.2.4)
+      react: 19.2.4
 
-  '@react-hook/window-size@3.1.1(react@19.2.3)':
+  '@react-hook/window-size@3.1.1(react@19.2.4)':
     dependencies:
-      '@react-hook/debounce': 3.0.0(react@19.2.3)
-      '@react-hook/event': 1.2.6(react@19.2.3)
-      '@react-hook/throttle': 2.2.0(react@19.2.3)
-      react: 19.2.3
+      '@react-hook/debounce': 3.0.0(react@19.2.4)
+      '@react-hook/event': 1.2.6(react@19.2.4)
+      '@react-hook/throttle': 2.2.0(react@19.2.4)
+      react: 19.2.4
 
   '@rolldown/pluginutils@1.0.0-beta.53': {}
+
+  '@rolldown/pluginutils@1.0.0-rc.5': {}
 
   '@rollup/rollup-android-arm-eabi@4.52.4':
     optional: true
@@ -2385,21 +2398,22 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@vitejs/plugin-rsc@0.5.9(react-dom@19.2.3(react@19.2.3))(react-server-dom-webpack@19.2.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(webpack@5.102.1))(react@19.2.3)(vite@7.3.0(@types/node@24.9.1)(jiti@2.6.1)(lightningcss@1.30.1)(terser@5.44.0))':
+  '@vitejs/plugin-rsc@0.5.21(react-dom@19.2.4(react@19.2.4))(react-server-dom-webpack@19.2.4(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(webpack@5.102.1))(react@19.2.4)(vite@7.3.0(@types/node@24.9.1)(jiti@2.6.1)(lightningcss@1.30.1)(terser@5.44.0))':
     dependencies:
+      '@rolldown/pluginutils': 1.0.0-rc.5
       es-module-lexer: 2.0.0
       estree-walker: 3.0.3
       magic-string: 0.30.21
       periscopic: 4.0.2
-      react: 19.2.3
-      react-dom: 19.2.3(react@19.2.3)
-      srvx: 0.9.8
+      react: 19.2.4
+      react-dom: 19.2.4(react@19.2.4)
+      srvx: 0.11.15
       strip-literal: 3.1.0
       turbo-stream: 3.1.0
       vite: 7.3.0(@types/node@24.9.1)(jiti@2.6.1)(lightningcss@1.30.1)(terser@5.44.0)
       vitefu: 1.1.1(vite@7.3.0(@types/node@24.9.1)(jiti@2.6.1)(lightningcss@1.30.1)(terser@5.44.0))
     optionalDependencies:
-      react-server-dom-webpack: 19.2.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(webpack@5.102.1)
+      react-server-dom-webpack: 19.2.4(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(webpack@5.102.1)
 
   '@webassemblyjs/ast@1.14.1':
     dependencies:
@@ -2586,7 +2600,7 @@ snapshots:
     dependencies:
       ms: 2.1.3
 
-  deck.gl@8.9.36(@loaders.gl/core@3.4.15)(@loaders.gl/gltf@3.4.15)(@loaders.gl/images@3.4.15)(@luma.gl/constants@8.5.21)(@luma.gl/core@8.5.21)(@luma.gl/engine@8.5.21)(@luma.gl/gltools@8.5.21)(@luma.gl/shadertools@8.5.21)(@luma.gl/webgl@8.5.21)(@math.gl/core@3.6.3)(@math.gl/web-mercator@3.6.3)(@types/react@19.2.7)(gl-matrix@3.4.4)(react-dom@19.2.3(react@19.2.3))(react@19.2.3):
+  deck.gl@8.9.36(@loaders.gl/core@3.4.15)(@loaders.gl/gltf@3.4.15)(@loaders.gl/images@3.4.15)(@luma.gl/constants@8.5.21)(@luma.gl/core@8.5.21)(@luma.gl/engine@8.5.21)(@luma.gl/gltools@8.5.21)(@luma.gl/shadertools@8.5.21)(@luma.gl/webgl@8.5.21)(@math.gl/core@3.6.3)(@math.gl/web-mercator@3.6.3)(@types/react@19.2.7)(gl-matrix@3.4.4)(react-dom@19.2.4(react@19.2.4))(react@19.2.4):
     dependencies:
       '@babel/runtime': 7.28.4
       '@deck.gl/aggregation-layers': 8.9.36(@deck.gl/core@8.9.36)(@deck.gl/layers@8.9.36(@deck.gl/core@8.9.36)(@loaders.gl/core@3.4.15)(@luma.gl/core@8.5.21))(@luma.gl/core@8.5.21)
@@ -2599,7 +2613,7 @@ snapshots:
       '@deck.gl/layers': 8.9.36(@deck.gl/core@8.9.36)(@loaders.gl/core@3.4.15)(@luma.gl/core@8.5.21)
       '@deck.gl/mapbox': 8.9.36(@deck.gl/core@8.9.36)
       '@deck.gl/mesh-layers': 8.9.36(@deck.gl/core@8.9.36)(@loaders.gl/images@3.4.15)(@luma.gl/core@8.5.21)(@luma.gl/engine@8.5.21)(@luma.gl/gltools@8.5.21)(@luma.gl/webgl@8.5.21)
-      '@deck.gl/react': 8.9.36(@deck.gl/core@8.9.36)(@types/react@19.2.7)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      '@deck.gl/react': 8.9.36(@deck.gl/core@8.9.36)(@types/react@19.2.7)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
     transitivePeerDependencies:
       - '@loaders.gl/core'
       - '@loaders.gl/gltf'
@@ -2624,7 +2638,7 @@ snapshots:
   detect-libc@2.1.2:
     optional: true
 
-  dotenv@17.2.3: {}
+  dotenv@17.4.0: {}
 
   draco3d@1.5.5: {}
 
@@ -2724,7 +2738,7 @@ snapshots:
 
   has-flag@4.0.0: {}
 
-  hono@4.11.3: {}
+  hono@4.12.10: {}
 
   iconv-lite@0.4.24:
     dependencies:
@@ -2829,21 +2843,23 @@ snapshots:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  masonic@3.7.0(react@19.2.3):
+  marked@17.0.5: {}
+
+  masonic@3.7.0(react@19.2.4):
     dependencies:
       '@essentials/memoize-one': 1.1.0
       '@essentials/one-key-map': 1.2.0
       '@essentials/request-timeout': 1.3.0
       '@juggle/resize-observer': 3.4.0
-      '@react-hook/event': 1.2.6(react@19.2.3)
-      '@react-hook/latest': 1.0.3(react@19.2.3)
-      '@react-hook/passive-layout-effect': 1.2.1(react@19.2.3)
-      '@react-hook/throttle': 2.2.0(react@19.2.3)
-      '@react-hook/window-scroll': 1.3.0(react@19.2.3)
-      '@react-hook/window-size': 3.1.1(react@19.2.3)
+      '@react-hook/event': 1.2.6(react@19.2.4)
+      '@react-hook/latest': 1.0.3(react@19.2.4)
+      '@react-hook/passive-layout-effect': 1.2.1(react@19.2.4)
+      '@react-hook/throttle': 2.2.0(react@19.2.4)
+      '@react-hook/window-scroll': 1.3.0(react@19.2.4)
+      '@react-hook/window-size': 3.1.1(react@19.2.4)
       '@types/raf-schd': 4.0.3
       raf-schd: 4.0.3
-      react: 19.2.3
+      react: 19.2.4
       trie-memoize: 1.2.0
 
   math.gl@3.6.3:
@@ -2912,23 +2928,23 @@ snapshots:
     dependencies:
       safe-buffer: 5.2.1
 
-  react-dom@19.2.3(react@19.2.3):
+  react-dom@19.2.4(react@19.2.4):
     dependencies:
-      react: 19.2.3
+      react: 19.2.4
       scheduler: 0.27.0
 
   react-refresh@0.18.0: {}
 
-  react-server-dom-webpack@19.2.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(webpack@5.102.1):
+  react-server-dom-webpack@19.2.4(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(webpack@5.102.1):
     dependencies:
       acorn-loose: 8.5.2
       neo-async: 2.6.2
-      react: 19.2.3
-      react-dom: 19.2.3(react@19.2.3)
+      react: 19.2.4
+      react-dom: 19.2.4(react@19.2.4)
       webpack: 5.102.1
       webpack-sources: 3.3.3
 
-  react@19.2.3: {}
+  react@19.2.4: {}
 
   require-from-string@2.0.2: {}
 
@@ -2998,7 +3014,7 @@ snapshots:
 
   sprintf-js@1.0.3: {}
 
-  srvx@0.9.8: {}
+  srvx@0.11.15: {}
 
   strip-literal@3.1.0:
     dependencies:
@@ -3054,9 +3070,9 @@ snapshots:
       escalade: 3.2.0
       picocolors: 1.1.1
 
-  use-sync-external-store@1.6.0(react@19.2.3):
+  use-sync-external-store@1.6.0(react@19.2.4):
     dependencies:
-      react: 19.2.3
+      react: 19.2.4
 
   vite@7.3.0(@types/node@24.9.1)(jiti@2.6.1)(lightningcss@1.30.1)(terser@5.44.0):
     dependencies:
@@ -3077,18 +3093,18 @@ snapshots:
     optionalDependencies:
       vite: 7.3.0(@types/node@24.9.1)(jiti@2.6.1)(lightningcss@1.30.1)(terser@5.44.0)
 
-  waku@1.0.0-alpha.0(@types/node@24.9.1)(jiti@2.6.1)(lightningcss@1.30.1)(react-dom@19.2.3(react@19.2.3))(react-server-dom-webpack@19.2.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(webpack@5.102.1))(react@19.2.3)(terser@5.44.0):
+  waku@1.0.0-alpha.6(@types/node@24.9.1)(jiti@2.6.1)(lightningcss@1.30.1)(react-dom@19.2.4(react@19.2.4))(react-server-dom-webpack@19.2.4(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(webpack@5.102.1))(react@19.2.4)(terser@5.44.0):
     dependencies:
-      '@hono/node-server': 1.19.1(hono@4.11.3)
+      '@hono/node-server': 1.19.12(hono@4.12.10)
       '@vitejs/plugin-react': 5.1.2(vite@7.3.0(@types/node@24.9.1)(jiti@2.6.1)(lightningcss@1.30.1)(terser@5.44.0))
-      '@vitejs/plugin-rsc': 0.5.9(react-dom@19.2.3(react@19.2.3))(react-server-dom-webpack@19.2.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(webpack@5.102.1))(react@19.2.3)(vite@7.3.0(@types/node@24.9.1)(jiti@2.6.1)(lightningcss@1.30.1)(terser@5.44.0))
-      dotenv: 17.2.3
-      hono: 4.11.3
+      '@vitejs/plugin-rsc': 0.5.21(react-dom@19.2.4(react@19.2.4))(react-server-dom-webpack@19.2.4(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(webpack@5.102.1))(react@19.2.4)(vite@7.3.0(@types/node@24.9.1)(jiti@2.6.1)(lightningcss@1.30.1)(terser@5.44.0))
+      dotenv: 17.4.0
+      hono: 4.12.10
       magic-string: 0.30.21
       picocolors: 1.1.1
-      react: 19.2.3
-      react-dom: 19.2.3(react@19.2.3)
-      react-server-dom-webpack: 19.2.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(webpack@5.102.1)
+      react: 19.2.4
+      react-dom: 19.2.4(react@19.2.4)
+      react-server-dom-webpack: 19.2.4(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(webpack@5.102.1)
       rsc-html-stream: 0.0.7
       vite: 7.3.0(@types/node@24.9.1)(jiti@2.6.1)(lightningcss@1.30.1)(terser@5.44.0)
     transitivePeerDependencies:
@@ -3148,9 +3164,9 @@ snapshots:
 
   zimmerframe@1.1.4: {}
 
-  zustand@4.5.7(@types/react@19.2.7)(react@19.2.3):
+  zustand@4.5.7(@types/react@19.2.7)(react@19.2.4):
     dependencies:
-      use-sync-external-store: 1.6.0(react@19.2.3)
+      use-sync-external-store: 1.6.0(react@19.2.4)
     optionalDependencies:
       '@types/react': 19.2.7
-      react: 19.2.3
+      react: 19.2.4
