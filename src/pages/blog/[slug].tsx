@@ -6,11 +6,11 @@ export default async function BlogArticlePage({ slug }: PageProps<'/blog/[slug]'
   const { title, html } = await getBlogPost(slug);
 
   return (
-    <div>
+    <div className="blog-article padded-content">
       <title>{title}</title>
-      <article dangerouslySetInnerHTML={{ __html: html }} />
-      <Link to="/blog">
-        Return to blog
+      <article className="markdown-body" dangerouslySetInnerHTML={{ __html: html }} />
+      <Link to="/blog" className="blog-back-link">
+        &larr; Blog
       </Link>
     </div>
   );

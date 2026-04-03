@@ -26,6 +26,9 @@ importers:
       deck.gl:
         specifier: ^8.9.32
         version: 8.9.36(@loaders.gl/core@3.4.15)(@loaders.gl/gltf@3.4.15)(@loaders.gl/images@3.4.15)(@luma.gl/constants@8.5.21)(@luma.gl/core@8.5.21)(@luma.gl/engine@8.5.21)(@luma.gl/gltools@8.5.21)(@luma.gl/shadertools@8.5.21)(@luma.gl/webgl@8.5.21)(@math.gl/core@3.6.3)(@math.gl/web-mercator@3.6.3)(@types/react@19.2.7)(gl-matrix@3.4.4)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      github-markdown-css:
+        specifier: ^5.8.1
+        version: 5.9.0
       marked:
         specifier: ^17.0.5
         version: 17.0.5
@@ -1066,6 +1069,10 @@ packages:
   gensync@1.0.0-beta.2:
     resolution: {integrity: sha512-3hN7NaskYvMDLQY55gnW3NQ+mesEAepTqlg+VEbj7zzqEMBVNhzcGYYeqFo/TlYz6eQiFcp1HcsCZO+nGgS8zg==}
     engines: {node: '>=6.9.0'}
+
+  github-markdown-css@5.9.0:
+    resolution: {integrity: sha512-tmT5sY+zvg2302XLYEfH2mtkViIM1SWf2nvYoF5N1ZsO0V6B2qZTiw3GOzw4vpjLygK/KG35qRlPFweHqfzz5w==}
+    engines: {node: '>=10'}
 
   gl-matrix@3.4.4:
     resolution: {integrity: sha512-latSnyDNt/8zYUB6VIJ6PCh2jBjJX6gnDsoCZ7LyW7GkqrD51EWwa9qCoGixj8YqBtETQK/xY7OmpTF8xz1DdQ==}
@@ -2725,6 +2732,8 @@ snapshots:
     optional: true
 
   gensync@1.0.0-beta.2: {}
+
+  github-markdown-css@5.9.0: {}
 
   gl-matrix@3.4.4: {}
 

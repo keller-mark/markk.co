@@ -1,6 +1,9 @@
 /* the props */
 @import "open-props/style";
 
+/* GitHub Markdown CSS */
+@import "github-markdown-css/github-markdown.css";
+
 /* optional imports that use the props */
 @import "open-props/normalize";
 @import "open-props/buttons";
@@ -39,7 +42,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .layout-container, main {
-    height: 100%;
+    min-height: 100%;
 }
 
 .bg-gradient1 {
@@ -279,6 +282,68 @@ p.about {
             flex-direction: column;
         }
     }
+}
+
+
+/* Blog list page */
+.blog-list {
+    max-width: 72ch;
+
+    & h1 {
+        font-size: var(--font-size-5);
+        margin-bottom: var(--size-1);
+    }
+
+    & .blog-list-tagline {
+        color: var(--text-2);
+        font-style: italic;
+        margin-bottom: var(--size-7);
+    }
+
+    & .blog-list-items {
+        display: flex;
+        flex-direction: column;
+    }
+
+    & .blog-list-item {
+        display: flex;
+        flex-direction: column;
+        gap: var(--size-1);
+        padding: var(--size-4) 0;
+        border-bottom: 1px solid var(--surface-3);
+        text-decoration: none;
+        color: inherit;
+
+        &:hover .blog-list-title {
+            text-decoration: underline;
+        }
+    }
+
+    & .blog-list-date {
+        font-family: var(--mono-font-family);
+        font-size: var(--font-size-0);
+        color: var(--text-2);
+    }
+
+    & .blog-list-title {
+        font-family: var(--title-font-family);
+        font-size: var(--font-size-4);
+    }
+}
+
+.blog-article {
+    & h1, h2, h3, h4, h5, h6, li, dd, figcaption, blockquote {
+        max-inline-size: none;
+    }
+    max-width: min(624px, calc(100vw - 20px));
+    margin: 20px auto;
+    padding-bottom: 50px;
+
+    & .markdown-body {
+        background-color: transparent;
+        margin-bottom: 20px;
+    }
+
 }
 
 
