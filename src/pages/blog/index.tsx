@@ -8,7 +8,7 @@ export default async function BlogIndexPage() {
     <div className="blog-list padded-content">
       <title>Blog | Mark</title>
       <h1>Blog</h1>
-      <p className="blog-list-tagline">Not sparkling words; these have come from the Broca region of my brain.</p>
+      <p className="blog-list-tagline">Not just sparkling words; these have come from the <a href="https://en.wikipedia.org/wiki/Broca%27s_area">Broca region</a> of my brain.</p>
 
       <div className="blog-list-items">
         {posts.map(({ slug, title }) => {

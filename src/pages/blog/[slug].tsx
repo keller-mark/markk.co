@@ -8,6 +8,9 @@ export default async function BlogArticlePage({ slug }: PageProps<'/blog/[slug]'
   return (
     <div className="blog-article padded-content">
       <title>{title}</title>
+      <Link to="/blog" className="blog-back-link">
+        &larr; Blog
+      </Link>
       <article className="markdown-body" dangerouslySetInnerHTML={{ __html: html }} />
       <Link to="/blog" className="blog-back-link">
         &larr; Blog
