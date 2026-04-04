@@ -346,6 +346,16 @@ p.about {
         margin-bottom: 20px;
     }
 
+    & .blog-prev-next-footer {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+
+        & .blog-back-link {
+
+        }
+    }
+
 }
 
 
