@@ -7,6 +7,9 @@ export default async function BlogArticlePage({ slug }: PageProps<'/blog/[slug]'
   const { title, html } = await getBlogPost(slug);
 
   const postIndex = posts.findIndex(p => p.slug === slug);
+  const hasPrevPost = (postIndex - 1) >= 0;
+  const hasNextPost = (postIndex + 1) <= posts.length - 1;
+
   const prevPost = posts.at(postIndex - 1);
   const nextPost = posts.at(postIndex + 1);
 
@@ -18,7 +21,7 @@ export default async function BlogArticlePage({ slug }: PageProps<'/blog/[slug]'
       </Link>
       <article className="markdown-body" dangerouslySetInnerHTML={{ __html: html }} />
       <div className="blog-prev-next-footer">
-        {prevPost ? (
+        {hasPrevPost && prevPost ? (
           <Link to={`/blog/${prevPost.slug}`} className="blog-back-link">
             &larr; {prevPost.title}
           </Link>
@@ -27,7 +30,7 @@ export default async function BlogArticlePage({ slug }: PageProps<'/blog/[slug]'
             &larr; Blog
           </Link>
         )}
-        {nextPost ? (
+        {hasNextPost && nextPost ? (
           <Link to={`/blog/${nextPost.slug}`} className="blog-back-link">
             {nextPost.title} &rarr;
           </Link>

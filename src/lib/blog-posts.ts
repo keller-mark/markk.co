@@ -5,12 +5,16 @@ import { Marked } from 'marked';
 const BLOG_DIR = join(process.cwd(), 'blog');
 
 export const getBlogPostPaths = async (): Promise<string[]> => {
-  const files = await readdir(BLOG_DIR);
-  return files
-    .filter(f => f.endsWith('.md') && f !== 'README.md')
-    .map(f => f.replace(/\.md$/, ''))
-    .sort()
-    .reverse();
+  try {
+    const files = await readdir(BLOG_DIR);
+    return files
+      .filter(f => f.endsWith('.md') && f !== 'README.md')
+      .map(f => f.replace(/\.md$/, ''))
+      .sort()
+      .reverse();
+  } catch {
+    return [];
+  }
 };
 
 export const getBlogPosts = async (): Promise<{ slug: string; title: string }[]> => {

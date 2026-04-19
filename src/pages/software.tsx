@@ -92,10 +92,10 @@ export default async function SoftwarePage() {
       <title>{data.title}</title>
       <div className="software-text-col">
         <p>
-          To achieve my research goals, I develop software.
+          {/*To achieve my research goals, I develop software.
           This includes web-based tools for interactive visualization, as well as many utilities that solve common problems that have arisen in my work.
           <br/>
-          <br/>
+          <br/>*/}
           I have created the following open-source tools and utilities.
         </p>
         <ul className="open-source-list">
