@@ -1,41 +1,32 @@
 import { Link } from 'waku';
-
-// TODO: see https://github.com/wakujs/waku/blob/main/examples/03_demo/src/pages/%5Bslug%5D.tsx
+import { getBlogPosts } from '../../lib';
 
 export default async function BlogIndexPage() {
-  const data = await getData();
+  const posts = await getBlogPosts();
 
   return (
-    <div>
-      <title>{data.title}</title>
-      <h1>{data.headline}</h1>
-      <p>{data.body}</p>
+    <div className="blog-list padded-content">
+      <title>Blog | Mark</title>
+      <h1>Blog</h1>
 
-      {/*
-        <p>TODO: link to posts in blog repo?</p>
-        <p>TODO: embed some bluesky posts?</p>
-        <p>TODO: link to old vitessce posts?</p>
-      */}
-      {data.articles.map((article) => (
-        <Link key={article} to={`/blog/${article}`}>
-          {article}
-        </Link>
-      ))}
-
+      <div className="blog-list-items">
+        {posts.map(({ slug, title }) => {
+          const dateMatch = slug.match(/^(\d{4})-(\d{2})-(\d{2})/);
+          const date = dateMatch
+            ? new Date(+dateMatch[1], +dateMatch[2] - 1, +dateMatch[3])
+                .toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
+            : null;
+          return (
+            <Link key={slug} to={`/blog/${slug}`} className="blog-list-item">
+              {date && <span className="blog-list-date">{date}</span>}
+              <span className="blog-list-title">{title}</span>
+            </Link>
+          );
+        })}
+      </div>
     </div>
   );
 }
-
-const getData = async () => {
-  const data = {
-    title: 'Blog | Mark',
-    headline: 'Blog page',
-    body: 'Some blog page contents here...',
-    articles: ['post1', 'post2'] as const,
-  };
-
-  return data;
-};
 
 export const getConfig = async () => {
   return {

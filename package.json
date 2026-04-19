@@ -9,10 +9,10 @@
     "start": "waku start"
   },
   "dependencies": {
-    "react": "~19.2.3",
-    "react-dom": "~19.2.3",
-    "react-server-dom-webpack": "~19.2.3",
-    "waku": "1.0.0-alpha.0",
+    "react": "~19.2.4",
+    "react-dom": "~19.2.4",
+    "react-server-dom-webpack": "~19.2.4",
+    "waku": "1.0.0-alpha.6",
     "open-props": "^1.7.16",
     "@deck.gl/core": "^8.9.32",
     "@deck.gl/layers": "^8.9.32",
@@ -21,8 +21,9 @@
     "masonic": "^3.7.0",
     "zustand": "^4.4.6",
     "@fontsource/piazzolla": "^5.2.8",
-    "@fontsource/maple-mono": "^5.2.6"
-
+    "@fontsource/maple-mono": "^5.2.6",
+    "marked": "^17.0.5",
+    "github-markdown-css": "^5.8.1"
   },
   "devDependencies": {
     "@types/react": "^19.2.7",

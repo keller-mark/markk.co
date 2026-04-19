@@ -92,16 +92,16 @@ export default async function SoftwarePage() {
       <title>{data.title}</title>
       <div className="software-text-col">
         <p>
-          To achieve my research goals, I develop software.
+          {/*To achieve my research goals, I develop software.
           This includes web-based tools for interactive visualization, as well as many utilities that solve common problems that have arisen in my work.
           <br/>
-          <br/>
+          <br/>*/}
           I have created the following open-source tools and utilities.
         </p>
         <ul className="open-source-list">
           <li><a target="_blank" href="https://github.com/keller-mark/use-coordination">use-coordination</a>: Library that enables visualization developers to implement coordinated multiple views in React-based visualization systems.</li>
           <li><a target="_blank" href="https://github.com/keller-mark/pizzarr">pizzarr</a>: R package for reading and writing data in
-          Zarr (v2) format.</li>
+          Zarr format.</li>
           <li><a target="_blank" href="https://github.com/keller-mark/esbuild-py">esbuild-py</a>, <a target="_blank" href="https://github.com/keller-mark/esbuildR">esbuildR</a>, and <a target="_blank" href="https://github.com/keller-mark/oxc-py">oxc-py</a>: Bindings to esbuild and oxc, enabling transformation of JSX to JS and thereby usage of JSX without NodeJS (e.g., during AnyWidget development).</li>
           <li><a target="_blank" href="https://github.com/keller-mark/dynamic-importmap">dynamic-importmap</a>: Rewrite bare import specifiers at runtime in the browser. Enables usage of importmaps in contexts such as AnyWidget.</li>
           <li><a target="_blank" href="https://github.com/keller-mark/anyhtmlwidget">anyhtmlwidget</a>: Brings core concepts from anywidget to R.</li>

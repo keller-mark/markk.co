@@ -1,37 +1,49 @@
 import { Link } from 'waku';
 import type { PageProps } from 'waku/router';
-
-// TODO: see https://github.com/wakujs/waku/blob/main/examples/03_demo/src/pages/%5Bslug%5D.tsx
-// Also see "Segment routes" part of docs https://waku.gg/#segment-routes
+import { getBlogPostPaths, getBlogPost, getBlogPosts } from '../../lib';
 
 export default async function BlogArticlePage({ slug }: PageProps<'/blog/[slug]'>) {
-  const data = await getData(slug);
+  const posts = (await getBlogPosts()).toReversed();
+  const { title, html } = await getBlogPost(slug);
+
+  const postIndex = posts.findIndex(p => p.slug === slug);
+  const hasPrevPost = (postIndex - 1) >= 0;
+  const hasNextPost = (postIndex + 1) <= posts.length - 1;
+
+  const prevPost = posts.at(postIndex - 1);
+  const nextPost = posts.at(postIndex + 1);
 
   return (
-    <div>
-      <title>{data.title}</title>
-      <h1>{data.headline} - {slug}</h1>
-      <p>{data.body}</p>
-      <Link to="/">
-        Return home
+    <div className="blog-article padded-content">
+      <title>{title}</title>
+      <Link to="/blog" className="blog-back-link">
+        &larr; Blog
       </Link>
+      <article className="markdown-body" dangerouslySetInnerHTML={{ __html: html }} />
+      <div className="blog-prev-next-footer">
+        {hasPrevPost && prevPost ? (
+          <Link to={`/blog/${prevPost.slug}`} className="blog-back-link">
+            &larr; {prevPost.title}
+          </Link>
+        ) : (
+          <Link to="/blog" className="blog-back-link">
+            &larr; Blog
+          </Link>
+        )}
+        {hasNextPost && nextPost ? (
+          <Link to={`/blog/${nextPost.slug}`} className="blog-back-link">
+            {nextPost.title} &rarr;
+          </Link>
+          ) : null}
+        </div>
     </div>
   );
 }
 
-const getData = async (slug: string) => {
-  const data = {
-    title: 'Blog',
-    headline: 'Blog page',
-    body: 'Some blog page contents here...',
-  };
-
-  return data;
-};
-
 export const getConfig = async () => {
+  const postPaths = await getBlogPostPaths();
   return {
     render: 'static',
-    staticPaths: ['post1', 'post2'],
+    staticPaths: postPaths,
   } as const;
 };
