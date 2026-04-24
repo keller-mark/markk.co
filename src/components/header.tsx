@@ -28,11 +28,11 @@ export const Header = () => {
             Software
           </Link>
         </li>
-        {/*<li>
+        <li>
           <Link to="/blog">
             Blog
           </Link>
-        </li>*/}
+        </li>
         <li>
           <Link to="/photos">
             Photos
