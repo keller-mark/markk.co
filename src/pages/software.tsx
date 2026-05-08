@@ -99,6 +99,7 @@ export default async function SoftwarePage() {
           I have created the following open-source tools and utilities.
         </p>
         <ul className="open-source-list">
+          <li><Link target="_blank" to="/blog/2026-04-24-pluot-motivations">pluot</Link>: Implement cross-platform static and interactive visualizations using Rust and WebGPU.</li>
           <li><a target="_blank" href="https://github.com/keller-mark/use-coordination">use-coordination</a>: Library that enables visualization developers to implement coordinated multiple views in React-based visualization systems.</li>
           <li><a target="_blank" href="https://github.com/keller-mark/pizzarr">pizzarr</a>: R package for reading and writing data in
           Zarr format.</li>

@@ -6,6 +6,13 @@ import { Link } from 'waku';
 // Copied from https://github.com/keller-mark/markk.co/blob/87ecbd028c2409e80c6f1b243e9913a48d11bf12/src/Intro.jsx
 const news = [
   {
+    date: "April 30, 2026",
+    slug: "sq-preprint-apr-2026",
+    description: (<p>
+      Preprint on SpatialQuery uploaded to <a href="https://doi.org/10.64898/2026.04.22.720136">bioRxiv</a>.
+    </p>),
+  },
+  {
     date: "January 28, 2026",
     slug: "bwh-seminar-jan-2026",
     description: (<p>
