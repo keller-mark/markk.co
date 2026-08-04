@@ -60,7 +60,7 @@ So why does the field of visualization software need to keep reinventing the whe
 
 ## The wish list
 
-As visualization researchers, why not _map out the design space_ and create a solution that satisfies everyone's needs? 
+Why not _map out the [design space](https://scholar.google.com/scholar?q=visualization+design+space)_ and create a solution that satisfies everyone's needs? 
 
 
 Looking more broadly at how we select visualization toolkits, there are often additional dimensions to consider besides simply "static vs. interactive".
