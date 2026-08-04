@@ -50,7 +50,6 @@ export const Header = () => {
         <li><a href="https://scholar.google.com/citations?user=hnKZ5mwAAAAJ">Scholar</a></li>
         <li><a href="https://github.com/keller-mark">GitHub</a></li>
         <li><a href="https://observablehq.com/@keller-mark">Observable</a></li>
-        <li><a href="https://bsky.app/profile/mkeller7.bsky.social">Bluesky</a></li>
         <li><a href="#" ref={emailRef} onClick={handleEmailClick}>Email</a></li>
       </ul>
     </header>

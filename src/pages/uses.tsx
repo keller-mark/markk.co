@@ -9,8 +9,8 @@ export default async function UsesPage() {
       <p>A (non-exhaustive) list of tools and software that I am currently using.</p>
       <ul>
         <li>macOS</li>
-        <li><a href="https://workflowy.com/">Workflowy</a>: For note-taking.</li>
-        <li><a href="https://soundcloud.com/keller-mark-7">SoundCloud</a>: For music listening and discovery.</li>
+        <li>Workflowy: For note-taking.</li>
+        <li>SoundCloud: For music listening and discovery.</li>
         <li>Zed and VSCode: For text editing and writing code.</li>
         <li>React: For web development.</li>
         <li>Zotero: For reference management. {/*(Paperpile+GDocs when working with non-CS collaborators.)*/}</li>
