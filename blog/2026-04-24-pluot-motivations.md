@@ -64,7 +64,7 @@ Why not _map out the [design space](https://scholar.google.com/scholar?q=visuali
 
 
 Looking more broadly at how we select visualization toolkits, there are often additional dimensions to consider besides simply "static vs. interactive".
-We often also need to consider the preferred programming language, whether we want bitmap vs. vector graphics, and whether we are rendering basic statistical plots vs. volumetric/mesh/3D ("InfoVis vs. SciVis").
+We often also need to consider the preferred programming language, whether we want bitmap vs. vector graphics, and whether we are rendering basic statistical plots vs. volumes/meshes/3D elements ("InfoVis vs. SciVis").
 
 ![Slide 3](/blog-images/pluot_slide_3.svg)
 
