@@ -16,11 +16,11 @@ Here, I describe my motivations for this work, and leave it to you to decide.
 ## Motivations
 
 
-The size and complexity of modern datasets, such as those generated during scientific research experiments, often cannot be easily distilled into a small number of static figures (e.g., figures within a journal paper).
-While journal figures remain valuable precisely because they require the original researchers to compress their findings into those that they perceive as most impactful, each reader of a scientific researcher also arrives with their own interests and questions (e.g., their own favorite gene).
+The size and complexity of modern datasets, such as those generated during scientific experiments, often cannot be easily distilled into a small number of static figures (e.g., figures within a journal paper).
+While journal figures remain valuable precisely because they require the original researchers to compress their findings into those that they perceive as most impactful, each reader of a scientific paper also arrives with their own interests and questions (e.g., their own favorite gene).
 
 
-Interactive data portals address this challenge: a user can arrive with their own questions, querying large and high-dimenensional scientific datasets and rendering visualizations on-demand.
+Interactive data portals aim to address this problem: a user can arrive with their own questions, querying large and high-dimenensional scientific datasets and rendering visualizations on-demand.
 The web-based nature of many such data portals also democratizes access: the user does not need to fiddle with installing a native app and does not need to download the (increasingly large) datasets in order to view the visualizations.
 
 <!--Not only are there user experience benefits to web-based visualization tools, but also developer experience ones: the web development ecosystem has come a long way, and there are many open-source web visualization toolkits that help developers to avoid reinventing the wheel.-->
