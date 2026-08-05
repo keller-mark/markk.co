@@ -60,7 +60,7 @@ So why does the field of visualization software need to keep reinventing the whe
 
 ## The wish list
 
-Why not _map out the [design space](https://scholar.google.com/scholar?q=visualization+design+space)_ and create a solution that satisfies everyone's needs? 
+Why not map out the _[design space](https://scholar.google.com/scholar?q=visualization+design+space)_ and create a solution that satisfies everyone's needs? 
 
 
 Looking more broadly at how we select visualization toolkits, there are often additional dimensions to consider besides simply "static vs. interactive".
@@ -83,11 +83,11 @@ We often also need to consider the preferred programming language, whether we wa
 Based on my experiences, the following characteristics are required for any such solution:
 
 
-- The same code can be used **across programming languages**, including in web browser, without requiring web browser in desktop case.
+- The same code can be used **across programming languages**, including in a web browser, but without _requiring_ a web browser in the desktop case.
 - The same code can power **static and interactive** visualization rendering.
-- **Scalability** to out-of-core dataset sizes.
 - The same code can be used for **bitmap and vector graphics** output.
 - **Small** WASM binary size (disclaimer: subjective).
+- **Scalability** to out-of-core dataset sizes.
 - **Decoupled** from coordinated multiple views implementation.
 - **Decoupled** from UI framework and event loop management.
 
@@ -114,7 +114,7 @@ In a 2024 [report](https://shonan.nii.ac.jp/docs/No.193.pdf) titled "The Moving 
 
 
 WebAssembly allows us to efficiently run software developed using systems programming languages in the web browser, and the new WebGPU API offers an ergonomic way to do GPU-accelerated rendering in the web browser.
-Specifically, the Rust programming language ecosystem offers tools to easily compile Rust code to WebAssembly (wasm-pack, wasm-bindgen, etc) and [WGPU](https://github.com/gfx-rs/wgpu) is a Rust-based implementation of WebGPU that can be run both inside and outside the browser (in fact, WGPU is how the WebGPU API is implemented under-the-hood in Firefox).
+Specifically, the Rust programming language ecosystem offers tools to easily compile Rust code to WebAssembly (wasm-bindgen, etc) and [wgpu](https://github.com/gfx-rs/wgpu) is a Rust-based implementation of WebGPU that can be run both inside and outside the browser (in fact, wgpu is how the WebGPU API is implemented under-the-hood in Firefox).
 By the end of 2025, WebGPU was supported in [all three major web browsers](https://github.com/gpuweb/gpuweb/wiki/Implementation-Status).
 
 
@@ -146,7 +146,7 @@ I set out to implement a proof of concept to determine whether this was feasible
 I made my initial commit in August of 2025, marking the start of the Pluot project.
 A week later, I had gotten some (very basic) interactive Rust+WGPU rendering working in the browser via WASM bindings.
 With a few more days, I got proof-of-concept Python bindings working.
-However, it took until early 2026 to polish this proof of concept and get many other features working: text rendering, async data loading, cacheing, coordinate systems, aspect ratio handling, margins, vector rendering, and a layered plotting API -- to the point that I can now claim Pluot addresses the goals of the original wish list.
+However, it took until early 2026 to polish this proof of concept and get many other features working: text rendering, async data loading, cacheing, coordinate systems, aspect ratio handling, margins, vector rendering, R bindings, and a layered plotting API -- to the point that I can now claim Pluot addresses the goals of the original wish list.
 
 
 ![Slide 11](/blog-images/pluot_slide_11.svg)
@@ -211,7 +211,7 @@ While not yet production-ready, Pluot demonstrates the potential for a paradigm 
 
 ## Learn more
 
-Here, I have focused on the personal motivations behind this project.
+Here, I have focused on the personal motivations behind this project and some high-level technical details.
 
 If you are interested in learning more, check out the [Pluot repository](https://github.com/keller-mark/pluot), [website](https://pluot.dev), or [preprint](https://doi.org/10.48550/arXiv.2605.14118).
 There are still many open questions, some of which are listed in the [GitHub issues](https://github.com/keller-mark/pluot/issues?q=sort%3Aupdated-desc+is%3Aissue+is%3Aopen).
