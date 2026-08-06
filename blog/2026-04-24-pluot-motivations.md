@@ -1,14 +1,6 @@
 # Why implement a data visualization toolkit in Rust?
 
-I am happy to share [Pluot](https://pluot.dev), a new library for creating data visualizations.
-
-Of course, developing a new plotting library is always a bit like the classic XKCD comic:
-
-[![How standards proliferate meme from XKCD](https://imgs.xkcd.com/comics/standards.png)](https://xkcd.com/927/)
-
-Have we created something useful, or just an additional competing thing?
-Here, I describe my motivations for this work, and leave it to you to decide.
-
+I am happy to share [Pluot](https://pluot.dev), a new library for creating interoperable data visualizations.
 
 > Update (August 2026): *I have updated this post to reframe the problem and interleave slides from a recent [presentation](https://scientificcomputing.rs/2026/talks/keller.html).*
 
@@ -205,13 +197,23 @@ Similarly, it is easy to add Rust crate dependencies that make WASM compilation 
 Identifying this gap motivated me to continue to push the project along, especially once I had established the feasibility via the initial experiments.
 
 
+## Conclusion
+
 While not yet production-ready, Pluot demonstrates the potential for a paradigm shift in how we create reproducible, performant, and cross-platform static and interactive visualizations.
+
+
+Of course, developing a new plotting library is always a bit like the classic XKCD comic:
+
+[![How standards proliferate meme from XKCD](https://imgs.xkcd.com/comics/standards.png)](https://xkcd.com/927/)
+
+Is this useful, or just an additional competing thing?
+I will leave it to you to decide.
 
 
 
 ## Learn more
 
-Here, I have focused on the personal motivations behind this project and some high-level technical details.
+Here, I have focused on the personal motivations behind this project and a few technical details.
 
-If you are interested in learning more, check out the [Pluot repository](https://github.com/keller-mark/pluot), [website](https://pluot.dev), or [preprint](https://doi.org/10.48550/arXiv.2605.14118).
-There are still many open questions, some of which are listed in the [GitHub issues](https://github.com/keller-mark/pluot/issues?q=sort%3Aupdated-desc+is%3Aissue+is%3Aopen).
+If you are interested in learning more, check out the [Pluot repository](https://github.com/keller-mark/pluot).
+There are still many open questions, some of which are listed in the [GitHub issues](https://github.com/keller-mark/pluot/issues).
