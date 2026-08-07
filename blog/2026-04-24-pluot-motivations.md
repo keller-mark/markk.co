@@ -188,7 +188,7 @@ It also helps that the datasets I work with in the single-cell and spatial biolo
 
 ## Reproducibility benefits
 
-In addition to rendering graphical outputs, the Pluot Rust core provides a [render-to-code](https://docs.rs/pluot/latest/pluot/fn.render_to_script.html) function.
+In addition to rendering graphical outputs, the Pluot Rust core provides a [render-to-script](https://docs.rs/pluot/latest/pluot/fn.render_to_script.html) function.
 In other words, given the same declarative inputs which are used to generate a static or interactive plot, we can ask Pluot for a Python/R/Rust/Bash/JS/JSX/HTML script or expression that, when executed, renders the same plot.
 
 
