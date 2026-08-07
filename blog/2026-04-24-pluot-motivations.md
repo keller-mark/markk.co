@@ -186,13 +186,33 @@ The [composable](https://github.com/manzt/zarrita.js/issues/349) nature of Zarr 
 It also helps that the datasets I work with in the single-cell and spatial biology domain and their communities have adopted Zarr, namely, [AnnData](https://github.com/scverse/anndata/blob/main/docs/fileformat-prose.md), [SpatialData](https://spatialdata.scverse.org/en/stable/design_doc.html), and [OME-Zarr](https://ngff.openmicroscopy.org/).
 
 
+## Reproducibility benefits
+
+In addition to rendering graphical outputs, the Pluot Rust core provides a [render-to-code](https://docs.rs/pluot/latest/pluot/fn.render_to_script.html) function.
+In other words, given the same declarative inputs which are used to generate a static or interactive plot, we can ask Pluot for a Python/R/Rust/Bash/JS/JSX/HTML script or expression that, when executed, renders the same plot.
+
+
+You can try this in any of the examples on the Pluot documentation website, using the Plot Controls dropdown:
+
+
+![Screenshot](/blog-images/pluot_render_to_script_screenshot.png)
+
+
+When discussing reproducibility, I am primarily thinking about workflows which transition from an interactive, GUI-based tool to the creation of static publication figures.
+Currently, this could involve taking a screenshot or clicking an "Export to PNG/SVG" button, neither of which is very reproducible (and would require some kind of browser automation to make it so).
+To make things reproducible, we could alternatively define a Python/R script that generates a static plot and run it within a pipeline (e.g., with Snakemake or Nextflow).
+But in the absence of an interoperable/cross-platform toolkit, such a script will require re-implementing the visualization using an alternative toolkit such as ggplot or matplotlib, and is therefore time consuming and involves context-switching between web-based interactive and non-web-based static plotting toolkits and their mental models.
+
+
+![Workflows](/blog-images/pluot_workflows.png)
+
+
+
 ## Related work
 
-
-
 As I went down this rabbit hole, I kept thinking to myself that I couldn't be the first person to think about this problem.
-I came across [many](https://github.com/keller-mark/awesome-rust-vis/) open-source projects that seemed quite similar, but none that seemed to check all of the boxes of being fast, scalable, bitmap+vector, static+interactive, and interoperable (with bindings to multiple langauges, including web), and with a **reasonable WASM bundle size** (e.g., <10 MB).
-This final point turns out to be especially tricky, as it is easy to inadvertently add Rust crate dependencies that significantly increase the resulting WASM bundle size.
+I came across [many projects](https://github.com/keller-mark/awesome-rust-vis/) that seemed quite similar, but none that seemed to check all of the boxes on the wish list.
+The small WASM bundle size requirement turns out to be especially tricky, as it is easy to inadvertently add Rust crate dependencies that significantly increase the resulting WASM bundle size.
 Similarly, it is easy to add Rust crate dependencies that make WASM compilation difficult for one reason or another (e.g., depend on a C library that is tricky to compile to WASM) or use concurrency features (Rust's Send and Sync) in a way that prevents WASM compilation.<!--I found several projects that checked many of the boxes, but none that checked all of them!-->
 Identifying this gap motivated me to continue to push the project along, especially once I had established the feasibility via the initial experiments.
 
