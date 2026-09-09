@@ -5,6 +5,13 @@ import { Link } from 'waku';
 
 // Copied from https://github.com/keller-mark/markk.co/blob/87ecbd028c2409e80c6f1b243e9913a48d11bf12/src/Intro.jsx
 const news = [
+   {
+    date: "September 3, 2026",
+    slug: "issrppm-sept-2026",
+    description: (<p>
+      Presented at the International Summer School of Renal Pathology and Precision Medicine (<a href="https://issrppm.org/">ISSRPPM</a>).
+    </p>),
+  },
   {
     date: "July 10, 2026",
     slug: "pluot-scicomprust-july-2026",
