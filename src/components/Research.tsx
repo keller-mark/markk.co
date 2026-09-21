@@ -5,7 +5,14 @@ import { Link } from 'waku';
 
 // Copied from https://github.com/keller-mark/markk.co/blob/87ecbd028c2409e80c6f1b243e9913a48d11bf12/src/Intro.jsx
 const news = [
-   {
+  {
+    date: "September 17, 2026",
+    slug: "spatial-star-preprint-sept-2026",
+    description: (<p>
+      Preprint on our survey of spatial transcriptomics visualization practices uploaded to <a href="https://doi.org/10.48550/arXiv.2609.20324">arXiv</a>.
+    </p>),
+  },
+  {
     date: "September 3, 2026",
     slug: "issrppm-sept-2026",
     description: (<p>
