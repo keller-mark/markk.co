@@ -13,7 +13,7 @@ export default async function HomePage() {
           <div className="blob" style={{ backgroundImage: `url(${data.profilePhoto})` }}></div>
           <h3>About</h3>
           I'm a Research Software Engineer at Harvard Medical School.
-          My PhD and postdoctoral research address challenges in visual analysis of large-scale, interconnected, and heterogeneous biological datasets.
+          My PhD and postdoctoral research have addressed challenges in visual analysis of large-scale, interconnected, and heterogeneous biological datasets.
           I apply techniques from <strong>bioinformatics</strong>, <strong>information visualization</strong>, and <strong>computer science</strong>.
           <br/>
           <br/>
