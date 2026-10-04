@@ -6,6 +6,13 @@ import { Link } from 'waku';
 // Copied from https://github.com/keller-mark/markk.co/blob/87ecbd028c2409e80c6f1b243e9913a48d11bf12/src/Intro.jsx
 const news = [
   {
+    date: "October 1, 2026",
+    slug: "necb-oct-2026",
+    description: (<p>
+      Presented a poster at the inaugural <a href="https://newenglandcompbio.org/">New England Computational Biology</a> symposium in Boston, MA.
+    </p>),
+  },
+  {
     date: "September 17, 2026",
     slug: "spatial-star-preprint-sept-2026",
     description: (<p>
@@ -20,10 +27,24 @@ const news = [
     </p>),
   },
   {
+    date: "July 14, 2026",
+    slug: "ismb-july-2026",
+    description: (<p>
+      Attended ISMB 2026 in Washington, DC where our survey of spatial transcriptomics visualization practices was presented by Denisse Chacón-Ramírez, winning the Runner-Up Abstract Award.
+    </p>),
+  },
+  {
     date: "July 10, 2026",
     slug: "pluot-scicomprust-july-2026",
     description: (<p>
       Presented Pluot at the Scientific Computing in Rust 2026 <a href="https://scientificcomputing.rs/2026/talks/keller.html">workshop</a>.
+    </p>),
+  },
+  {
+    date: "June 13, 2026",
+    slug: "hca-june-2026",
+    description: (<p>
+      Presented a poster at the 2026 <a href="https://events.humancellatlas.org/2026hcagm/">Human Cell Atlas General Meeting</a> in Boston, MA.
     </p>),
   },
   {
